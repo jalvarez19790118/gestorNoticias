@@ -19,7 +19,7 @@ const MyNoticiaCard = () => {
             <CardImg
                 top
                 width="100%"
-                src="https://svadcf.es/documentos/banco_imagenes_noticias/vinetas/medicamentos.jpg"
+                src="https://svadcf.es/documentos/banco_imagenes_noticias/vinetas/medicamentos.jpgnp"
                 alt="Card image cap"/>
             <CardBody>
                 <CardTitle>Card title</CardTitle>
