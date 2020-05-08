@@ -109,7 +109,8 @@ $notFourtyColor: #ced2da;
     .card-header {
       
         background-color: $notFourtyColor;
+        border: 1px solid $notTerciaryColor;
         margin: 2px;
-        padding: 2px;
+        padding: 3px;
     }
 }

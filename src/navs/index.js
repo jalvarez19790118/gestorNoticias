@@ -26,6 +26,21 @@ export default {
           }
 
         },
+
+        {
+          name: 'Alertas',
+          url: '/gestor/buscador/alertas',
+
+          icon: {
+
+            lib: 'Bs',
+            name: 'BsFillExclamationTriangleFill',
+            style: { color: '#87a8de', 'fontSize': '1.4em', verticalAlign: 'middle' }
+    
+          }
+
+        },
+
       ]
       
       

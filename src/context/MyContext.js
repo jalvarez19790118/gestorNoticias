@@ -8,7 +8,7 @@ const MyProvider = (props) => {
     const obtieneNoticias = async() => {
         try {
 
-            const respuesta = await clienteAxios.get('/noticias');
+            const respuesta = await clienteAxios.get('/noticias?_sort=fh_public&_order=desc');
             cargaNoticias(respuesta.data);
 
         } catch (error) {
@@ -16,18 +16,37 @@ const MyProvider = (props) => {
             console.log(error);
         }
     }
+    
+
+    const obtieneAlertas = async() => {
+        try {
+
+            const respuesta = await clienteAxios.get('/alertas?_sort=fh_public&_order=desc');
+            cargaAlertas(respuesta.data);
+
+        } catch (error) {
+
+            console.log(error);
+        }
+    }
+
 
     const [noticias,
         cargaNoticias] = useState([]);
 
+    const [alertas,
+        cargaAlertas] = useState([]);
+
     useEffect(() => {
         obtieneNoticias();
+        obtieneAlertas();
     }, [])
 
     return (
 
         <MyContext.Provider value={{
-            noticias
+            noticias,
+            alertas
         }}>
             {props.children}
         </MyContext.Provider>
