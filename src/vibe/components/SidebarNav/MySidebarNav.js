@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import NavSpacer from './components/NavSpacer';
 import NavOverlay from './components/NavOverlay';
 import NavDivider from './components/NavDivider';
-import NavSingleItem from './components/MyNavSingleItem';
-import NavDropdownItem from './components/NavDropdownItem';
+import MyNavSingleItem from './components/MyNavSingleItem';
+import MyNavDropdownItem from './components/MyNavDropdownItem';
 import PageAlertContext from '../PageAlert/PageAlertContext';
 
 export default class MySidebarNav extends Component {
@@ -20,11 +20,11 @@ export default class MySidebarNav extends Component {
 
     const itemType = (item, index) => {
       if (item.children) {
-        return <NavDropdownItem key={index} item={item} isSidebarCollapsed={this.props.isSidebarCollapsed} />;
+        return <MyNavDropdownItem key={index} item={item} isSidebarCollapsed={this.props.isSidebarCollapsed} />;
       } else if (item.divider) {
         return <NavDivider key={index} />;
       } else {
-        return <NavSingleItem item={item} key={index} />;
+        return <MyNavSingleItem item={item} key={index} />;
       }
     };
 

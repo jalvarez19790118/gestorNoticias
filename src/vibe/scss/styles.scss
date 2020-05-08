@@ -1,17 +1,10 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-@import "~@glidejs/glide/src/assets/sass/glide.core";
-@import "~@glidejs/glide/src/assets/sass/glide.theme";
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans');º
 @import '~bootstrap/scss/bootstrap';
 @import './components/index';
 
+@import './mystyles/SearchNotPage.scss';
 
-
-
-
-.glide ul  .card
+body
 {
-    height:  300px;
-    margin-bottom: 0px;
-   
+    overflow: hidden;
 }

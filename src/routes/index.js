@@ -1,13 +1,13 @@
 
-import MyInicioPage from '../views/pages/mypages/MyInicioPage'
+import SearchNotPage from '../views/pages/search/SearchNotPage'
 
 
 export default  [
     
     {
-      name: 'Inicio',
-      path: '/gestor/inicio',
-      component: MyInicioPage,
+      name: 'Buscador de Noticias',
+      path: '/gestor/buscador/noticias',
+      component: SearchNotPage,
     },
    
   

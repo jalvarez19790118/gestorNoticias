@@ -7,19 +7,20 @@
   "copyright": "Copyright 2019 Nice Dash",
   "private": true,
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.7.3",
     "classnames": "^2.2.6",
     "clean": "^4.0.2",
+    "html-entities": "^1.3.1",
     "node-sass": "^4.14.1",
     "react": "^16.8.1",
     "react-chartjs-2": "2.6.4",
-    "react-dom": "^16.8.1",
+    "react-dom": "^16.13.1",
     "react-feather": "^1.1.6",
     "react-fontawesome": "1.6.1",
     "react-icons": "^3.10.0",
+    "react-indiana-drag-scroll": "^1.6.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.3",
     "reactstrap": "6.4.0"
@@ -32,7 +33,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rimraf .cache .tmp lib node_modules build "
+    "clean": "rimraf .cache .tmp lib node_modules build ",
+    "json-serve": "json-server --watch data.json --port 4000"
   },
   "eslintConfig": {
     "extends": "react-app"

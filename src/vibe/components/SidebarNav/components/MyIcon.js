@@ -15,7 +15,7 @@ if (Icon === null) return null;
     return ( 
         
     <IconContext.Provider value={{ style:  item.style }}>
-        <Icon className="mr-2" />
+        <Icon />
     </IconContext.Provider>
 
      );

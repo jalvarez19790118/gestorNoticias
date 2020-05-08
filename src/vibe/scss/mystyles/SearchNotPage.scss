@@ -1,0 +1,115 @@
+
+$notPrimaryColor: #091220;
+$notSecondaryColor: #222;
+$notTerciaryColor: #162c50;
+$notFourtyColor: #ced2da;
+
+
+.NotContentPanel {
+    max-width: 1800px;
+
+}
+
+.NotContent {
+
+    font-family: "Trebuchet MS",sans-serif,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+
+    border: 1px solid $notPrimaryColor;
+    border-radius: 0.25rem;
+
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+
+    button {
+      
+
+        background: $notTerciaryColor !important;
+        color: #fff;
+        border-radius: 0.35rem;
+        width: auto;
+        height: auto;
+        box-shadow: unset;
+
+        svg {
+            color: #fff ;
+
+        }
+
+
+        &:hover {
+           
+            background-color: $notFourtyColor !important;
+            color: $notTerciaryColor;
+            background: $notPrimaryColor;
+
+            svg {
+                color: #fff ;
+
+            }
+        }
+        &:active {
+           
+
+            background-color: $notFourtyColor !important;
+
+            svg {
+                color: $notTerciaryColor;
+               
+
+            }
+        }
+    }
+
+    .card-header {
+        text-align: right;
+
+    }
+
+    .card-title {
+
+        color: $notPrimaryColor;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .card-subtitle {
+
+        font-size: 0.9em;
+
+        div {
+            &:first-child {
+                font-weight: bold;
+                color: $notTerciaryColor;
+            }
+            &:last-child {
+                font-style: italic;
+                color: $notSecondaryColor;
+
+            }
+        }
+
+    }
+
+    .card-text {
+
+        div {
+            color: $notSecondaryColor;
+            font-weight: normal;
+            font-style: italic;
+            font-size: 1em;
+            text-overflow: ellipsis;
+
+        }
+    }
+
+    .card-header {
+      
+        background-color: $notFourtyColor;
+        margin: 2px;
+        padding: 2px;
+    }
+}

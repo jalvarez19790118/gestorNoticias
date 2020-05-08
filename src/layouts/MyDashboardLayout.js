@@ -93,7 +93,7 @@ export default class MyDashboardLayout extends Component {
                     <Route path={page.path} component={page.component} key={key} />
                   ))}
 
-                  <Redirect from="/gestor" to="/gestor/inicio" />
+                  <Redirect from="/gestor" to="/gestor/buscador/noticias" />
                  </Switch>
               </PageContent>
             </Page>

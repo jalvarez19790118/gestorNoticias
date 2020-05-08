@@ -9,26 +9,34 @@ import {
     Button
 } from 'reactstrap';
 
+import {Html5Entities} from 'html-entities';
 
+const MyNoticiaCard = ({item}) => {
 
+    const htmlEntities = new Html5Entities();
 
-const MyNoticiaCard = () => {
     return (
 
-        <Card>
-            <CardImg
-                top
-                width="100%"
-                src="https://svadcf.es/documentos/banco_imagenes_noticias/vinetas/medicamentos.jpgnp"
-                alt="Card image cap"/>
+        <Card className="p-2">
             <CardBody>
-                <CardTitle>Card title</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>Some quick example text to build on the card title and make up the
-                    bulk of the card's content.</CardText>
-                <Button>Button</Button>
+                <CardTitle>
+                {htmlEntities.decode(item.titular)} 
+                 
+                </CardTitle>
+
+                <hr/>
+                <CardText>
+                
+                 {htmlEntities.decode(item.entradilla)}
+                 
+                 
+             
+                
+                </CardText>
+
             </CardBody>
         </Card>
+
     );
 }
 
