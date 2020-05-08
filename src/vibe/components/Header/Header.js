@@ -41,7 +41,7 @@ export default class Header extends Component {
       <header className="app-header">
         <SkipToContentLink focusId="primary-content" />
         <div className="top-nav">
-          <Navbar color="faded" light expand="md">
+          <Navbar className="myNavbar" color="faded" light expand="md">
             <ToggleSidebarButton
               toggleSidebar={this.props.toggleSidebar}
               isSidebarCollapsed={this.props.isSidebarCollapsed}

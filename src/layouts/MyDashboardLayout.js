@@ -74,7 +74,7 @@ export default class MyDashboardLayout extends Component {
               {...this.props}
             />
             <Page>
-              <Header
+              <Header 
                 toggleSidebar={this.toggleSideCollapse}
                 isSidebarCollapsed={sidebarCollapsed}
                 routes={routes}

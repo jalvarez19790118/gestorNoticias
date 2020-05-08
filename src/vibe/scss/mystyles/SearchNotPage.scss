@@ -1,12 +1,7 @@
 
-$notPrimaryColor: #091220;
-$notSecondaryColor: #222;
-$notTerciaryColor: #162c50;
-$notFourtyColor: #ced2da;
-
 
 .NotContentPanel {
-    max-width: 1800px;
+    max-width: calc(100% - 4px);
 
 }
 
@@ -28,17 +23,14 @@ $notFourtyColor: #ced2da;
       
 
         background: $notTerciaryColor !important;
-        color: #fff;
+        color: #fff !important;
         border-radius: 0.35rem;
         width: auto;
         height: auto;
         box-shadow: unset;
 
-        svg {
-            color: #fff ;
-
-        }
-
+       
+         
 
         &:hover {
            
@@ -46,10 +38,7 @@ $notFourtyColor: #ced2da;
             color: $notTerciaryColor;
             background: $notPrimaryColor;
 
-            svg {
-                color: #fff ;
-
-            }
+         
         }
         &:active {
            
@@ -57,7 +46,7 @@ $notFourtyColor: #ced2da;
             background-color: $notFourtyColor !important;
 
             svg {
-                color: $notTerciaryColor;
+                color: $notTerciaryColor !important;
                
 
             }

@@ -1,0 +1,49 @@
+#primary-content
+{
+    padding: 5px !important; 
+}
+
+
+.myNavbar {
+    font-family: "Trebuchet MS",sans-serif,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+
+    background-color: $notFourtyColor;
+    background-color: #ced2da;
+    padding: 0;
+    height: 50px;
+    border-bottom: 1px solid $notPrimaryColor;
+
+    button {
+
+        background: $notTerciaryColor !important;
+        color: #fff !important;
+        border-radius: 0.35rem;
+        width: auto;
+        height: auto;
+        box-shadow: unset !important;
+
+        &:hover {
+
+            background-color: $notFourtyColor !important;
+            color: $notTerciaryColor !important;
+            background: $notPrimaryColor;
+
+            
+        }
+        &:active {
+
+            background-color: $notFourtyColor !important;
+
+            
+        }
+    }
+
+
+
+    .page-heading
+    {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    
+}
