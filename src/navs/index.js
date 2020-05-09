@@ -15,7 +15,7 @@ export default {
       children: [
         {
           name: 'Noticias',
-          url: '/gestor/buscador/noticias',
+          url: '/gestor/n/noticias',
 
           icon: {
 
@@ -29,7 +29,7 @@ export default {
 
         {
           name: 'Alertas',
-          url: '/gestor/buscador/alertas',
+          url: '/gestor/a/alertas',
 
           icon: {
 

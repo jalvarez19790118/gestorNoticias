@@ -1,4 +1,32 @@
+.LoadingCard {
+ 
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: calc(50% - 50px);
+    right: 0;
+    width: 250px;
 
+    .card
+    {
+    font-family: "Trebuchet MS",sans-serif,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    border: 1px solid $notPrimaryColor;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 300px;
+    }
+
+    .card-text {
+
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+
+
+}
 
 .NotContentPanel {
     max-width: calc(100% - 4px);
@@ -20,7 +48,6 @@
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
 
     button {
-      
 
         background: $notTerciaryColor !important;
         color: #fff !important;
@@ -28,26 +55,20 @@
         width: auto;
         height: auto;
         box-shadow: unset;
-
-       
-         
-
         &:hover {
-           
-            background-color: $notFourtyColor !important;
-            color: $notTerciaryColor;
-            background: $notPrimaryColor;
+            border: 1px solid $notPrimaryColor !important;
 
-         
+            color: $notTerciaryColor !important;
+            background: $notFourtyColor !important;
+
         }
         &:active {
-           
 
-            background-color: $notFourtyColor !important;
+            border: 1px solid $notPrimaryColor !important;
+            background-color: #fff !important;
 
             svg {
                 color: $notTerciaryColor !important;
-               
 
             }
         }
@@ -96,7 +117,7 @@
     }
 
     .card-header {
-      
+
         background-color: $notFourtyColor;
         border: 1px solid $notTerciaryColor;
         margin: 2px;

@@ -1,17 +1,31 @@
-import React,{useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {MyContext} from '../../../context/MyContext';
 import NotContentPanel from './NotContentPanel';
-
-
-const SearchNotPage = () => {
-
-    const {noticias} = useContext(MyContext);
+import LoadingCard from './LoadingCard';
 
 
 
-    return (<div>
-        <NotContentPanel items={noticias}></NotContentPanel>
-    </div>);
-}
+const SearchNotPage = (props) => {
+
+     let { id } = props.match.params;
+    
+    const {news,  loadingNews, refreshNewsData } = useContext(MyContext);
+
+     
+     useEffect(() => {
+        refreshNewsData(id); 
+
+     }, []);
  
+     
+    return (
+       
+        <div>
+            {loadingNews ? <LoadingCard/> :  <NotContentPanel  items={news}></NotContentPanel>}
+        </div>
+
+
+    );
+}
+
 export default SearchNotPage;

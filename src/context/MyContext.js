@@ -1,52 +1,58 @@
-import React, {createContext, useState, useEffect} from 'react';
+import React, {createContext, useState} from 'react';
 import clienteAxios from '../config/axios';
 
 export const MyContext = createContext();
 
 const MyProvider = (props) => {
 
-    const obtieneNoticias = async() => {
+  //  let { id } = props.match.params;
+
+    const obtieneNoticias = async(tipo) => {
         try {
 
-            const respuesta = await clienteAxios.get('/noticias?_sort=fh_public&_order=desc');
-            cargaNoticias(respuesta.data);
+
+                const respuesta = await clienteAxios.get(`/${tipo}?_sort=fh_public&_order=desc`);
+                setNews(respuesta.data);
+                setLoadingNews(false);
+
+
+            
 
         } catch (error) {
 
             console.log(error);
         }
     }
+
+
+    const [loadingNews,
+        setLoadingNews] = useState(false)
+
+    
+    const [news,
+        setNews] = useState([]);
+
+        const [type,
+            setType] = useState(null);
     
 
-    const obtieneAlertas = async() => {
-        try {
+    const refreshNewsData = (tipo) => {
+      if (!loadingNews) setLoadingNews(true);
+        obtieneNoticias(tipo);
 
-            const respuesta = await clienteAxios.get('/alertas?_sort=fh_public&_order=desc');
-            cargaAlertas(respuesta.data);
+    };
 
-        } catch (error) {
-
-            console.log(error);
-        }
-    }
-
-
-    const [noticias,
-        cargaNoticias] = useState([]);
-
-    const [alertas,
-        cargaAlertas] = useState([]);
-
-    useEffect(() => {
-        obtieneNoticias();
-        obtieneAlertas();
-    }, [])
 
     return (
 
-        <MyContext.Provider value={{
-            noticias,
-            alertas
+        <MyContext.Provider
+            value={{
+            news,
+            loadingNews,
+            refreshNewsData,
+          
+            type,
+            setType
         }}>
             {props.children}
         </MyContext.Provider>

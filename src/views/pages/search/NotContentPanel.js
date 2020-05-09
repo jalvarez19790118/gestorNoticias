@@ -1,13 +1,20 @@
-import React from 'react';
+import React, {useEffect}from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import NotContent from './NotContent';
-
+import $ from 'jquery';
 import ScrollContainer from "react-indiana-drag-scroll";
 
 const NotContentPanel = ({items}) => {
+
+  let  ref = null
+
+  useEffect(() => { $(ref).fadeIn(300); }, []);
+
+
+
     return (
 
-        
+        <div ref={div => ref = div} style={{'display' : 'none'}}>
         <ScrollContainer
         style={{
         'maxHeight': 'calc(100vh - 90px)',
@@ -25,6 +32,8 @@ const NotContentPanel = ({items}) => {
             </Row>
         </Container>
         </ScrollContainer>
+
+        </div>
     );
 }
 

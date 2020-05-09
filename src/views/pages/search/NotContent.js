@@ -8,13 +8,12 @@ import {
     CardBody,
     CardTitle,
     CardSubtitle,
-    CardFooter,
     Button
 } from 'reactstrap';
 
 import {Html5Entities} from 'html-entities';
 
-const NotContent = ({item}) => {
+const NotContent = ({item,type}) => {
 
     const d = new Date(item.fh_public)
     const dtf = new Intl.DateTimeFormat('en', {
@@ -93,14 +92,14 @@ const NotContent = ({item}) => {
 
                 <CardSubtitle className="mt-2 d-flex">
 
-                    <div class="mr-3">VADEMECUM</div>
-                    <div>{`${da}-${mo}-${ye}`}</div>
+                    <label className="mr-1">VADEMECUM</label>
+                    <label>{`${da}-${mo}-${ye}`}</label>
 
                 </CardSubtitle>
 
                 <CardText className="mt-2">
 
-                    <div>{htmlEntities.decode(item.entradilla)}</div>
+                    {htmlEntities.decode(item.entradilla)}
 
                 </CardText>
 
