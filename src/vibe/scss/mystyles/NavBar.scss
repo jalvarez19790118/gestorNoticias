@@ -1,22 +1,35 @@
+.app-header .top-nav {
+    padding: 0 0px;
+    width: 100%;
+    box-shadow: none;
+   
+}
+
+.app-footer
+{
+    display:none;
+}
+
 #primary-content
 {
-    padding: 5px !important; 
+    padding: 0px !important; 
 }
 
 
-.myNavbar {
-    font-family: "Trebuchet MS",sans-serif,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 
-    background-color: $notFourtyColor;
-    background-color: #ced2da;
+.myNavbar {
+    font-family: $actualfontFamily;
+    color: #fff;
+    background-color: $notPrimaryColor;
+    
     padding: 0;
     height: 50px;
+    border-bottom: 0px solid;
     border-bottom: 1px solid $notPrimaryColor;
-
     button {
 
-        background: $notTerciaryColor !important;
-        color: #fff !important;
+        background: $notFourtyColor !important;
+        color: $notPrimaryColor !important;
         border-radius: 0.35rem;
         width: auto;
         height: auto;

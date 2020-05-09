@@ -9,7 +9,7 @@
 
     .card
     {
-    font-family: "Trebuchet MS",sans-serif,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-family: $actualfontFamily;
     border: 1px solid $notPrimaryColor;
     border-radius: 0.25rem;
     -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
@@ -31,11 +31,58 @@
 .NotContentPanel {
     max-width: calc(100% - 4px);
 
+    
+
 }
+
+
+.totaElemContainer
+{
+
+    border: 1px solid $notPrimaryColor;
+    background-color: $notFourtyColor;
+  //  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.3), 0 2px 0px rgba(0, 21, 41, 0.12);
+
+
+    
+    Label
+    {
+          font-family: $actualfontFamily;
+          font-size: 0.9em;
+        
+          color: $notPrimaryColor;
+    }
+
+    select
+    {
+         width:90px;
+         max-width: 90px;
+         border: 1px solid $notPrimaryColor;
+         background: #fff;
+         font-weight: bold;
+         font-size: 0.8em;
+
+         option
+         {
+             padding-left:5px
+         }
+    }
+}
+
+.indiana-scroll-container
+{
+    min-height:  calc(100vh - 131px) !important;
+    max-height: calc(100vh - 131px) !important;
+    border-right: 1px solid $notPrimaryColor;
+    border-left: 1px solid $notPrimaryColor;
+}
+
+
+
 
 .NotContent {
 
-    font-family: "Trebuchet MS",sans-serif,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-family: $actualfontFamily;
 
     border: 1px solid $notPrimaryColor;
     border-radius: 0.25rem;
@@ -123,4 +170,51 @@
         margin: 2px;
         padding: 3px;
     }
+}
+
+
+.NotFooter
+{
+    border: 1px solid $notPrimaryColor !important;
+    background-color: $notFourtyColor;
+    flex-direction: column;
+    display: FLEX;
+    
+
+    .pagination
+{
+    margin-left: auto;
+    margin-right: auto;
+   height: 15px;
+   margin-top: 5px;
+    
+    li > a
+    {
+        background: #091220 ;
+        color: #fff;
+        border-radius: 0.35rem;
+        width: 24px;
+        display: block;
+        height: 24px;
+        box-shadow: unset !important;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+        line-height: 23px;
+
+        
+    }
+
+   .active a
+   {
+ 
+        background: #fff !important;
+        color: $notPrimaryColor  !important;
+        border: 1px solid $notPrimaryColor !important;
+        text-decoration:none;
+    
+   }
+
+}
+
 }
