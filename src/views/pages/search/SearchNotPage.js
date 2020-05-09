@@ -80,12 +80,12 @@ const NotHeader = () => {
               <Col sm='12' md='6' className="m-0 p-0">
         
                   <FormGroup className="d-flex p-0 m-0 my-1 text-center">
-                      <Label className="p-0 my-auto mr-2">Mostrando</Label>
+                      <Label className="p-0 my-auto mr-2 ml-3">Mostrando</Label>
                       <Input type="select" value={size} onChange={e=>{setNewSize(e.target.value)}} name="totalElem" id="totalElem">
                       {option_telem.map((option, idx) => <option key={idx}>{option}</option>)}
                       
                       </Input>
-                      <Label className="p-0 my-auto ml-2">resultados de <b>{allResults}</b> resultados </Label>
+                      <Label className="p-0 my-auto ml-2 mr-2">resultados de <b>{allResults}</b> resultados </Label>
                   </FormGroup>
         
               </Col>
@@ -120,6 +120,7 @@ const NotFooter = () => {
               
              
               <Pagination
+               hideNavigation
                  activePage={currentPage}
                  itemsCountPerPage={size}
                  totalItemsCount={pages*size}

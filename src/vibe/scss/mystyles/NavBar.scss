@@ -16,11 +16,66 @@
 }
 
 
+.app-sidebar
+{
+
+    font-family: $actualfontFamily;
+    background-color: $notTerciaryColor;
+    
+   
+
+}
+
+
+.site-logo-bar {
+    border-bottom: 1px solid $notPrimaryColor;
+    background-color: $notTerciaryColor;
+    height: 50px;
+   
+}
+
+
+#main-menu .has-submenu {
+  
+    border-bottom: 1px solid $notPrimaryColor;
+   
+   
+}
+
+#main-menu .nav-submenu {
+  
+    border-top: 1px solid $notPrimaryColor;
+   
+   
+}
+
+#main-menu .nav-item > a.active {
+    box-shadow: inset 4px 0px $notFourtyColor;
+}
+
+#main-menu .nav-item.has-submenu ul .nav-item {
+    background: $notTerciaryColor;
+    color: #fff;
+    border: 1px solid $notPrimaryColor;
+    border-top: 0px solid;
+   
+}
+
+#main-menu .nav-item > a {
+    
+    color: #fff;
+    font-size: 1.1em;
+}
+
+#main-menu .nav-item.has-submenu ul .nav-item a.active {
+    background: $notPrimaryColor;
+    color:  #fff
+}
 
 .myNavbar {
     font-family: $actualfontFamily;
     color: #fff;
-    background-color: $notPrimaryColor;
+    background-color: $notTerciaryColor;
     
     padding: 0;
     height: 50px;

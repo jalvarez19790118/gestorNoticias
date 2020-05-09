@@ -35,7 +35,7 @@ const NotContentPanel = ({items}) => {
 
             <Row>
                 {items.map((item, idx) => {
-                    return <Col sm="12" md="6"  lg="4" xl="3"  key={idx} className="m-0 p-1">
+                    return <Col sm="12" md="6"  lg="2" xl="2"  key={idx} className="m-0 p-1">
                        <NotContent item={item}></NotContent>
                     </Col>
                 })}

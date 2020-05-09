@@ -8,7 +8,7 @@ export default {
 
         lib: 'Feather',
         name: 'FiSearch',
-        style: { color: '#87a8de', 'fontSize': '1.4em', verticalAlign: 'middle' }
+        style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
 
       },
      
@@ -21,7 +21,7 @@ export default {
 
             lib: 'Bs',
             name: 'BsNewspaper',
-            style: { color: '#87a8de', 'fontSize': '1.4em', verticalAlign: 'middle' }
+            style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
     
           }
 
@@ -35,7 +35,7 @@ export default {
 
             lib: 'Bs',
             name: 'BsFillExclamationTriangleFill',
-            style: { color: '#87a8de', 'fontSize': '1.4em', verticalAlign: 'middle' }
+            style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
     
           }
 

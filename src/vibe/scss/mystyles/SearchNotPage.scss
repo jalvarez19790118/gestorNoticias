@@ -1,5 +1,5 @@
 .LoadingCard {
- 
+
     position: absolute;
     top: 50%;
     bottom: 0;
@@ -7,16 +7,15 @@
     right: 0;
     width: 250px;
 
-    .card
-    {
-    font-family: $actualfontFamily;
-    border: 1px solid $notPrimaryColor;
-    border-radius: 0.25rem;
-    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-    text-align: center;
-    max-width: 300px;
+    .card {
+        font-family: $actualfontFamily;
+        border: 1px solid $notPrimaryColor;
+        border-radius: 0.25rem;
+        -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+        -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+        text-align: center;
+        max-width: 300px;
     }
 
     .card-text {
@@ -25,60 +24,47 @@
         font-weight: bold;
     }
 
-
 }
 
 .NotContentPanel {
     max-width: calc(100% - 4px);
 
-    
-
 }
 
-
-.totaElemContainer
-{
+.totaElemContainer {
 
     border: 1px solid $notPrimaryColor;
+    border-top: 0px solid;
     background-color: $notFourtyColor;
-  //  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.3), 0 2px 0px rgba(0, 21, 41, 0.12);
+    //  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.3), 0 2px 0px rgba(0, 21, 41, 0.12);
 
+    Label {
+        font-family: $actualfontFamily;
+        font-size: 0.9em;
 
-    
-    Label
-    {
-          font-family: $actualfontFamily;
-          font-size: 0.9em;
-        
-          color: $notPrimaryColor;
+        color: $notPrimaryColor;
     }
 
-    select
-    {
-         width:90px;
-         max-width: 90px;
-         border: 1px solid $notPrimaryColor;
-         background: #fff;
-         font-weight: bold;
-         font-size: 0.8em;
+    select {
+        width: 90px;
+        max-width: 90px;
+        border: 1px solid $notPrimaryColor;
+        background: #fff;
+        font-weight: bold;
+        font-size: 0.8em;
 
-         option
-         {
-             padding-left:5px
-         }
+        option {
+            padding-left: 5px;
+        }
     }
 }
 
-.indiana-scroll-container
-{
-    min-height:  calc(100vh - 131px) !important;
+.indiana-scroll-container {
+    min-height: calc(100vh - 131px) !important;
     max-height: calc(100vh - 131px) !important;
     border-right: 1px solid $notPrimaryColor;
     border-left: 1px solid $notPrimaryColor;
 }
-
-
-
 
 .NotContent {
 
@@ -126,6 +112,10 @@
 
     }
 
+    .card-body {
+        padding: 12px;
+    }
+
     .card-title {
 
         color: $notPrimaryColor;
@@ -137,10 +127,10 @@
 
         font-size: 0.9em;
 
-        div {
+        label {
             &:first-child {
                 font-weight: bold;
-                color: $notTerciaryColor;
+                color: $notPrimaryColor;
             }
             &:last-child {
                 font-style: italic;
@@ -161,6 +151,13 @@
             text-overflow: ellipsis;
 
         }
+
+        .contHtml
+        {
+            max-height: 250px;
+            overflow: hidden;
+            margin-bottom: 25px !important;
+        }
     }
 
     .card-header {
@@ -169,52 +166,89 @@
         border: 1px solid $notTerciaryColor;
         margin: 2px;
         padding: 3px;
+        border-radius: 0.35rem;
+    }
+    &:hover {
+        cursor: pointer;
+        background: #fff;
+
+        .card-header {
+            background-color:  $notPrimaryColor;
+           
+        }
+
+
+        button {
+
+            border: 1px solid $notPrimaryColor !important;
+            background: #fff !important;
+            color: $notPrimaryColor !important;
+            border-radius: 0.35rem;
+            width: auto;
+            height: auto;
+            box-shadow: unset;
+            &:hover {
+                border: 1px solid $notPrimaryColor !important;
+    
+                color: $notTerciaryColor !important;
+                background: $notFourtyColor !important;
+    
+            }
+            &:active {
+    
+                border: 1px solid $notPrimaryColor !important;
+                background-color: #fff !important;
+    
+                svg {
+                    color: $notTerciaryColor !important;
+    
+                }
+            }
+        }
+
+    }
+
+    hr {
+        border-color: $notPrimaryColor;
     }
 }
 
-
-.NotFooter
-{
+.NotFooter {
     border: 1px solid $notPrimaryColor !important;
     background-color: $notFourtyColor;
     flex-direction: column;
     display: FLEX;
-    
 
-    .pagination
-{
-    margin-left: auto;
-    margin-right: auto;
-   height: 15px;
-   margin-top: 5px;
-    
-    li > a
-    {
-        background: #091220 ;
-        color: #fff;
-        border-radius: 0.35rem;
-        width: 24px;
-        display: block;
-        height: 24px;
-        box-shadow: unset !important;
-        text-align: center;
-        font-size: 0.8rem;
-        font-weight: bold;
-        line-height: 23px;
+    .pagination {
+        margin-left: auto;
+        margin-right: auto;
+        height: 15px;
+        margin-top: 5px;
 
-        
+        li > a {
+            background: #091220;
+            color: #fff;
+            border-radius: 0.35rem;
+            width: 28px;
+            display: block;
+            height: 28px;
+            box-shadow: unset !important;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: 28px;
+
+        }
+
+        .active a {
+
+            background: #fff !important;
+            color: $notPrimaryColor !important;
+            border: 1px solid $notPrimaryColor !important;
+            text-decoration: none;
+
+        }
+
     }
-
-   .active a
-   {
- 
-        background: #fff !important;
-        color: $notPrimaryColor  !important;
-        border: 1px solid $notPrimaryColor !important;
-        text-decoration:none;
-    
-   }
-
-}
 
 }

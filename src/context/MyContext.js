@@ -40,7 +40,7 @@ const MyProvider = (props) => {
     const [loadingNews,setLoadingNews] = useState(false)
     const [news,setNews] = useState([]);
     const [type, setType] = useState(null);
-    const [size, setSize] = useState(10);
+    const [size, setSize] = useState(20);
     const [pages, setPages] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     

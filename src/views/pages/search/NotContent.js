@@ -13,7 +13,7 @@ import {
 
 import {Html5Entities} from 'html-entities';
 
-const NotContent = ({item,type}) => {
+const NotContent = ({item, type}) => {
 
     const d = new Date(item.fh_public)
     const dtf = new Intl.DateTimeFormat('en', {
@@ -74,21 +74,21 @@ const NotContent = ({item,type}) => {
                 <div className="float-left">
                     <Button>{IconEdit}</Button>
                     <Button>{IconCopy}</Button>
-                    <Button>{IconDelete}</Button>
+                   
                 </div>
                 <div className="float-right">
-                    <Button>{IconView}</Button>
+                  <Button>{IconDelete}</Button>
                 </div>
 
             </CardHeader>
 
             <CardBody>
-                <CardTitle>
+                <CardTitle className="m-0 p-0">
                     {htmlEntities.decode(item.titular)}
 
                 </CardTitle>
 
-                <hr/>
+                <hr className="m-0 mt-0 p-0 pt-0"/>
 
                 <CardSubtitle className="mt-2 d-flex">
 
@@ -99,7 +99,9 @@ const NotContent = ({item,type}) => {
 
                 <CardText className="mt-2">
 
+                
                     {htmlEntities.decode(item.entradilla)}
+               
 
                 </CardText>
 
