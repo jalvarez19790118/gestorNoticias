@@ -28,15 +28,19 @@
 
 .NotContentPanel {
     max-width: calc(100% - 4px);
+    margin-top: 42px;
 
 }
 
 .totaElemContainer {
 
     border: 1px solid $notPrimaryColor;
-    border-top: 0px solid;
+    border-top: 0 solid;
     background-color: $notFourtyColor;
-    //  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.3), 0 2px 0px rgba(0, 21, 41, 0.12);
+    position: absolute;
+    z-index: 10;
+     box-shadow: 0 2px 0px rgba(0, 0, 0, 0.3), 0 2px 0px rgba(0, 21, 41, 0.1);
+  
 
     Label {
         font-family: $actualfontFamily;
@@ -60,8 +64,8 @@
 }
 
 .indiana-scroll-container {
-    min-height: calc(100vh - 131px) !important;
-    max-height: calc(100vh - 131px) !important;
+    min-height: calc(100vh - 88px) !important;
+    max-height: calc(100vh - 88px) !important;
     border-right: 1px solid $notPrimaryColor;
     border-left: 1px solid $notPrimaryColor;
 }
@@ -152,8 +156,7 @@
 
         }
 
-        .contHtml
-        {
+        .contHtml {
             max-height: 250px;
             overflow: hidden;
             margin-bottom: 25px !important;
@@ -173,10 +176,9 @@
         background: #fff;
 
         .card-header {
-            background-color:  $notPrimaryColor;
-           
-        }
+            background-color: $notPrimaryColor;
 
+        }
 
         button {
 
@@ -189,19 +191,19 @@
             box-shadow: unset;
             &:hover {
                 border: 1px solid $notPrimaryColor !important;
-    
+
                 color: $notTerciaryColor !important;
                 background: $notFourtyColor !important;
-    
+
             }
             &:active {
-    
+
                 border: 1px solid $notPrimaryColor !important;
                 background-color: #fff !important;
-    
+
                 svg {
                     color: $notTerciaryColor !important;
-    
+
                 }
             }
         }
@@ -218,12 +220,16 @@
     background-color: $notFourtyColor;
     flex-direction: column;
     display: FLEX;
-
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.3), 0 -1px 1px 1px  rgba(0, 21, 41, 0.1);
+   
     .pagination {
         margin-left: auto;
         margin-right: auto;
         height: 15px;
         margin-top: 5px;
+      
 
         li > a {
             background: #091220;
@@ -249,6 +255,60 @@
 
         }
 
+    }
+
+}
+
+.NotFullModal {
+    max-width: 950px;
+    width: calc(100% - 10px);
+    margin: 5px auto;
+    height: calc(100vh - 15px);
+
+    .modal-header {
+        border: 1px solid $notPrimaryColor;
+        background: $notTerciaryColor;
+        border-radius: 0.25rem;
+        height: 50px;
+
+        .modal-title {
+            width: 100%;
+        }
+    }
+
+    .modal-content {
+        height: calc(100vh - 15px);
+
+        -webkit-box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.4);
+        box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.4);
+
+        .indiana-scroll-container {
+            max-height: calc(100vh - 80px) !important;
+            min-height: calc(100vh - 80px) !important;
+            border: 0 solid;
+
+            scrollbar-width: thin;
+
+            .NotContent {
+                border: 0 solid;
+                box-shadow: unset;
+            }
+
+            .card-title {
+
+                font-size: 1.7em;
+                margin-bottom: 25px !important;
+            }
+
+            .card-body
+            {
+                table
+                {
+                    width:  100% !important;
+                }
+            }
+        }
     }
 
 }

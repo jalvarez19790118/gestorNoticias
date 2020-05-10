@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import MyIcon from '../../../vibe/components/SidebarNav/components/MyIcon';
 
 import {
@@ -13,8 +13,9 @@ import {
 
 import {Html5Entities} from 'html-entities';
 
-const NotContent = ({item, type}) => {
+const NotContent = ({item, modal, showModal}) => {
 
+    
     const d = new Date(item.fh_public)
     const dtf = new Intl.DateTimeFormat('en', {
         year: 'numeric',
@@ -66,9 +67,21 @@ const NotContent = ({item, type}) => {
         style: styleObj
     }}/>;
 
+
+
+
+    const showModalWindow = () => {
+
+        showModal({
+            ...modal,
+          item: item,
+          show: true
+        });
+    }
+
     return (
 
-        <Card className="NotContent m-0 p-0">
+        <Card onClick={showModalWindow} className="NotContent m-0 p-0">
 
             <CardHeader>
                 <div className="float-left">
