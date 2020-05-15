@@ -39,8 +39,7 @@
     background-color: $notFourtyColor;
     position: absolute;
     z-index: 10;
-     box-shadow: 0 2px 0px rgba(0, 0, 0, 0.3), 0 2px 0px rgba(0, 21, 41, 0.1);
-  
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1);
 
     Label {
         font-family: $actualfontFamily;
@@ -80,10 +79,11 @@
     display: flex;
     flex-flow: column;
     height: 100%;
+    /*
     -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
     -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-
+*/
     button {
 
         background: $notTerciaryColor !important;
@@ -118,8 +118,25 @@
 
     .card-body {
         padding: 12px;
+
+         overflow: hidden;
+     margin-bottom: 15px !important;
     }
 
+ .mh_not { max-height: 300px;}
+
+    .card-text
+    {
+
+        table {
+            width: 100% !important;
+        }
+
+        td {
+            width: 100% !important;
+        }
+
+    }
     .card-title {
 
         color: $notPrimaryColor;
@@ -171,44 +188,6 @@
         padding: 3px;
         border-radius: 0.35rem;
     }
-    &:hover {
-        cursor: pointer;
-        background: #fff;
-
-        .card-header {
-            background-color: $notPrimaryColor;
-
-        }
-
-        button {
-
-            border: 1px solid $notPrimaryColor !important;
-            background: #fff !important;
-            color: $notPrimaryColor !important;
-            border-radius: 0.35rem;
-            width: auto;
-            height: auto;
-            box-shadow: unset;
-            &:hover {
-                border: 1px solid $notPrimaryColor !important;
-
-                color: $notTerciaryColor !important;
-                background: $notFourtyColor !important;
-
-            }
-            &:active {
-
-                border: 1px solid $notPrimaryColor !important;
-                background-color: #fff !important;
-
-                svg {
-                    color: $notTerciaryColor !important;
-
-                }
-            }
-        }
-
-    }
 
     hr {
         border-color: $notPrimaryColor;
@@ -222,14 +201,13 @@
     display: FLEX;
     position: absolute;
     z-index: 10;
-    box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.3), 0 -1px 1px 1px  rgba(0, 21, 41, 0.1);
-   
+    box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.3), 0 -1px 1px 1px rgba(0, 21, 41, 0.1);
+
     .pagination {
         margin-left: auto;
         margin-right: auto;
         height: 15px;
         margin-top: 5px;
-      
 
         li > a {
             background: #091220;
@@ -259,6 +237,28 @@
 
 }
 
+.NotContentFull {
+   
+    box-shadow: unset;
+    height: calc(100vh - 62px);
+    border: 1px solid $notPrimaryColor;
+
+    .card-body {
+        table {
+            width: 100% !important;
+            max-height: unset !important;
+        }
+    }
+
+    .card-title {
+
+        font-size: 1.7em;
+        margin-bottom: 25px !important;
+        font-weight:bold;
+    }
+}
+
+
 .NotFullModal {
     max-width: 950px;
     width: calc(100% - 10px);
@@ -267,12 +267,17 @@
 
     .modal-header {
         border: 1px solid $notPrimaryColor;
-        background: $notTerciaryColor;
+        background: $notFourtyColor;
         border-radius: 0.25rem;
         height: 50px;
 
         .modal-title {
             width: 100%;
+        }
+
+        button
+        {
+            background: $notTerciaryColor !important;
         }
     }
 
@@ -290,25 +295,34 @@
 
             scrollbar-width: thin;
 
-            .NotContent {
-                border: 0 solid;
-                box-shadow: unset;
-            }
 
-            .card-title {
+           
 
-                font-size: 1.7em;
-                margin-bottom: 25px !important;
-            }
-
-            .card-body
-            {
-                table
-                {
-                    width:  100% !important;
-                }
-            }
         }
+
+
+     
+
+    }
+
+
+    
+
+}
+
+.EditNotPage
+{
+
+    .indiana-scroll-container {
+        max-height: calc(100vh - 62px) !important;
+        min-height: calc(100vh - 62px) !important;
+        border: 0 solid;
+
+        scrollbar-width: thin;
+
+
+       
+
     }
 
 }

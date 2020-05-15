@@ -1,0 +1,290 @@
+.EditorFormPage {
+
+    font-family: $actualfontFamily;
+    border: 1px solid $notPrimaryColor;
+    background-color: #fff;
+    height: calc(100vh - 58px);
+    max-width: unset;
+    border-radius: 0.25rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .label {
+        color: $notPrimaryColor;
+        font-size: 0.9em;
+        font-weight: bold;
+        max-width: 120px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .react-datepicker__input-container {
+        input {
+            width: 100%;
+        }
+    }
+
+    .react-datepicker-wrapper {
+        display: block;
+        padding: 0;
+        border: 0;
+    }
+
+    label {
+        color: $notPrimaryColor;
+        font-size: 0.9em;
+        font-weight: bold;
+        display: inline;
+    }
+
+    input,
+    select {
+        border: 1px solid $notPrimaryColor;
+        border-radius: 0.35rem;
+        color: #000 !important;
+        font-size: 0.9em;
+        font-weight: normal;
+        box-shadow: none !important;
+        background-color: #eee !important;
+        padding: 4px 6px;
+        &:focus {
+            border: 1px solid $notPrimaryColor;
+        }
+    }
+
+    .quill {
+        border: 0 solid $notPrimaryColor;
+        border-radius: 0.35rem;
+
+        .ql-toolbar {
+            border-top-left-radius: 0.35rem;
+            border-top-right-radius: 0.35rem;
+            border: 0 solid;
+            padding: 4px 0;
+
+        }
+
+        .ql-container {
+            border: 1px solid $notPrimaryColor !important;
+            border-radius: 0.25rem;
+
+        }
+
+        .ql-editor {
+            font-family: $actualfontFamily !important;
+            background-color: #eee;
+            border-radius: 0.25rem;
+
+        }
+
+        .ql-toolbar button {
+            background: $notPrimaryColor;
+            color: #fff;
+            margin: 1px;
+            border-radius: 0.3rem;
+
+            .ql-stroke {
+                stroke: #fff;
+            }
+
+            .ql-fill {
+                fill: #fff;
+            }
+
+            .ql-active {
+                .ql-stroke {
+                    stroke: #800;
+                }
+            }
+
+            .ql-active .ql-fill {
+                stroke: #800;
+            }
+
+        }
+
+        .ql-picker.ql-header {
+            border: 1px solid $notPrimaryColor;
+            border-radius: 0.2rem;
+            background: #eee;
+        }
+
+        .ql-color-picker {
+            background: $notPrimaryColor;
+            border-radius: 0.25rem;
+            margin: 1px;
+
+            .ql-stroke {
+                stroke: #fff;
+            }
+
+        }
+
+        .ql-background {
+
+            .ql-picker-label {
+                margin-top: -2px;
+                border: 0;
+            }
+
+            .ql-fill {
+                stroke: #fff;
+                opacity: 0.5;
+
+            }
+
+        }
+
+        .ql-picker-options,
+        .ql-size,
+        .ql-tooltip {
+            border: 1px solid $notPrimaryColor !important;
+            border-radius: 0.3rem;
+        }
+    }
+
+    .EditorEntradilla {
+        .ql-editor {
+            min-height: 100px;
+        }
+    }
+
+    .EditorContenido {
+        .ql-editor {
+            min-height: 200px;
+        }
+    }
+
+    .toggle-container {
+        label {
+            margin-left: 5px;
+            position: relative;
+            top: -6px;
+        }
+
+        .react-toggle--checked .react-toggle-track {
+            border: 1px solid;
+            background-color: $activeColor;
+           
+        };
+        .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+            border: 1px solid;
+            background-color: $notPrimaryColor;
+
+        };
+
+        .react-toggle--checked,
+        .react-toggle--focus .react-toggle-thumb {
+            box-shadow: none !important;
+        }
+        .react-toggle-track {
+
+            border: 1px solid;
+            background-color: $inactiveColor;
+            border-radius: 0.3rem;
+        }
+
+        .react-toggle-thumb {
+
+            border-radius: 0.3rem;
+        }
+
+        .react-toggle--checked .react-toggle-thumb {
+            left: 27px;
+            border-color: unset;
+        }
+
+        .react-toggle--focus .react-toggle-thumb {
+            -webkit-box-shadow: unset;
+            -moz-box-shadow: unset;
+            box-shadow: unset;
+        }
+        .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+            -webkit-box-shadow: unset;
+            -moz-box-shadow: unset;
+            box-shadow: unset;
+        }
+
+    }
+
+    .select-container {
+
+        
+        .rw-popup
+        {
+         
+            border: 1px solid $notPrimaryColor !important;
+            border-top: 0px !important;
+            box-shadow: unset !important;
+
+            .rw-list-option
+            {
+                font-size: 0.9em;
+                font-weight: bold;
+
+                .rw-state-focus
+                {
+                border: 0px solid;
+                }
+
+                
+            }
+
+            .rw-list-empty
+                {
+                    font-size: 0.9em;
+                font-weight: bold;
+                }
+        }
+
+        .rw-widget-input {
+            border: 1px solid $notPrimaryColor;
+            box-shadow: unset !important;
+            background: #eee;
+
+            input {
+                border: 0px solid;
+                position: relative;
+                display: none;
+             
+            }
+
+
+        }
+
+
+            .rw-multiselect-tag {
+                vertical-align: unset;
+                border: 1px solid;
+                background: #fff;
+                border-radius: 0.3rem;
+                font-size: 0.9em;
+                font-weight: bold;
+                
+                button
+                {
+                 
+                    background-color: #091220;
+                    border: 1px solid #091220;
+                    color: #fff;
+                    opacity: 1 !important;
+                    margin: 4px;
+                    width: 24px;
+                    border-radius: 0.2rem;
+                    margin-left: 10px;
+                    margin-right: 0px;
+                    font-size: 15px;
+                    padding: -5px;
+                    font-weight: bold;
+                }
+            }
+
+           
+    }
+
+}

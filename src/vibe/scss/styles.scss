@@ -3,9 +3,10 @@
 @import './components/index';
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import './mystyles/vars.scss';
 @import './mystyles/SearchNotPage.scss';
+@import './mystyles/EditorNotPage.scss';
 @import './mystyles/NavBar.scss';
 body
 {

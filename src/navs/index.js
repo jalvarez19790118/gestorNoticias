@@ -2,12 +2,12 @@ export default {
   top: [
 
     {
-      name: 'Buscador',
+      name: 'Visor',
       open: true,
       icon: {
 
         lib: 'Feather',
-        name: 'FiSearch',
+        name: 'FiEye',
         style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
 
       },
@@ -46,8 +46,18 @@ export default {
       
 
     },
-
     
+    {
+      name: 'Editor de noticias',
+      url: '/gestor/editor',
+      icon: {
+
+        lib: 'Feather',
+        name: 'FiEdit',
+        style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
+
+      }
+    }
 
       
     

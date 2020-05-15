@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import MyIcon from '../../../vibe/components/SidebarNav/components/MyIcon';
 
 import {
@@ -15,7 +15,6 @@ import {Html5Entities} from 'html-entities';
 
 const NotContent = ({item, modal, showModal}) => {
 
-    
     const d = new Date(item.fh_public)
     const dtf = new Intl.DateTimeFormat('en', {
         year: 'numeric',
@@ -63,39 +62,43 @@ const NotContent = ({item, modal, showModal}) => {
     const IconDelete = <MyIcon
         item={{
         lib: 'Feather',
-        name: 'FiXSquare',
+        name: 'FiXCircle',
         style: styleObj
     }}/>;
 
-
-
+    const IconInfo = <MyIcon
+        item={{
+        lib: 'Feather',
+        name: 'FiInfo',
+        style: styleObj
+    }}/>;
 
     const showModalWindow = () => {
 
         showModal({
             ...modal,
-          item: item,
-          show: true
+            item: item,
+            show: true
         });
     }
 
     return (
 
-        <Card onClick={showModalWindow} className="NotContent m-0 p-0">
+        <Card className="NotContent m-0 p-0">
 
             <CardHeader>
                 <div className="float-left">
                     <Button>{IconEdit}</Button>
                     <Button>{IconCopy}</Button>
-                   
+                    <Button>{IconDelete}</Button>
                 </div>
                 <div className="float-right">
-                  <Button>{IconDelete}</Button>
+                    <Button>{IconInfo}</Button>
                 </div>
 
             </CardHeader>
 
-            <CardBody>
+            <CardBody onClick={showModalWindow}>
                 <CardTitle className="m-0 p-0">
                     {htmlEntities.decode(item.titular)}
 
@@ -110,11 +113,16 @@ const NotContent = ({item, modal, showModal}) => {
 
                 </CardSubtitle>
 
-                <CardText className="mt-2">
+                <CardText className="mt-2 mh_not">
 
-                
                     {htmlEntities.decode(item.entradilla)}
-               
+
+                    <br/><br/>
+
+                    <span
+                        dangerouslySetInnerHTML={{
+                        __html: item.contenido_html
+                    }}/>
 
                 </CardText>
 

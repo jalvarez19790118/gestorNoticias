@@ -4,7 +4,7 @@ import { Container, Row, Col, FormGroup, Label, Input } from 'reactstrap';
 import Pagination from "react-js-pagination";
 
 import NotContentPanel from './NotContentPanel';
-import LoadingCard from './LoadingCard';
+import LoadingCard from '../../commons/LoadingCard';
 
 
 

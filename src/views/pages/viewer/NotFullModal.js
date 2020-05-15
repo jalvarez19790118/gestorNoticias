@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import ScrollContainer from "react-indiana-drag-scroll";
-import NotContentFull from './NolContentFull';
+import NotContentFull from './NotContentFull';
 import MyIcon from '../../../vibe/components/SidebarNav/components/MyIcon';
 
 const NotFullModal = ({modal, showModal}) => {
@@ -13,22 +13,18 @@ const NotFullModal = ({modal, showModal}) => {
         show: false
     });
 
-
-
     const styleObj = {
         'fontSize': '20px',
         'margin': '2px',
-        'color' : '#162c50'
+        'color': '#fff'
     };
 
     const IconClose = <MyIcon
-    item={{
-    lib: 'Feather',
-    name: 'FiXSquare',
-    style: styleObj
-}}/>;
-
-
+        item={{
+        lib: 'Feather',
+        name: 'FiXSquare',
+        style: styleObj
+    }}/>;
 
     return (
 
@@ -37,11 +33,9 @@ const NotFullModal = ({modal, showModal}) => {
             <Modal isOpen={show} toggle={toggle} className="NotFullModal">
                 <ModalHeader className="m-0 p-1">
 
-               
-
-                <div className="float-right">
-                  <Button onClick={toggle}>{IconClose}</Button>
-                </div>
+                    <div className="float-right">
+                        <Button onClick={toggle}>{IconClose}</Button>
+                    </div>
 
                 </ModalHeader>
 
