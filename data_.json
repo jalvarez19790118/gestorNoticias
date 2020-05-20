@@ -4707,6 +4707,175 @@
     "creation":"2010-09-02 13:24:45",
     "ib_destacado":"0",
     "profesionales":"0"
-    }]
+    }],
+
+    {
+      "Especialidades": [
+  
+          {
+              "id": 159,
+              "nombre": "Alergología"
+          }, {
+              "id": 6,
+              "nombre": "Alergología - Inmunología"
+          }, {
+              "id": 152,
+              "nombre": "Análisis clínicos"
+          }, {
+              "id": 9,
+              "nombre": "Anatomía patológica"
+          }, {
+              "id": 7,
+              "nombre": "Anestesiología"
+          }, {
+              "id": 100,
+              "nombre": "Angiologia y cirugia cardiovascular"
+          }, {
+              "id": 156,
+              "nombre": "Bioquímica clínica"
+          }, {
+              "id": 10,
+              "nombre": "Cardiología"
+          }, {
+              "id": 151,
+              "nombre": "Cirugía"
+          }, {
+              "id": 19,
+              "nombre": "Cirugia cardiovascular"
+          }, {
+              "id": 22,
+              "nombre": "Cirugia general y del aparato digestivo"
+          }, {
+              "id": 24,
+              "nombre": "Cirugia oral y maxilofacial"
+          }, {
+              "id": 27,
+              "nombre": "Cirugia ortopédica y traumatologia"
+          }, {
+              "id": 23,
+              "nombre": "Cirugia pediatrica"
+          }, {
+              "id": 26,
+              "nombre": "Cirugia plastica estetica y reparadora"
+          }, {
+              "id": 31,
+              "nombre": "Cirugia toracica"
+          }, {
+              "id": 81,
+              "nombre": "Deportiva"
+          }, {
+              "id": 34,
+              "nombre": "Dermatología"
+          }, {
+              "id": 48,
+              "nombre": "Endocrinología y nutrición"
+          }, {
+              "id": 65,
+              "nombre": "Enfermedades infecciosas"
+          }, {
+              "id": 127,
+              "nombre": "Estomatología"
+          }, {
+              "id": 93,
+              "nombre": "Farmacología"
+          }, {
+              "id": 139,
+              "nombre": "Gastroenterología"
+          }, {
+              "id": 56,
+              "nombre": "Geriatría"
+          }, {
+              "id": 150,
+              "nombre": "Ginecología y obstetricia"
+          }, {
+              "id": 59,
+              "nombre": "Hematología"
+          }, {
+              "id": 160,
+              "nombre": "Inmunologia"
+          }, {
+              "id": 77,
+              "nombre": "Legal y forense"
+          }, {
+              "id": 82,
+              "nombre": "Medicina del trabajo"
+          }, {
+              "id": 161,
+              "nombre": "Medicina familiar y comunitaria"
+          }, {
+              "id": 162,
+              "nombre": "Medicina física y rehabilitación"
+          }, {
+              "id": 74,
+              "nombre": "Medicina General"
+          }, {
+              "id": 153,
+              "nombre": "Medicina intensiva"
+          }, {
+              "id": 76,
+              "nombre": "Medicina interna"
+          }, {
+              "id": 78,
+              "nombre": "Medicina nuclear"
+          }, {
+              "id": 163,
+              "nombre": "Medicina preventiva y de salud pública"
+          }, {
+              "id": 164,
+              "nombre": "Microbiologia y parasitología"
+          }, {
+              "id": 85,
+              "nombre": "Nefrología"
+          }, {
+              "id": 105,
+              "nombre": "Neumología"
+          }, {
+              "id": 141,
+              "nombre": "Neurocirugía"
+          }, {
+              "id": 165,
+              "nombre": "Neurofisiología clínica"
+          }, {
+              "id": 84,
+              "nombre": "Neurología"
+          }, {
+              "id": 91,
+              "nombre": "Oftalmología"
+          }, {
+              "id": 90,
+              "nombre": "Oncología médica"
+          }, {
+              "id": 166,
+              "nombre": "Oncología radioterápica"
+          }, {
+              "id": 92,
+              "nombre": "Otorrinolaringología"
+          }, {
+              "id": 143,
+              "nombre": "otros"
+          }, {
+              "id": 96,
+              "nombre": "Pediatría"
+          }, {
+              "id": 167,
+              "nombre": "Psicología clínica"
+          }, {
+              "id": 104,
+              "nombre": "Psiquiatría"
+          }, {
+              "id": 168,
+              "nombre": "Radiofarmacia"
+          }, {
+              "id": 114,
+              "nombre": "Reumatología"
+          }, {
+              "id": 140,
+              "nombre": "Urgencias"
+          }, {
+              "id": 136,
+              "nombre": "Urología"
+          }
+      ]
+  }
     
 }

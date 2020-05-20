@@ -1,4 +1,4 @@
-import React, {createContext, useState, useEffect} from 'react';
+import React, {createContext, useState} from 'react';
 import clienteAxios from '../config/axios';
 
 export const MyContext = createContext();
@@ -7,7 +7,14 @@ const MyProvider = (props) => {
 
   
 
- 
+    const [allResults,setAllResults] = useState([]);
+    const [loadingNews,setLoadingNews] = useState(false)
+    const [news,setNews] = useState([]);
+    const [type, setType] = useState(null);
+    const [size, setSize] = useState(20);
+    const [pages, setPages] = useState(0);
+    const [currentPage, setCurrentPage] = useState(1);
+    
 
 
     const obtieneNoticias = async(tipo) => {
@@ -36,14 +43,7 @@ const MyProvider = (props) => {
         }
     }
 
-    const [allResults,setAllResults] = useState([]);
-    const [loadingNews,setLoadingNews] = useState(false)
-    const [news,setNews] = useState([]);
-    const [type, setType] = useState(null);
-    const [size, setSize] = useState(20);
-    const [pages, setPages] = useState(0);
-    const [currentPage, setCurrentPage] = useState(1);
-    
+
     const setNewSize = (newSize) => {
         if (newSize.length === 0 ) return null;
        

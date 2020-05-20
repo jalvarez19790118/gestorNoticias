@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useContext, useState, useEffect, Fragment} from 'react';
+import {FormContext} from '../../../context/FormContext';
 import {
     Container,
     Col,
@@ -10,326 +11,116 @@ import {
 } from 'reactstrap';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import DatePicker, {registerLocale} from "react-datepicker";
-import es from "date-fns/locale/es"; // the locale you want
-import "react-datepicker/dist/react-datepicker.css";
-import Toggle from 'react-toggle'
-import "react-toggle/style.css";
-import Select  from 'react-select';
 
-registerLocale("es", es);
+import {modules, formats, modules_entradilla} from './config/quill_config';
+
+
 
 const EditorFormPage = ({noticia, setNoticia}) => {
 
-    const setFormValue = (target, value) => {
+    const [defaultEspec,
+        setdefaultEspec] = useState([]);
 
-        let new_noticia = {
-            ...noticia
+    const {especialidades} = useContext(FormContext);
+
+    useEffect(() => {
+
+        if (especialidades.length > 0) {
+
+            let options = [];
+
+            especialidades.map((value, key) => {
+
+                options.push({value: value.id, label: value.nombre});
+
+            })
+
+            setdefaultEspec(options);
+        }
+
+    }, [especialidades])
+
+    const setFormValue = (field, value, is_date = false) => {
+
+        let fields = {
+            ...noticia.fields,
+            [field]: value
         };
 
-        new_noticia[target] = value;
-        setNoticia(new_noticia);
+        setNoticia({
+            ...noticia,
+            fields
+        })
 
     }
-
-    const modules_entradilla = {
-        toolbar: [
-            ['bold', 'italic', 'underline', 'strike']
-        ]
-    }
-
-    const modules = {
-        toolbar: [
-
-            [
-                {
-                    'header': [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        false
-                    ]
-                }
-            ],
-            [
-                'bold', 'italic', 'underline', 'strike'
-            ],
-            [
-                {
-                    'list': 'ordered'
-                }, {
-                    'list': 'bullet'
-                }, {
-                    'indent': '-1'
-                }, {
-                    'indent': '+1'
-                }
-            ],
-            [
-                'link', 'image'
-            ],
-            [
-                {
-                    'color': []
-                }, {
-                    'background': []
-                }
-            ],
-            ['clean']
-        ]
-    }
-
-    const formats = [
-        'header',
-        'bold',
-        'italic',
-        'underline',
-        'strike',
-        'blockquote',
-        'list',
-        'bullet',
-        'indent',
-        'link',
-        'image',
-        'color'
-    ]
-
-
-    const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
-      ]
 
     return (
 
+        <Fragment>
         <Container fuid="true" className="EditorFormPage m-0 p-0">
 
-            <Row>
-                <Col sm='12'>
-                    <Form>
-                        <Row className="m-0 p-0 px-1 pt-2 pb-1">
+            <Form>
 
-                            <Col xs="12" className="m-0 p-0  d-flex ">
-                                <div className="text-left toggle-container">
-                                    <Toggle
-                                        id='show_not'
-                                        defaultChecked={true}
-                                        onChange={e => console.log(e.target)}/>
-                                    <label>Mostrar</label>
+                <Row className="m-0 p-2">
 
-                                    <Toggle
-                                        id='show_not'
-                                        defaultChecked={false}
-                                        onChange={e => console.log(e.target)}/>
-                                    <label>Destacado</label>
+                    <Col sm="12" className="m-0 p-0 py-0">
+                        <FormGroup className="p-0">
+                            <Label for="exampleEmail">Titular:</Label>
+                            <Input
+                                onChange={e => setFormValue(e.target.name, e.target.value)}
+                                type="text"
+                                name="titular"
+                                id="titular"
+                                value={noticia.fields.titular}
+                                placeholder=""/>
+                        </FormGroup>
+                    </Col>
 
-                                    <Toggle id='show_bot' defaultChecked={false} onChange={e => console.log(e)}/>
-                                    <label>Profesionales</label>
+                </Row>
 
-                                    <Toggle
-                                        id='show_bot'
-                                        defaultChecked={false}
-                                        onChange={e => console.log(e.target)}/>
-                                    <label>Boletín</label>
-                                </div>
-                            </Col>
+                <Row className="m-0 p-0 px-2 pb-1 ">
+                    <Col xs="12" className="m-0  p-0">
+                        <FormGroup className="p-0">
+                            <Label for="exampleEmail">Entradilla:</Label>
 
-                        </Row>
+                            <ReactQuill
+                                modules={modules_entradilla}
+                                theme="snow"
+                                name="entradilla"
+                                value={noticia.fields.entradilla}
+                                className="EditorEntradilla"
+                                onChange={e => setFormValue('entradilla', e)}/>
 
-                        <Row className="m-0 p-0 px-1 pt-1 pb-1">
+                        </FormGroup>
+                    </Col>
 
-                            <Col xs="4" className="m-0 p-0 pr-2 py-0 ">
+                </Row>
 
-                                <FormGroup>
-                                    <div className="label">Publicacion:</div>
-                                    <DatePicker
-                                        selected={noticia.fh_public}
-                                        value={noticia.fh_public}
-                                        className="text-center"
-                                        onChange={date => setFormValue('fh_public', date)}
-                                        locale="es"
-                                        dateFormat="dd-MM-yyyy"
-                                        placeholderText=""/>
+                <Row className="m-0 p-0 px-2 pb-1 ">
+                    <Col xs="12" className="m-0  p-0">
+                        <FormGroup className="p-0">
+                            <Label for="exampleEmail">Contenido:</Label>
 
-                                </FormGroup>
-                            </Col>
-                            <Col xs="4" className="m-0 p-0 pr-2 py-0 ">
+                            <ReactQuill
+                                modules={modules}
+                                formats={formats}
+                                theme="snow"
+                                name="contenido_html"
+                                value={noticia.fields.contenido_html}
+                                className="EditorContenido"
+                                onChange={e => setFormValue('contenido_html', e)}/>
 
-                                <FormGroup>
-                                    <div className="label">Desactivación:</div>
-                                    <DatePicker
-                                        selected={noticia.fh_desactivacion}
-                                        className="text-center"
-                                        value={noticia.fh_desactivacion}
-                                        onChange={date => setFormValue('fh_desactivacion', date)}
-                                        locale="es"
-                                        dateFormat="dd-MM-yyyy"
-                                        placeholderText=""/>
+                        </FormGroup>
+                    </Col>
 
-                                </FormGroup>
-                            </Col>
+                </Row>
 
-                            <Col xs="4" className="m-0 p-0 pr-2 py-0 ">
+            </Form>
 
-                                <FormGroup>
-                                    <div className="label">En Portada hasta:</div>
-                                    <DatePicker
-                                        selected={noticia.fh_desactivacion}
-                                        className="text-center"
-                                        value={noticia.fh_desactivacion}
-                                        onChange={date => setFormValue('fh_desactivacion', date)}
-                                        locale="es"
-                                        dateFormat="dd-MM-yyyy"
-                                        placeholderText=""/>
-
-                                </FormGroup>
-                            </Col>
-
-                        </Row>
-                        <Row className="m-0 p-0 px-1 pb-1 ">
-
-                            <Col xs="3" className="m-0 p-0 pr-1 py-0">
-
-                                <FormGroup>
-                                    <Label>Tipo:</Label>
-                                    <Input
-                                        type="select"
-                                        name="tipo_referencia"
-                                        onChange={e => setFormValue(e.target.name, e.target.value)}>
-                                        <option value="LAB">Laboratorio</option>
-                                        <option value="ENT">Entidad</option>
-
-                                    </Input>
-                                </FormGroup>
-                            </Col>
-
-                            <Col xs="9" className="m-0 px-1 py-0">
-
-                                <FormGroup className="p-0">
-                                    <Label for="exampleEmail">Entidad/Laboratorio:</Label>
-                                    <Input
-                                        onChange={e => setFormValue(e.target.name, e.target.value)}
-                                        type="text"
-                                        name="titular"
-                                        id="titular"
-                                        value={noticia.titular}
-                                        placeholder=""/>
-                                </FormGroup>
-
-                            </Col>
-
-                        </Row>
-
-                        <Row className="m-0 p-0 px-1 pb-1 ">
-
-                            <Col xs="3" className="m-0 p-0 pr-1 py-0">
-
-                                <FormGroup>
-                                    <Label>Categoria:</Label>
-                                    <Input
-                                        type="select"
-                                        name="tipo_referencia"
-                                        onChange={e => setFormValue(e.target.name, e.target.value)}></Input>
-                                </FormGroup>
-                            </Col>
-
-                            <Col xs="9" className="m-0 px-1 py-0">
-
-                                <FormGroup className="p-0">
-                                    <Label for="exampleEmail">Palabra clave:</Label>
-                                    <Input
-                                        onChange={e => setFormValue(e.target.name, e.target.value)}
-                                        type="text"
-                                        name="titular"
-                                        id="titular"
-                                        value={noticia.titular}
-                                        placeholder=""/>
-                                </FormGroup>
-
-                            </Col>
-
-                        </Row>
-
-                        <Row className="m-0 p-0 px-1 pt-2 pb-1">
-                            <Col xs="12" className="m-0 p-0 ">
-
-                                <div className="toggle-container">
-                                    <Toggle id='show_bot' defaultChecked={false} onChange={e => console.log(e)}/>
-                                    <label>Especialidas Médicas</label>
-
-                                </div>
-                                <div class="select-container">
-
-                                <Select
-                                    
-                                    isMulti
-                                    options={options}/>
-                                </div>
-                            </Col>
-                        </Row>
-
-                        <Row className="m-0 p-2">
-
-                            <Col sm="12" className="m-0 p-0 py-0">
-                                <FormGroup className="p-0">
-                                    <Label for="exampleEmail">Titular:</Label>
-                                    <Input
-                                        onChange={e => setFormValue(e.target.name, e.target.value)}
-                                        type="text"
-                                        name="titular"
-                                        id="titular"
-                                        value={noticia.titular}
-                                        placeholder=""/>
-                                </FormGroup>
-                            </Col>
-
-                        </Row>
-
-                        <Row className="m-0 p-0 px-2 pb-1 ">
-                            <Col xs="12" className="m-0  p-0">
-                                <FormGroup className="p-0">
-                                    <Label for="exampleEmail">Entradilla:</Label>
-
-                                    <ReactQuill
-                                        modules={modules_entradilla}
-                                        theme="snow"
-                                        name="entradilla"
-                                        value={noticia.entradilla}
-                                        className="EditorEntradilla"
-                                        onChange={e => setFormValue('entradilla', e)}/>
-
-                                </FormGroup>
-                            </Col>
-
-                        </Row>
-
-                        <Row className="m-0 p-0 px-2 pb-1 ">
-                            <Col xs="12" className="m-0  p-0">
-                                <FormGroup className="p-0">
-                                    <Label for="exampleEmail">Contenido:</Label>
-
-                                    <ReactQuill
-                                        modules={modules}
-                                        formats={formats}
-                                        theme="snow"
-                                        name="contenido_html"
-                                        value={noticia.contenido_html}
-                                        className="EditorContenido"
-                                        onChange={e => setFormValue('contenido_html', e)}/>
-
-                                </FormGroup>
-                            </Col>
-
-                        </Row>
-
-                    </Form>
-                </Col>
-            </Row>
         </Container>
+       
+
+        </Fragment>
 
     )
 }
