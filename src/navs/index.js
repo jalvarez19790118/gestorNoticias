@@ -19,8 +19,8 @@ export default {
 
           icon: {
 
-            lib: 'Bs',
-            name: 'BsNewspaper',
+            lib: 'Feather',
+            name: 'FiFileText',
             style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
     
           }
@@ -33,8 +33,8 @@ export default {
 
           icon: {
 
-            lib: 'Bs',
-            name: 'BsFillExclamationTriangleFill',
+            lib: 'Feather',
+            name: 'FiAlertTriangle',
             style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
     
           }
@@ -47,8 +47,55 @@ export default {
 
     },
     
+
+
     {
-      name: 'Editor',
+      name: 'Añadir',
+      open: false,
+      icon: {
+
+        lib: 'Feather',
+        name: 'FiFilePlus',
+        style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
+
+      },
+
+      children: [
+        {
+          name: 'Nueva noticia',
+          url: '/gestor/editor/nueva_noticia',
+
+          icon: {
+
+            lib: 'Feather',
+            name: 'FiFileText',
+            style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
+    
+          }
+
+        },
+
+        {
+          name: 'Nueva alerta',
+          url: '/gestor/editor/nueva_alerta',
+
+          icon: {
+
+            lib: 'Feather',
+            name: 'FiAlertTriangle',
+            style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
+    
+          }
+
+        },
+      
+      
+      ]
+    },
+
+
+    {
+      name: 'Editar',
       open: false,
       icon: {
 
@@ -60,13 +107,13 @@ export default {
 
       children: [
         {
-          name: 'Nueva Noticia',
-          url: '/gestor/editor/nueva_noticia',
+          name: 'Editar noticia',
+          url: '/gestor/editor/editar_noticia',
 
           icon: {
 
-            lib: 'Bs',
-            name: 'BsNewspaper',
+            lib: 'Feather',
+            name: 'FiFileText',
             style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
     
           }
@@ -74,13 +121,13 @@ export default {
         },
 
         {
-          name: 'Nueva Alerta',
-          url: '/gestor/editor/nueva_alerta',
+          name: 'Editar alerta',
+          url: '/gestor/editor/editar_alerta',
 
           icon: {
 
-            lib: 'Bs',
-            name: 'BsFillExclamationTriangleFill',
+            lib: 'Feather',
+            name: 'FiAlertTriangle',
             style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
     
           }

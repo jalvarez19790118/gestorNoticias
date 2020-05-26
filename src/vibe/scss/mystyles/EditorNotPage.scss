@@ -1,8 +1,7 @@
 .EditNotPage {
-   
-    .Editor_container
-    {
-        height: calc(100vh - 50px);
+
+    .Editor_container {
+        height: calc(100vh - 83px);
         overflow-y: auto;
         overflow-x: hidden;
     }
@@ -34,29 +33,25 @@
 
             input {
                 width: 100%;
-                
 
             }
 
         }
 
-        .react-datepicker-popper
-        {
+        .react-datepicker-popper {
             z-index: 10000;
 
-            .react-datepicker__header
-            {
-                background-color: #f2f5f9;
+            .react-datepicker__header {
+                background-color: #eee;
             }
-            .react-datepicker__month-container
-            {
-            -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-            -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-            border-radius: 0.35rem;
+            .react-datepicker__month-container {
+                -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+                -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+                box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+                border-radius: 0.35rem;
             }
         }
-        
+
         .react-datepicker-wrapper {
             display: block;
             padding: 0;
@@ -78,7 +73,7 @@
             font-size: 0.9em;
             font-weight: normal;
             box-shadow: none !important;
-            background-color: #f2f5f9 !important;
+            background-color: #eee !important;
             padding: 4px 6px;
             font-weight: bold;
             &:focus {
@@ -140,7 +135,7 @@
             .react-toggle-thumb {
 
                 border: 0 solid $borderSectionColor;
-                background-color: #f2f5f9;
+                background-color: #eee;
                 border-radius: 0.2rem;
             }
 
@@ -170,7 +165,7 @@
 
             div[class$="control"] {
                 border: 1px solid $borderSectionColor;
-                background: #f2f5f9;
+                background: #eee;
                 font-size: 0.9em;
                 font-weight: bold;
                 color: $notPrimaryColor;
@@ -211,9 +206,8 @@
             div[class$='-Input'] {
 
                 margin-left: 8px;
-                input
-                {
-                display:none;
+                input {
+                    display: block;
                 }
             }
 
@@ -301,13 +295,13 @@
 
         hr {
 
-            border-top: wpx solid #f2f5f9;
+            border-top: wpx solid #eee;
         }
 
         .listGroup {
             border: 1px solid $borderSectionColor;
             border-radius: 0.25rem;
-            background: #f2f5f9;
+            background: #eee;
             padding: 0;
             margin-top: 5px !important;
             padding-top: 0 !important;
@@ -316,7 +310,7 @@
                 border: 0 solid $notPrimaryColor;
                 border-bottom: 1px solid $borderSectionColor;
 
-                background: #f2f5f9;
+                background: #eee;
                 font-size: 0.9em;
                 font-weight: bold;
 
@@ -371,7 +365,7 @@
                 padding: 1px;
                 box-shadow: unset;
                 text-align: center;
-                background: #f2f5f9;
+                background: #eee;
                 border-radius: 0.35rem;
             }
 
@@ -396,6 +390,12 @@
             padding: 0 0.25rem 0.25rem !important;
 
         }
+    }
+
+
+    .formFieldsPageContainer,.formPageContainer
+    {
+        margin-top: 40px !important;
     }
 
     .carrousel {
@@ -429,12 +429,10 @@
         font-weight: bold;
         font-size: 0.7em;
         font-weight: bold;
-      
-        
+
         margin-top: auto !important;
         margin-bottom: auto !important;
         display: grid;
-       
 
     }
 
@@ -453,7 +451,7 @@
                     color: $notSecondaryColor;
                     &:hover {
 
-                        background: #f2f5f9;
+                        background: #eee;
                     }
                 }
             }
@@ -472,19 +470,23 @@
         }
 
         .se-wrapper-wysiwyg {
-            background-color: #f2f5f9;
+            background-color: #eee;
             display: block;
             border: 1px solid $borderSectionColor;
             margin-left: 2px;
             margin-right: 2px;
             width: calc(100% - 4px);
             border-radius: 0.25rem;
-            margin-top: 0px;
+            margin-top: 0;
             margin-bottom: 4px;
         }
 
         .se-resizing-bar {
             display: none;
         }
+        .EditNotPage .EditorFormPage .select-container div[class$='-Input'] input {
+            /* display: none; */
+        }
     }
 }
+

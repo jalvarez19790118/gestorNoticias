@@ -82,6 +82,7 @@
         box-shadow: unset !important;
         margin: 0px;
         margin-right: 10px;
+        margin-left: 10px;
         padding: 2px;
         &:hover {
 
@@ -114,13 +115,14 @@
 
 .site-logo-bar .navbar-brand {
     padding: 0 5px;
+    background: $notPrimaryColor;
     img {
         max-height: 50px;
         max-width: 40px;
         display: inline-block;
         border: 1px solid #fff;
         border-radius: 0.15rem;
-        margin-right: 8px;
+        margin-right: 4px;
     }
 
 
@@ -137,4 +139,47 @@
 }
 }
 
+.app-body
+{
+    overflow: hidden;
+}
 
+.app-sidebar {
+   width: 185px;
+    box-shadow: 0px 0px 1px    2px rgba(0, 0, 0, 0.3), 0px 0px 1px 2px rgba(0, 21, 41, 0.1);
+}
+
+#page-content {
+    margin-left: 185px;
+}
+
+
+#main-menu
+{
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1);
+}
+
+#main-menu .nav-item > a {
+  
+    padding: 7px 10px;
+    font-size: .9em;
+    font-weight: bold;
+   
+}
+
+
+#main-menu .nav-item.has-submenu ul .nav-item a {
+    padding-left: 15px;
+    font-weight: normal;
+   
+   
+
+}
+
+
+#main-menu .menu-expand-icon {
+  
+    right: 5px;
+    top: 8px;
+   
+}

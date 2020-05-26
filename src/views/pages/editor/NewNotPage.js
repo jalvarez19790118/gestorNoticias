@@ -1,6 +1,9 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import LoadingCard from '../../commons/LoadingCard';
 import EditorContentPanel from './EditorContentPanel';
+import EditorHeader from './EditorHeader';
+
+import EditorFooter from './EditorFooter';
 import {init_noticia} from './config/noticia_config';
 const NewNotPage = () => {
 
@@ -58,7 +61,7 @@ const NewNotPage = () => {
         <Fragment>
             {first
                 ? <LoadingCard/>
-                : <EditorContentPanel noticia={noticia} setNoticia={setNoticia}/>}
+                : <Fragment><EditorHeader/><EditorContentPanel type={'nueva_noticia'}  noticia={noticia} setNoticia={setNoticia}/></Fragment>}
         </Fragment>
     )
 

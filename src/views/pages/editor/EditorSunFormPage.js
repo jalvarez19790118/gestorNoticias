@@ -17,7 +17,7 @@ import {MyContext} from '../../../context/MyContext';
 
 import $ from 'jquery';
 
-const EditorSunFormPage = ({noticia, setNoticia}) => {
+const EditorSunFormPage = ({type,noticia, setNoticia}) => {
 
 
 
@@ -28,7 +28,7 @@ const EditorSunFormPage = ({noticia, setNoticia}) => {
         let entrallidaheight = $('.EditorEntradilla .sun-editor').height();
         
 
-        let new_height = `${wheight - (entrallidaheight + 278)}px`;
+        let new_height = `${wheight - (entrallidaheight + 350)}px`;
 
         $('.EditorContenido .se-wrapper-wysiwyg').css({'min-height': new_height});
 
@@ -38,7 +38,7 @@ const EditorSunFormPage = ({noticia, setNoticia}) => {
 
     const saveState = (new_noticia) => {
 
-        sessionStorage.setItem('nueva_noticia', JSON.stringify(new_noticia));
+        sessionStorage.setItem(type, JSON.stringify(new_noticia));
         setNoticia(new_noticia);
     }    
 

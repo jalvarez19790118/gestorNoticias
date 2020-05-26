@@ -2,25 +2,28 @@ import React, {Fragment, useState} from 'react';
 import Dropzone from 'react-dropzone-uploader'
 import {getDroppedOrSelectedFiles} from 'html5-file-selector';
 import 'react-dropzone-uploader/dist/styles.css'
-
 import {Container, ListGroup, ListGroupItem} from 'reactstrap';
-import {IconDelete, IconAdd,IconLoad,IconPDF} from '../config/select_config';
-const AttachPdfs = ({noticia, setNoticia}) => {
+import {IconDelete, IconAdd,IconLoad,IconHTML} from '../config/select_config';
+
+const AttacthFiles = ({type, noticia, setNoticia}) => {
 
     const [lastStatus,
         setLastStatus] = useState('done');
 
+
         
 
-        const saveState = (new_noticia) => {
+    const saveState = (new_noticia) => {
 
-            sessionStorage.setItem('nueva_noticia', JSON.stringify(new_noticia));
-            setNoticia(new_noticia);
-        }    
-    
+        sessionStorage.setItem(type, JSON.stringify(new_noticia));
+        setNoticia(new_noticia);
+    }    
 
-    const setPdfFile = (file) => {
 
+
+    const setHtmlFile = (file) => {
+
+        //  console.log(file);
 
         let new_noticia = {
 
@@ -28,26 +31,26 @@ const AttachPdfs = ({noticia, setNoticia}) => {
         }
 
         new_noticia
-            .pdfs
+            .files
             .list
             .push(file);
 
-            saveState(new_noticia);
+        saveState(new_noticia);
     }
 
-    const removePdFile = (id) => {
+    const removeHtmlFile = (id) => {
 
        
 
         let new_list = noticia
-            .pdfs
+            .files
             .list
             .filter((value) => value.id !== id);
 
         let new_noticia = {
 
             ...noticia,
-            pdfs: {
+            files: {
 
                 list: new_list
             }
@@ -144,7 +147,7 @@ const AttachPdfs = ({noticia, setNoticia}) => {
         if (status === 'done') 
             setTimeout(() => {
 
-                setPdfFile(meta);
+                setHtmlFile(meta);
                 setLastStatus(status);
             }, 1000);
         else 
@@ -153,34 +156,34 @@ const AttachPdfs = ({noticia, setNoticia}) => {
     
     const handleSubmit = (files, allFiles) => {
 
-      
+        // console.log(data);
         console.log(files.map(f => f.meta))
-        
+        // allFiles.forEach(f => f.remove())
     }
 
     return (
         <Container fuid="true" className="EditorFormPage m-0 mt-1 p-0">
             <div className="m-0 p-1 dropzone">
-                <div className="label float-left">Adjuntar ficheros PDF:</div>
+                <div className="label float-left">Adjuntar ficheros:</div>
                 <Dropzone
                     getUploadParams={getUploadParams}
                     onChangeStatus={handleChangeStatus}
                     InputComponent={NewInput}
                     LayoutComponent={NewLayout}
-                    accept=".pdf"/>
+                    accept=".html, .pdf, .doc, .xml, image/*"/>
 
                 <div>
-                    {noticia.pdfs.list.length >= 1
+                    {noticia.files.list.length >= 1
                         ? <ListGroup className="listGroup m-0 p-0 ">
 
                                 {noticia
-                                    .pdfs
+                                    .files
                                     .list
                                     .map((val, key) => {
                                         return <ListGroupItem className="m-0 p-1" key={val.id}>
                                             <div className="d-flex">
-                                                <div>{IconPDF}{val.name}</div>
-                                                <div className="float-right" onClick={e => removePdFile(val.id)}>{IconDelete}</div>
+                                                <div>{IconHTML}{val.name}</div>
+                                                <div className="float-right" onClick={e => removeHtmlFile(val.id)}>{IconDelete}</div>
                                             </div>
                                         </ListGroupItem>
                                     })
@@ -196,4 +199,4 @@ const AttachPdfs = ({noticia, setNoticia}) => {
     );
 }
 
-export default AttachPdfs;
+export default AttacthFiles;

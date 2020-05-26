@@ -4,11 +4,11 @@ import FormProvider from '../../../context/FormContext';
 import $ from 'jquery';
 import EditorSunFormPage from './EditorSunFormPage';
 import EditorFieldsFormPage from './EditorFieldsFormPage';
+import EditorFooter from './EditorFooter';
 
 
 
-
-const EditorContentPanel = ({noticia,setNoticia}) => {
+const EditorContentPanel = ({type,noticia,setNoticia}) => {
 
 
     let ref = null;
@@ -28,13 +28,13 @@ const EditorContentPanel = ({noticia,setNoticia}) => {
         <Container fluid={true}  className="EditNotPage m-0 p-0">
             <Row className="m-0 p-0 Editor_container">
                 <Col sm='12' md='5' className="py-1 pl-1 pr-0 formFieldsPageContainer">
-                    <EditorFieldsFormPage noticia={noticia} setNoticia={setNoticia}/>
+                    <EditorFieldsFormPage type={type} noticia={noticia} setNoticia={setNoticia}/>
 
                 </Col>
 
 
                 <Col sm='12' md='7' className="m-0 p-1 formPageContainer">
-                 <EditorSunFormPage noticia={noticia} setNoticia={setNoticia}/>
+                 <EditorSunFormPage  type={type} noticia={noticia} setNoticia={setNoticia}/>
 
                    
                 </Col>
@@ -42,6 +42,7 @@ const EditorContentPanel = ({noticia,setNoticia}) => {
             </Row>
         </Container>
         </div>
+        <EditorFooter/>
         </FormProvider>
     );
 }

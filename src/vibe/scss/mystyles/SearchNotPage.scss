@@ -34,17 +34,21 @@
 
 .totaElemContainer {
 
-    border: 1px solid $notPrimaryColor;
+    border: 0 solid #fff;
+    border-left: 0 solid;
+    border-right: 0 solid;
     border-top: 0 solid;
-    background-color: $notFourtyColor;
+    background-color: $notPrimaryColor;
     position: absolute;
     z-index: 10;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1);
+    min-height: 38px;
+    color: #fff !important;
 
     Label {
         font-family: $actualfontFamily;
         font-size: 0.9em;
-
+        color: #fff !important;
         color: $notPrimaryColor;
     }
 
@@ -73,7 +77,7 @@
 
     font-family: $actualfontFamily;
 
-    border: 1px solid $notPrimaryColor;
+    border: 1px solid $borderSectionColor;
     border-radius: 0.25rem;
 
     display: flex;
@@ -86,26 +90,32 @@
 */
     button {
 
-        background: $notTerciaryColor !important;
-        color: #fff !important;
+        background: #eee !important;
+        color: $notPrimaryColor !important;
+        border: 1px solid #eee !important;
         border-radius: 0.35rem;
         width: auto;
         height: auto;
         box-shadow: unset;
+        padding: 0;
+        height: 30px;
+        box-shadow: unset;
+        width: 30px;
         &:hover {
-            border: 1px solid $notPrimaryColor !important;
+            border: 1px solid #eee !important;
 
-            color: $notTerciaryColor !important;
-            background: $notFourtyColor !important;
+            color: $notPrimaryColor !important;
+            background: #eee !important;
 
         }
         &:active {
 
-            border: 1px solid $notPrimaryColor !important;
+            border: 1px solid #eee !important;
             background-color: #fff !important;
 
             svg {
                 color: $notTerciaryColor !important;
+                font-size: 10px;
 
             }
         }
@@ -119,14 +129,15 @@
     .card-body {
         padding: 12px;
 
-         overflow: hidden;
-     margin-bottom: 15px !important;
+        overflow: hidden;
+        margin-bottom: 15px !important;
     }
 
- .mh_not { max-height: 300px;}
+    .mh_not {
+        max-height: 300px;
+    }
 
-    .card-text
-    {
+    .card-text {
 
         table {
             width: 100% !important;
@@ -182,8 +193,8 @@
 
     .card-header {
 
-        background-color: $notFourtyColor;
-        border: 1px solid $notTerciaryColor;
+        background-color: #eee;
+        border: 1px solid $borderSectionColor;
         margin: 2px;
         padding: 3px;
         border-radius: 0.35rem;
@@ -195,22 +206,22 @@
 }
 
 .NotFooter {
-    border: 1px solid $notPrimaryColor !important;
-    background-color: $notFourtyColor;
+    border-top: 1px solid $notPrimaryColor !important;
+    background-color: $notPrimaryColor;
     flex-direction: column;
     display: FLEX;
     position: absolute;
     z-index: 10;
     box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.3), 0 -1px 1px 1px rgba(0, 21, 41, 0.1);
-
+    min-height: 38px;
     .pagination {
         margin-left: auto;
         margin-right: auto;
-        height: 15px;
+        height: 16px;
         margin-top: 5px;
 
         li > a {
-            background: #091220;
+            background: $notPrimaryColor;
             color: #fff;
             border-radius: 0.35rem;
             width: 28px;
@@ -218,17 +229,20 @@
             height: 28px;
             box-shadow: unset !important;
             text-align: center;
-            font-size: 1rem;
-            font-weight: bold;
+            font-size: 0.8rem;
+            font-weight: normal;
             line-height: 28px;
+            border: 1px solid $notPrimaryColor !important;
 
         }
 
         .active a {
 
-            background: #fff !important;
-            color: $notPrimaryColor !important;
-            border: 1px solid $notPrimaryColor !important;
+            background: $notPrimaryColor !important;
+            color: #fff !important;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: 0 solid $notPrimaryColor !important;
             text-decoration: none;
 
         }
@@ -238,10 +252,10 @@
 }
 
 .NotContentFull {
-   
+
     box-shadow: unset;
     height: calc(100vh - 62px);
-    border: 1px solid $notPrimaryColor;
+    border: 0 solid $borderSectionColor;
 
     .card-body {
         table {
@@ -254,10 +268,9 @@
 
         font-size: 1.7em;
         margin-bottom: 25px !important;
-        font-weight:bold;
+        font-weight: bold;
     }
 }
-
 
 .NotFullModal {
     max-width: 950px;
@@ -266,8 +279,8 @@
     height: calc(100vh - 15px);
 
     .modal-header {
-        border: 1px solid $notPrimaryColor;
-        background: $notFourtyColor;
+        border: 1px solid $borderSectionColor;
+        background: #eee;
         border-radius: 0.25rem;
         height: 50px;
 
@@ -275,9 +288,13 @@
             width: 100%;
         }
 
-        button
-        {
-            background: $notTerciaryColor !important;
+        button {
+            background: #eee !important;
+            box-shadow: none;
+            border: 0 solid $borderSectionColor;
+            svg {
+                color: $notPrimaryColor;
+            }
         }
     }
 
@@ -295,23 +312,13 @@
 
             scrollbar-width: thin;
 
-
-           
-
         }
-
-
-     
 
     }
 
-
-    
-
 }
 
-.EditNotPage
-{
+.EditNotPage {
 
     .indiana-scroll-container {
         max-height: calc(100vh - 62px) !important;
@@ -319,9 +326,6 @@
         border: 0 solid;
 
         scrollbar-width: thin;
-
-
-       
 
     }
 

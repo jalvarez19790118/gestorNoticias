@@ -14,6 +14,7 @@ import AsyncSelect, {components} from 'react-select/async';
 import {IconDelete, IconAdd} from '../config/select_config';
 
 const SelectComponent = ({
+    type,
     label,
     tipo,
     noticia,
@@ -33,7 +34,7 @@ const SelectComponent = ({
 
     const saveState = (new_noticia) => {
 
-        sessionStorage.setItem('nueva_noticia', JSON.stringify(new_noticia));
+        sessionStorage.setItem(type, JSON.stringify(new_noticia));
         guardaNoticia(new_noticia);
     }    
 

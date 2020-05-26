@@ -9,14 +9,13 @@ import Toggle from 'react-toggle'
 import "react-toggle/style.css";
 import Select from 'react-select';
 
-import AttachPdfs from './attachComponents/AttachPdfs';
-import AttachHtmls from './attachComponents/AttachHtmls';
+import AttachFiles from './attachComponents/AttachFiles';
 import ImgBank from './imgComponents/ImgBank';
 import SelectComponents from './selectComponents/SelectComponent';
 
 registerLocale("es", es);
 
-const EditorFieldsFormPage = ({noticia, setNoticia}) => {
+const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
     const [defaultCat,
         setdefaultCat] = useState([]);
@@ -40,7 +39,7 @@ const EditorFieldsFormPage = ({noticia, setNoticia}) => {
 
     const saveState = (new_noticia) => {
 
-        sessionStorage.setItem('nueva_noticia', JSON.stringify(new_noticia));
+        sessionStorage.setItem(type, JSON.stringify(new_noticia));
         setNoticia(new_noticia);
     }
 
@@ -331,17 +330,10 @@ const EditorFieldsFormPage = ({noticia, setNoticia}) => {
 
             </Container>
 
-            <AttachPdfs noticia={noticia} setNoticia={setNoticia}/>
-            <AttachHtmls noticia={noticia} setNoticia={setNoticia}/>
+            <AttachFiles type={type} noticia={noticia} setNoticia={setNoticia}/>
 
             <SelectComponents
-                label={'especialidades'}
-                tipo={"especialities"}
-                noticia={noticia}
-                guardaNoticia={setNoticia}
-                opciones={especialidades}
-                obtieneOpciones={obtieneEspecialidades}/>
-            <SelectComponents
+                type={type}
                 label={'medicamentos'}
                 tipo={"drugs"}
                 noticia={noticia}
@@ -350,6 +342,7 @@ const EditorFieldsFormPage = ({noticia, setNoticia}) => {
                 obtieneOpciones={obtieneMedicamentos}/>
 
             <SelectComponents
+                type={type}
                 label={'atcs'}
                 tipo={"atcs"}
                 noticia={noticia}
@@ -358,6 +351,7 @@ const EditorFieldsFormPage = ({noticia, setNoticia}) => {
                 obtieneOpciones={obtieneAtcs}/>
 
             <SelectComponents
+                type={type}
                 label={'enfermedades'}
                 tipo={"diseases"}
                 noticia={noticia}
@@ -366,6 +360,7 @@ const EditorFieldsFormPage = ({noticia, setNoticia}) => {
                 obtieneOpciones={obtieneEnfermedades}/>
 
             <SelectComponents
+                type={type}
                 label={'laboratorios'}
                 tipo={"laboratories"}
                 noticia={noticia}
@@ -374,14 +369,15 @@ const EditorFieldsFormPage = ({noticia, setNoticia}) => {
                 obtieneOpciones={obtieneLaboratorios}/>
 
             <SelectComponents
+                type={type}
                 label={'entidades'}
                 tipo={'entities'}
                 noticia={noticia}
                 guardaNoticia={setNoticia}
                 opciones={entidades}
-                obtieneOpciones={obtieneEntidades}/>
-
-            <ImgBank keywords={keywords}/>
+                obtieneOpciones={obtieneEntidades}/> {type === 'nueva_noticia'
+                ? <ImgBank keywords={keywords}/>
+                : null}
 
         </Fragment>
     )

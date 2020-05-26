@@ -1,4 +1,4 @@
-const empty_new =  {
+const empty_new = {
 
     "fields": {
         "id_categoria": null,
@@ -52,24 +52,18 @@ const empty_new =  {
         "active": 0,
         "list": []
     },
-    "pdfs": {
+ 
 
-        "list": []
-    },
-    "htmls": {
-
+    "files": {
         "list": []
     }
-}
-
-
-const get_initial_new = () =>
-{
-
-
-    return  empty_new;
 
 }
 
+const get_initial_new = () => {
+
+    return empty_new;
+
+}
 
 export const init_noticia = get_initial_new();
