@@ -1,411 +1,490 @@
-.EditorFormPage {
-
-    font-family: $actualfontFamily;
-    border: 1px solid $notPrimaryColor;
-    background-color: #fff;
-
-    max-width: unset;
-    border-radius: 0.25rem;
-
-    .label {
-        color: $notPrimaryColor;
-        font-size: 0.9em;
-        font-weight: bold;
-        max-width: 120px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+.EditNotPage {
+   
+    .Editor_container
+    {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
-    .form-group {
-        margin-bottom: 0;
-    }
+    .EditorFormPage {
 
-    .react-datepicker__input-container {
+        font-family: $actualfontFamily;
+        border: 1px solid $borderSectionColor;
+        background-color: #fff;
 
-      
-        input {
-            width: 100%;
+        max-width: unset;
+        border-radius: 0.25rem;
+
+        .label {
+            color: $notPrimaryColor;
+            font-size: 0.9em;
+            font-weight: bold;
             max-width: 200px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .react-datepicker__input-container {
+
+            input {
+                width: 100%;
+                
+
+            }
 
         }
 
+        .react-datepicker-popper
+        {
+            z-index: 10000;
+
+            .react-datepicker__header
+            {
+                background-color: #f2f5f9;
+            }
+            .react-datepicker__month-container
+            {
+            -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+            -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+            border-radius: 0.35rem;
+            }
+        }
         
-    }
-
-    .react-datepicker-wrapper {
-        display: block;
-        padding: 0;
-        border: 0;
-    }
-
-    label {
-        color: $notPrimaryColor;
-        font-size: 0.9em;
-        font-weight: bold;
-        display: inline;
-    }
-
-    input,
-    select {
-        border: 1px solid $notPrimaryColor;
-        border-radius: 0.35rem;
-        color: #000 !important;
-        font-size: 0.9em;
-        font-weight: normal;
-        box-shadow: none !important;
-        background-color: #eee !important;
-        padding: 4px 6px;
-        &:focus {
-            border: 1px solid $notPrimaryColor;
-        }
-    }
-
-    .quill {
-        border: 0 solid $notPrimaryColor;
-        border-radius: 0.35rem;
-
-        .ql-toolbar {
-            border-top-left-radius: 0.35rem;
-            border-top-right-radius: 0.35rem;
-            border: 0 solid;
-            padding: 4px 0;
-
+        .react-datepicker-wrapper {
+            display: block;
+            padding: 0;
+            border: 0;
         }
 
-        .ql-container {
-            border: 1px solid $notPrimaryColor !important;
-            border-radius: 0.25rem;
-
-        }
-
-        .ql-editor {
-            font-family: $actualfontFamily !important;
-            background-color: #eee;
-            border-radius: 0.25rem;
-
-        }
-
-        .ql-toolbar button {
-            background: $notPrimaryColor;
-            color: #fff;
-            margin: 1px;
-            border-radius: 0.3rem;
-
-            .ql-stroke {
-                stroke: #fff;
-            }
-
-            .ql-fill {
-                fill: #fff;
-            }
-
-            .ql-active {
-                .ql-stroke {
-                    stroke: #800;
-                }
-            }
-
-            .ql-active .ql-fill {
-                stroke: #800;
-            }
-
-        }
-
-        .ql-picker.ql-header {
-            border: 1px solid $notPrimaryColor;
-            border-radius: 0.2rem;
-            background: #eee;
-        }
-
-        .ql-color-picker {
-            background: $notPrimaryColor;
-            border-radius: 0.25rem;
-            margin: 1px;
-
-            .ql-stroke {
-                stroke: #fff;
-            }
-
-        }
-
-        .ql-background {
-
-            .ql-picker-label {
-                margin-top: -2px;
-                border: 0;
-            }
-
-            .ql-fill {
-                stroke: #fff;
-                opacity: 0.5;
-
-            }
-
-        }
-
-        .ql-picker-options,
-        .ql-size,
-        .ql-tooltip {
-            border: 1px solid $notPrimaryColor !important;
-            border-radius: 0.3rem;
-        }
-    }
-
-    .EditorEntradilla {
-        .ql-editor {
-            min-height: 100px;
-        }
-    }
-
-    .EditorContenido {
-        .ql-editor {
-
-            min-height: calc(100vh - 395px);
-
-            min-height: calc(100vh - 395px);
-            overflow-y: scroll;
-
-        }
-    }
-
-    .toggle-container {
-        height: 25px;
         label {
-            margin-left: 5px;
-            position: relative;
-            top: -6px;
-        }
-
-        button {
-            padding: 2px;
-            background: $notSecondaryColor !important;
-            float: right;
-            box-shadow: unset !important;
-            padding-right: 10px;
-            padding-left: 5px;
-            color: #fff;
-            font-weight: bold;
-            &:hover {
-                background: $notSecondaryColor !important;
-            }
-
+            color: $notPrimaryColor;
             font-size: 0.9em;
-            svg {
-                margin-right: 5px;
-            }
+            font-weight: bold;
+            display: inline;
         }
 
-        .react-toggle--checked .react-toggle-track {
-            border: 1px solid;
-            background-color: $activeColor;
-
-        };
-        .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-            border: 1px solid;
-            background-color: $notPrimaryColor;
-
-        };
-
-        .react-toggle--checked,
-        .react-toggle--focus .react-toggle-thumb {
+        input,
+        select {
+            border: 1px solid $borderSectionColor;
+            border-radius: 0.35rem;
+            color: #000 !important;
+            font-size: 0.9em;
+            font-weight: normal;
             box-shadow: none !important;
-        }
-        .react-toggle-track {
-
-            border: 1px solid;
-            background-color: $inactiveColor;
-            border-radius: 0.3rem;
-        }
-
-        .react-toggle-thumb {
-
-            border-radius: 0.3rem;
-        }
-
-        .react-toggle--checked .react-toggle-thumb {
-            left: 27px;
-            border-color: unset;
-        }
-
-        .react-toggle--focus .react-toggle-thumb {
-            -webkit-box-shadow: unset;
-            -moz-box-shadow: unset;
-            box-shadow: unset;
-        }
-        .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
-            -webkit-box-shadow: unset;
-            -moz-box-shadow: unset;
-            box-shadow: unset;
-        }
-
-    }
-
-    .form-control {
-        height: 33px;
-
-    }
-    .select-container {
-
-        div[class$="control"] {
-            border: 1px solid $notPrimaryColor;
-            background: #eee;
-            font-size: 0.9em;
+            background-color: #f2f5f9 !important;
+            padding: 4px 6px;
             font-weight: bold;
-            color: $notPrimaryColor;
-            box-shadow: unset;
-            min-height: unset;
+            &:focus {
+                border: 1px solid $borderSectionColor;
+            }
         }
 
-        span[class$='indicatorSeparator'] {
-            width: 0;
-        }
-
-        div[class$='-ValueContainer'] {
-            padding: 0;
-        }
-
-        div[class$='-IndicatorsContainer'] {
-
-            svg[class$='-Svg'] {
-                color: #fff;
-                stroke: #fff;
-                line-height: 2;
-                background: $notPrimaryColor;
-                border-radius: 0.3rem;
-                height: 25PX;
-                width: 25PX;
-
+        .toggle-container {
+            height: 25px;
+            label {
+                margin-left: 5px;
+                position: relative;
+                top: -6px;
             }
 
-        }
-
-
-        div[class$='-placeholder'] {
-
-           opacity: 0.5;
-           margin-left: 8px;   
-
-        }
-
-        
-        div[class$='-Input'] {
-
-            margin-left: 8px;   
- 
-         }
-
-
-        div[class$='-multiValue'] {
-            border: 1px solid $notPrimaryColor;
-            background: #fff;
-            padding: 2px;
-            border-radius: 0.3rem;
-            display: none;
-            div {
-                &:first-child {
-                    font-size: 1em;
+            button {
+                padding: 2px;
+                background: #fff !important;
+                float: right;
+                box-shadow: unset !important;
+                padding-right: 10px;
+                padding-left: 5px;
+                color: $notPrimaryColor;
+                font-weight: bold;
+                font-size: 0.9em;
+                border: 0 solid;
+                &:hover {
+                    background: #fff !important;
                 }
-                &:last-child {
 
-                    background: #091220;
-                    border-radius: 0.3rem;
-                    margin-left: 10px;
-                }
-            }
-
-        }
-
-        div[class$='-singleValue'] {
-            font-size: 1em;
-            padding-left: 4px;
-        }
-
-        svg[class$='-Svg'] {
-            color: #fff;
-            stroke: #fff;
-            line-height: 2;
-
-        }
-
-        div[class$="-menu"] {
-            border: 1px solid $notPrimaryColor;
-            background: #fff;
-            font-size: 0.9em;
-            font-weight: bold;
-           padding: 0;
-           box-shadow: unset;
-        }
-
-        .isRelative div[class$="-menu"] {
-
-            position: relative;
-
-        }
-
-        div[class$="-indicatorContainer"] {
-
-            padding: 3px;
-            margin-bottom: auto;
-
-        }
-
-        div[class$='LoadingMessage'] {
-            font-size: 0.9em;
-            font-weight: bold;
-            color: $notPrimaryColor;
-            padding: 4px;
-        }
-
-        div[class$='NoOptionsMessage'] {
-            font-size: 0.9em;
-            font-weight: bold;
-            color: $inactiveColor;
-            padding: 4px;
-            background: #f4c6c6;
-        }
-
-        div[class$='MenuList'] {
-            font-size: 0.9em;
-            font-weight: bold;
-            color: $notPrimaryColor;
-            padding: 0;
-        }
-
-        div[class$='option'] {
-
-            padding: 4px;
-        }
-    }
-
-    hr {
-
-        border-top: wpx solid #eee;
-    }
-
-    .listGroup {
-        border-top: 1px solid $notPrimaryColor;
-        padding: 0;
-        border-radius: 0;
-        margin-top: 5px !important;
-
-        .list-group-item {
-            border: 0 solid $notPrimaryColor;
-            border-bottom: 1px solid #eee;
-
-            background: #fff;
-            font-size: 0.9em;
-            font-weight: bold;
-            border-radius: 0.2rem;
-            div {
-                &:first-child {
-                    float: left;
-                    width: calc(100% - 0px);
+                font-size: 0.9em;
+                svg {
                     margin-right: 5px;
                 }
+            }
+
+            .react-toggle--checked .react-toggle-track {
+                border: 1px solid $borderSectionColor;
+                background-color: $activeColor;
+
+            };
+            .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+                border: 1px solid $borderSectionColor;
+                background-color: $notPrimaryColor;
+
+            };
+
+            .react-toggle--checked,
+            .react-toggle--focus .react-toggle-thumb {
+                box-shadow: none !important;
+            }
+            .react-toggle-track {
+
+                border: 1px solid $borderSectionColor;
+                background-color: $inactiveColor;
+                border-radius: 0.3rem;
+            }
+
+            .react-toggle-thumb {
+
+                border: 0 solid $borderSectionColor;
+                background-color: #f2f5f9;
+                border-radius: 0.2rem;
+            }
+
+            .react-toggle--checked .react-toggle-thumb {
+                left: 27px;
+                border-color: unset;
+            }
+
+            .react-toggle--focus .react-toggle-thumb {
+                -webkit-box-shadow: unset;
+                -moz-box-shadow: unset;
+                box-shadow: unset;
+            }
+            .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+                -webkit-box-shadow: unset;
+                -moz-box-shadow: unset;
+                box-shadow: unset;
+            }
+
+        }
+
+        .form-control {
+            height: 33px;
+
+        }
+        .select-container {
+
+            div[class$="control"] {
+                border: 1px solid $borderSectionColor;
+                background: #f2f5f9;
+                font-size: 0.9em;
+                font-weight: bold;
+                color: $notPrimaryColor;
+                box-shadow: unset;
+                min-height: unset;
+            }
+
+            span[class$='indicatorSeparator'] {
+                width: 0;
+            }
+
+            div[class$='-ValueContainer'] {
+                padding: 0;
+            }
+
+            div[class$='-IndicatorsContainer'] {
+
+                svg[class$='-Svg'] {
+                    color: $notPrimaryColor;
+                    stroke: $notPrimaryColor;
+                    line-height: 2;
+                    background: transparent;
+                    border-radius: 0.3rem;
+                    height: 25PX;
+                    width: 25PX;
+
+                }
 
             }
+
+            div[class$='-placeholder'] {
+
+                opacity: 0.5;
+                margin-left: 8px;
+
+            }
+
+            div[class$='-Input'] {
+
+                margin-left: 8px;
+                input
+                {
+                display:none;
+                }
+            }
+
+            div[class$='-multiValue'] {
+                border: 1px solid $notPrimaryColor;
+                background: #fff;
+                padding: 2px;
+                border-radius: 0.3rem;
+                display: none;
+                div {
+                    &:first-child {
+                        font-size: 1em;
+                    }
+                    &:last-child {
+
+                        background: transparent;
+                        border-radius: 0.3rem;
+                        margin-left: 10px;
+                    }
+                }
+
+            }
+
+            div[class$='-singleValue'] {
+                font-size: 1em;
+                padding-left: 4px;
+            }
+
+            svg[class$='-Svg'] {
+                color: $notPrimaryColor;
+                stroke: $notPrimaryColor;
+                line-height: 2;
+
+            }
+
+            div[class$="-menu"] {
+                border: 1px solid $borderSectionColor;
+                background: #fff;
+                font-size: 0.9em;
+                font-weight: bold;
+                padding: 0;
+                box-shadow: unset;
+            }
+
+            .isRelative div[class$="-menu"] {
+
+                position: relative;
+
+            }
+
+            div[class$="-indicatorContainer"] {
+
+                padding: 3px;
+                margin-bottom: auto;
+
+            }
+
+            div[class$='LoadingMessage'] {
+                font-size: 0.9em;
+                font-weight: bold;
+                color: $notPrimaryColor;
+                padding: 4px;
+            }
+
+            div[class$='NoOptionsMessage'] {
+                font-size: 0.9em;
+                font-weight: bold;
+                color: $inactiveColor;
+                padding: 4px;
+                background: #f4c6c6;
+            }
+
+            div[class$='MenuList'] {
+                font-size: 0.9em;
+                font-weight: bold;
+                color: $notPrimaryColor;
+                padding: 0;
+            }
+
+            div[class$='option'] {
+
+                padding: 4px;
+            }
+        }
+
+        hr {
+
+            border-top: wpx solid #f2f5f9;
+        }
+
+        .listGroup {
+            border: 1px solid $borderSectionColor;
+            border-radius: 0.25rem;
+            background: #f2f5f9;
+            padding: 0;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+
+            .list-group-item {
+                border: 0 solid $notPrimaryColor;
+                border-bottom: 1px solid $borderSectionColor;
+
+                background: #f2f5f9;
+                font-size: 0.9em;
+                font-weight: bold;
+
+                margin: 0 !important;
+                &:last-child {
+                    border-bottom: 0 solid;
+                }
+
+                div {
+                    &:first-child {
+                        float: left;
+                        width: calc(100% - 0px);
+                        margin-right: 5px;
+                    }
+
+                }
+            }
+        }
+
+        .dropzone {
+
+            height: auto;
+            min-height: 33px;
+
+            .label {
+                width: calc(100% - 150px);
+                line-height: 27px;
+                margin-left: 5px;
+
+            }
+
+            .btnaddfiles {
+                padding: 2px;
+                background: #fff !important;
+                float: right;
+                box-shadow: unset !important;
+                padding-right: 10px;
+                padding-left: 5px;
+                color: $notPrimaryColor;
+                font-weight: bold;
+                font-size: 0.9em;
+                cursor: pointer;
+                border-radius: 0.35rem;
+
+            }
+
+            .loadingMsg {
+                border: 1px solid $borderSectionColor;
+                background: #fff;
+                font-size: 0.9em;
+                font-weight: bold;
+                padding: 1px;
+                box-shadow: unset;
+                text-align: center;
+                background: #f2f5f9;
+                border-radius: 0.35rem;
+            }
+
+            .list-group {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+
+                .list-group-item {
+                    padding: 4px;
+                }
+            }
+
+        }
+
+    }
+    @media (max-width: 767px) {
+        .formFieldsPageContainer {
+            padding: 0.25rem !important;
+        }
+        .formPageContainer {
+            padding: 0 0.25rem 0.25rem !important;
+
         }
     }
 
+    .carrousel {
+
+        .BrainhubCarouselItem {
+
+            img {
+
+                padding: 0;
+
+                width: calc(100% - 10px) !important;
+                border: 1px solid $notPrimaryColor;
+                border-radius: 0.25rem;
+                max-height: 225px;
+            }
+        }
+
+        .BrainhubCarousel__thumbnail {
+            background: #fff;
+
+            img {
+                border: 1px solid $notPrimaryColor;
+                border-radius: 0.25rem;
+            }
+        }
+
+    }
+
+    .ImgBankSearching {
+        font-size: 0.7em;
+        font-weight: bold;
+        font-size: 0.7em;
+        font-weight: bold;
+      
+        
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+        display: grid;
+       
+
+    }
+
+    .sun-editor {
+        border: 0 solid;
+
+        .se-toolbar {
+            outline: 0 solid;
+            background: #fff;
+
+            .se-btn-module-border {
+                border: 1px solid $borderSectionColor;
+
+                .se-btn {
+
+                    color: $notSecondaryColor;
+                    &:hover {
+
+                        background: #f2f5f9;
+                    }
+                }
+            }
+        }
+
+        .se-list-layer {
+
+            border: 1px solid $borderSectionColor;
+            margin-top: 2px;
+            border-radius: 0.2rem;
+
+            -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+            -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+
+        }
+
+        .se-wrapper-wysiwyg {
+            background-color: #f2f5f9;
+            display: block;
+            border: 1px solid $borderSectionColor;
+            margin-left: 2px;
+            margin-right: 2px;
+            width: calc(100% - 4px);
+            border-radius: 0.25rem;
+            margin-top: 0px;
+            margin-bottom: 4px;
+        }
+
+        .se-resizing-bar {
+            display: none;
+        }
+    }
 }

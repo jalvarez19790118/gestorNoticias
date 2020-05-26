@@ -1,117 +1,140 @@
 .app-header .top-nav {
-    padding: 0 0px;
+    padding: 0;
     width: 100%;
     box-shadow: none;
-   
+
 }
 
-.app-footer
-{
-    display:none;
+.app-footer {
+    display: none;
 }
 
-#primary-content
-{
-    padding: 0px !important; 
+#primary-content {
+    padding: 0 !important;
 }
 
-
-.app-sidebar
-{
+.app-sidebar {
 
     font-family: $actualfontFamily;
     background-color: $notTerciaryColor;
-    
-   
 
 }
-
 
 .site-logo-bar {
     border-bottom: 1px solid $notPrimaryColor;
     background-color: $notTerciaryColor;
     height: 50px;
-   
+
 }
 
-
 #main-menu .has-submenu {
-  
+
     border-bottom: 1px solid $notPrimaryColor;
-   
-   
+
 }
 
 #main-menu .nav-submenu {
-  
+
     border-top: 1px solid $notPrimaryColor;
-   
-   
+
 }
 
 #main-menu .nav-item > a.active {
-    box-shadow: inset 4px 0px $notFourtyColor;
+    box-shadow: inset 4px 0 $notFourtyColor;
 }
 
 #main-menu .nav-item.has-submenu ul .nav-item {
     background: $notTerciaryColor;
     color: #fff;
     border: 1px solid $notPrimaryColor;
-    border-top: 0px solid;
-   
+    border-top: 0 solid;
+
 }
 
 #main-menu .nav-item > a {
-    
+
     color: #fff;
     font-size: 1.1em;
 }
 
 #main-menu .nav-item.has-submenu ul .nav-item a.active {
     background: $notPrimaryColor;
-    color:  #fff
+    color: #fff;
 }
 
 .myNavbar {
     font-family: $actualfontFamily;
     color: #fff;
     background-color: $notTerciaryColor;
-    
+
     padding: 0;
     height: 50px;
-    border-bottom: 0px solid;
+    border-bottom: 0 solid;
     border-bottom: 1px solid $notPrimaryColor;
     button {
 
-        background: $notFourtyColor !important;
-        color: $notPrimaryColor !important;
+        border: 0px solid !important;
+        background: $notTerciaryColor !important;
+        color: #fff !important;
         border-radius: 0.35rem;
         width: auto;
         height: auto;
         box-shadow: unset !important;
-
+        margin: 0px;
+        margin-right: 10px;
+        padding: 2px;
         &:hover {
 
-            background-color: $notFourtyColor !important;
-            color: $notTerciaryColor !important;
-            background: $notFourtyColor !important;
+            background: $notTerciaryColor !important;
+            color: #fff !important;
 
-            
         }
         &:active {
 
-            background-color: $notFourtyColor !important;
+            background: $notTerciaryColor !important;
+            color: #fff !important;
 
-            
         }
+
+        &:focus
+        {
+            background: $notTerciaryColor !important;
+            color: #fff !important;
+        }
+      
     }
 
-
-
-    .page-heading
-    {
-        font-size: 1.5em;
-        font-weight: bold;
+    .page-heading {
+        font-size: 1.2em;
+        font-weight: normal;
     }
-    
+
 }
+
+
+.site-logo-bar .navbar-brand {
+    padding: 0 5px;
+    img {
+        max-height: 50px;
+        max-width: 40px;
+        display: inline-block;
+        border: 1px solid #fff;
+        border-radius: 0.15rem;
+        margin-right: 8px;
+    }
+
+
+ 
+}
+
+.app-header .top-nav > nav {
+    padding: 0px 0px;
+}
+
+@media screen and (min-width: 992px) {
+.side-menu-collapsed .site-logo-bar .navbar-brand {
+    padding: 0 5px;
+}
+}
+
+

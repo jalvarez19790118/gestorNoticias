@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { Header, MySidebarNav, Footer, PageContent, Page } from '../vibe';
 import nav from '../navs';
 import routes from '../routes';
+import Logo from '../assets/images/logo.png';
 import ContextProviders from '../vibe/components/utilities/ContextProviders';
 import handleKeyAccessibility, { handleClickAccessibility } from '../vibe/helpers/handleTabAccessibility';
 import MyProvider from '../context/MyContext';
@@ -67,8 +68,8 @@ export default class MyDashboardLayout extends Component {
           <div className="app-body">
             <MySidebarNav
               nav={nav}
-              logo={null}
-              logoText=""
+              logo={Logo}
+              logoText="Vademecum"
               isSidebarCollapsed={sidebarCollapsed}
               toggleSidebar={this.toggleSideCollapse}
               {...this.props}

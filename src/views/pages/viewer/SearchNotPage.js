@@ -90,11 +90,11 @@ const NotHeader = ({onpanel,setOnPanel}) => {
 
 
 
-
-    useEffect(() => {
+ useEffect(() => {
         window.addEventListener("resize", updateOnpanelSize);
         return () => window.removeEventListener("resize", updateOnpanelSize);
     });
+   
 
     const {size,allResults,setNewSize} = useContext(MyContext);
 

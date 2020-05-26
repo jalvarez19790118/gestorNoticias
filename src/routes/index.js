@@ -1,6 +1,7 @@
 
 import SearchNotPage from '../views/pages/viewer/SearchNotPage';
-import EditNotPage from '../views/pages/editor/EditorNotPage';
+import NewNotPage from '../views/pages/editor/NewNotPage';
+import NewAlertPage from '../views/pages/editor/NewAlertPage';
 
 
 export default  [
@@ -18,10 +19,17 @@ export default  [
   },
   
   {
-    name: 'Editor de noticias',
-    path: '/gestor/editor/',
-    component: EditNotPage
+    name: 'Editor - Nueva Noticia',
+    path: '/gestor/editor/nueva_noticia',
+    component: NewNotPage
+  },
+
+  {
+    name: 'Editor - Nueva Alerta',
+    path: '/gestor/editor/nueva_alerta',
+    component: NewAlertPage
   }
+
 ];
 
 

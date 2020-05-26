@@ -3,7 +3,7 @@ export default {
 
     {
       name: 'Visor',
-      open: true,
+      open: false,
       icon: {
 
         lib: 'Feather',
@@ -48,15 +48,47 @@ export default {
     },
     
     {
-      name: 'Editor de noticias',
-      url: '/gestor/editor',
+      name: 'Editor',
+      open: false,
       icon: {
 
         lib: 'Feather',
         name: 'FiEdit',
         style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
 
-      }
+      },
+
+      children: [
+        {
+          name: 'Nueva Noticia',
+          url: '/gestor/editor/nueva_noticia',
+
+          icon: {
+
+            lib: 'Bs',
+            name: 'BsNewspaper',
+            style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
+    
+          }
+
+        },
+
+        {
+          name: 'Nueva Alerta',
+          url: '/gestor/editor/nueva_alerta',
+
+          icon: {
+
+            lib: 'Bs',
+            name: 'BsFillExclamationTriangleFill',
+            style: { color: '#fff', 'fontSize': '1.2em', verticalAlign: 'middle' }
+    
+          }
+
+        },
+      
+      
+      ]
     }
 
       

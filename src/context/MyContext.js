@@ -1,4 +1,4 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useState,useEffect} from 'react';
 import clienteAxios from '../config/axios';
 
 export const MyContext = createContext();
@@ -15,6 +15,23 @@ const MyProvider = (props) => {
     const [pages, setPages] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     
+
+    const [wwidth, setWwidth] = useState(window.innerWidth);
+    const [wheight, setWheight] = useState(window.innerHeight);
+
+
+
+    const updateOnpanelSize= () => {
+        
+        setWwidth(window.innerWidth);
+        setWheight(window.innerHeight)
+
+     };
+
+    useEffect(() => {
+        window.addEventListener("resize", updateOnpanelSize);
+        return () => window.removeEventListener("resize", updateOnpanelSize);
+    });
 
 
     const obtieneNoticias = async(tipo) => {
@@ -81,7 +98,10 @@ const MyProvider = (props) => {
             setType,
             pages,
             currentPage,
-            setNewCurrentPage
+            setNewCurrentPage,
+            wwidth,
+            wheight
+            
         }}>
             {props.children}
         </MyContext.Provider>
