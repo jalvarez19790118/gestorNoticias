@@ -63,7 +63,7 @@ export default {
       children: [
         {
           name: 'Nueva noticia',
-          url: '/gestor/editor/nueva_noticia',
+          url: '/gestor/editor/nueva_noticia/noticia',
 
           icon: {
 
@@ -77,7 +77,7 @@ export default {
 
         {
           name: 'Nueva alerta',
-          url: '/gestor/editor/nueva_alerta',
+          url: '/gestor/editor/nueva_alerta/alerta',
 
           icon: {
 
@@ -108,7 +108,7 @@ export default {
       children: [
         {
           name: 'Editar noticia',
-          url: '/gestor/editor/editar_noticia',
+          url: '/gestor/editor/editar_noticia/noticia/0',
 
           icon: {
 
@@ -122,7 +122,7 @@ export default {
 
         {
           name: 'Editar alerta',
-          url: '/gestor/editor/editar_alerta',
+          url: '/gestor/editor/editar_alerta/alerta/0',
 
           icon: {
 

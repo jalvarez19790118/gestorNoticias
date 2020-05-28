@@ -9,7 +9,8 @@ import {
     Form,
     FormGroup,
     Input,
-    Label
+    Label,
+    CardBody
 } from 'reactstrap';
 
 import {MyContext} from '../../../context/MyContext';
@@ -33,6 +34,7 @@ const EditorSunFormPage = ({type,noticia, setNoticia}) => {
         $('.EditorContenido .se-wrapper-wysiwyg').css({'min-height': new_height});
 
     });
+
 
 
 

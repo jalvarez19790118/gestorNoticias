@@ -1,33 +1,44 @@
-
 import SearchNotPage from '../views/pages/viewer/SearchNotPage';
-import NewNotPage from '../views/pages/editor/NewNotPage';
-import NewAlertPage from '../views/pages/editor/NewAlertPage';
+import NewElementPage from '../views/pages/editor/NewElementPage';
+import EditElementPage from '../views/pages/editor/EditElementPage';
 
 
 export default  [
 
    {
-    name: 'Visor de Noticias',
+    name: 'Visor de noticias',
     path: '/gestor/n/:id',
     component: SearchNotPage
   },
 
   {
-    name: 'Visor de Alertas',
+    name: 'Visor de alertas',
     path: '/gestor/a/:id',
     component: SearchNotPage
   },
   
   {
-    name: 'Editor - Nueva Noticia',
-    path: '/gestor/editor/nueva_noticia',
-    component: NewNotPage
+    name: 'Editor - Nueva noticia',
+    path: '/gestor/editor/nueva_noticia/:element',
+    component: NewElementPage
   },
 
   {
-    name: 'Editor - Nueva Alerta',
-    path: '/gestor/editor/nueva_alerta',
-    component: NewAlertPage
+    name: 'Editor - Nueva alerta',
+    path: '/gestor/editor/nueva_alerta/:element',
+    component: NewElementPage
+  },
+  
+    {
+    name: 'Editor - Editar noticia',
+    path: '/gestor/editor/editar_noticia/:element/:id',
+    component: EditElementPage
+  },
+
+  {
+    name: 'Editor - Editar Alerta',
+    path: '/gestor/editor/editar_alerta/:element/:id',
+    component: EditElementPage
   }
 
 ];

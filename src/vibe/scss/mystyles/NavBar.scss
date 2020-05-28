@@ -153,6 +153,13 @@
     margin-left: 185px;
 }
 
+@media screen and (max-width: 992px)
+{
+#page-content {
+    margin-left: 0px;
+}
+
+}
 
 #main-menu
 {

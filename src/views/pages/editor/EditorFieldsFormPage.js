@@ -15,8 +15,12 @@ import SelectComponents from './selectComponents/SelectComponent';
 
 registerLocale("es", es);
 
+
 const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
+
+
+ 
     const [defaultCat,
         setdefaultCat] = useState([]);
 
@@ -24,29 +28,37 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
         setKeywords] = useState({});
 
     const [year,
-        setYear] = useState(new Date(noticia.fields.year));
+        setYear] = useState(null);
 
+
+        /*
     const [fhpublic,
-        setFhPublic] = useState(new Date(noticia.fields.fh_public));
+        setFhPublic] = useState(setFromInitData(noticia.fields.fh_public));
 
     const [fhdesact,
-        setFhDesact] = useState(new Date(noticia.fields.fh_desactivacion));
+        setFhDesact] = useState(setFromInitData(noticia.fields.fh_desactivacion));
 
     const [fhportada,
-        setFhportada] = useState(new Date(noticia.fields.fh_portada));
-
+        setFhportada] = useState(setFromInitData(noticia.fields.fh_portada));
+*/
     const {categorias} = useContext(FormContext);
 
     const saveState = (new_noticia) => {
+
+       
 
         sessionStorage.setItem(type, JSON.stringify(new_noticia));
         setNoticia(new_noticia);
     }
 
+ 
     useEffect(() => {
 
-        if (categorias.length > 0) {
 
+        
+        if (categorias.length > 0) {
+           
+        
             let options_cat = [];
 
             categorias.map((value, key) => {
@@ -67,9 +79,17 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
             setdefaultCat(options_cat);
 
+          
+          
+
+       
         }
 
-    }, [categorias])
+        setYear(new Date(noticia.fields.year.toString()));
+
+    }, [noticia])
+
+
 
     const setFormValue = (field, value) => {
 
@@ -90,8 +110,7 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
     const {
         atcs,
         obtieneAtcs,
-        especialidades,
-        obtieneEspecialidades,
+       
         medicamentos,
         obtieneMedicamentos,
         enfermedades,
@@ -114,7 +133,7 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
                         <div className="label">Año:</div>
                         <DatePicker
                             selected={year}
-                            value={year}
+                            //value={new Date()}
                             className="text-center"
                             onChange={date => {
                             setYear(date);
@@ -131,11 +150,10 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
                         <div className="label">Publicacion:</div>
                         <DatePicker
-                            selected={fhpublic}
-                            value={fhpublic}
+                          
                             className="text-center"
                             onChange={date => {
-                            setFhPublic(date);
+                           
                             setFormValue('fh_public', date)
                         }}
                             locale="es"
@@ -147,11 +165,10 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
                         <div className="label">Desactivación:</div>
                         <DatePicker
-                            selected={fhdesact}
-                            value={fhdesact}
+                          
                             className="text-center"
                             onChange={date => {
-                            setFhDesact(date);
+                          
                             setFormValue('fh_desactivacion', date)
                         }}
                             locale="es"
@@ -164,11 +181,10 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
                         <div className="label">En Portada hasta:</div>
                         <DatePicker
-                            selected={fhportada}
-                            value={fhportada}
+                          
                             className="text-center"
                             onChange={date => {
-                            setFhportada(date);
+                           
                             setFormValue('fh_portada', date)
                         }}
                             locale="es"

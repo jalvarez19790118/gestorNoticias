@@ -17,9 +17,11 @@ const EditorContentPanel = ({type,noticia,setNoticia}) => {
 
     useEffect(() => {
 
+    
+
         $(ref).fadeIn(300);
 
-    }, []);
+    }, [noticia]);
 
 
     return (
