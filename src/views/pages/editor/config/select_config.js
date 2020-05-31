@@ -71,3 +71,16 @@ style: {
     'fontSize': '25px'
 }
 }}/>;
+
+
+
+export const IconSave = <MyIcon
+item={{
+lib: 'Ai',
+name: 'AiFillSave',
+style: {
+    'fontSize' : '16px',
+    'color' : '#162c50',
+    'marginRight' : '5px'
+}
+}}/>;

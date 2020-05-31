@@ -1,5 +1,6 @@
 import React from 'react';
 import MyIcon from '../../../vibe/components/SidebarNav/components/MyIcon';
+import {useHistory} from "react-router-dom";
 
 import {
     Card,
@@ -13,9 +14,14 @@ import {
 
 import {Html5Entities} from 'html-entities';
 
-const NotContent = ({item, modal, showModal}) => {
+const NotContent = ({mode, item, modal, showModal}) => {
 
-    const d = new Date(item.fh_public)
+
+
+
+    const d = new Date(item.fields.fh_public);
+
+
     const dtf = new Intl.DateTimeFormat('en', {
         year: 'numeric',
         month: '2-digit',
@@ -32,6 +38,9 @@ const NotContent = ({item, modal, showModal}) => {
     ] = dtf.formatToParts(d)
 
     const htmlEntities = new Html5Entities();
+    
+    const history = useHistory();
+
 
     const styleObj = {
         'fontSize': '20px',
@@ -81,6 +90,17 @@ const NotContent = ({item, modal, showModal}) => {
             show: true
         });
     }
+    
+
+    const navigateToEdit = () => {
+
+
+
+        let site = mode.slice(0, -1);       
+        history.push(`/gestor/editor/editar_${site}/${site}/${item.id}`);
+      
+
+    }
 
     return (
 
@@ -88,7 +108,7 @@ const NotContent = ({item, modal, showModal}) => {
 
             <CardHeader>
                 <div className="float-left">
-                    <Button>{IconEdit}</Button>
+                    <Button onClick={e=>navigateToEdit()}>{IconEdit}</Button>
                     <Button>{IconCopy}</Button>
                     <Button>{IconDelete}</Button>
                 </div>
@@ -100,7 +120,7 @@ const NotContent = ({item, modal, showModal}) => {
 
             <CardBody onClick={showModalWindow}>
                 <CardTitle className="m-0 p-0">
-                    {htmlEntities.decode(item.titular)}
+                    {htmlEntities.decode(item.fields.titular)}
 
                 </CardTitle>
 
@@ -109,19 +129,19 @@ const NotContent = ({item, modal, showModal}) => {
                 <CardSubtitle className="mt-2 d-flex">
 
                     <label className="mr-1">VADEMECUM</label>
-                    <label>{`${da}-${mo}-${ye}`}</label>
+                  
 
                 </CardSubtitle>
 
                 <CardText className="mt-2 mh_not">
 
-                    {htmlEntities.decode(item.entradilla)}
+                    {htmlEntities.decode(item.fields.entradilla)}
 
                     <br/><br/>
 
                     <span
                         dangerouslySetInnerHTML={{
-                        __html: item.contenido_html
+                        __html: item.fields.contenido_html
                     }}/>
 
                 </CardText>

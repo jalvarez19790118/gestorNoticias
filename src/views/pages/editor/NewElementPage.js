@@ -87,6 +87,8 @@ const NewElementPage = () => {
         } else 
             new_status = JSON.parse(objNoticia);
         
+
+            sessionStorage.setItem('nueva_' + element, JSON.stringify(new_status));
         return new_status;
 
     }
@@ -100,6 +102,8 @@ const NewElementPage = () => {
             console.log(element);
 
             setNoticia(getSessionState);
+
+          
             setFirst(false);
         }
 
@@ -113,7 +117,7 @@ const NewElementPage = () => {
         <Fragment>
             {first
                 ? <LoadingCard/>
-                : <Fragment><EditorHeader/><EditorContentPanel
+                : <Fragment><EditorHeader mode={"save"} storage={`nueva_${element}`} type={element} /><EditorContentPanel
                     type={`nueva_${element}`}
                     noticia={noticia}
                     setNoticia={setNoticia}/></Fragment>}

@@ -15,14 +15,13 @@ import SelectComponents from './selectComponents/SelectComponent';
 
 registerLocale("es", es);
 
-
 const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
-
-
- 
     const [defaultCat,
         setdefaultCat] = useState([]);
+
+    const [selecCat,
+        setSelectCat] = useState(null);
 
     const [keywords,
         setKeywords] = useState({});
@@ -30,35 +29,30 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
     const [year,
         setYear] = useState(null);
 
-
-        /*
     const [fhpublic,
-        setFhPublic] = useState(setFromInitData(noticia.fields.fh_public));
+        setFhPublic] = useState(null);
 
     const [fhdesact,
-        setFhDesact] = useState(setFromInitData(noticia.fields.fh_desactivacion));
+        setFhDesact] = useState(null);
 
     const [fhportada,
-        setFhportada] = useState(setFromInitData(noticia.fields.fh_portada));
-*/
+        setFhportada] = useState(null);
+
+    const [tref,
+        setTref] = useState(null);
+
     const {categorias} = useContext(FormContext);
 
     const saveState = (new_noticia) => {
-
-       
 
         sessionStorage.setItem(type, JSON.stringify(new_noticia));
         setNoticia(new_noticia);
     }
 
- 
     useEffect(() => {
 
-
-        
         if (categorias.length > 0) {
-           
-        
+
             let options_cat = [];
 
             categorias.map((value, key) => {
@@ -79,17 +73,47 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
             setdefaultCat(options_cat);
 
-          
-          
+            if (parseInt(noticia.fields.id_categoria) > 0) {
+                let option = options_cat.filter((v, k) => v.value === noticia.fields.id_categoria);
+                setSelectCat(option[0]);
+            } else 
 
-       
-        }
+                setSelectCat(noticia.fields.id_categoria);
 
-        setYear(new Date(noticia.fields.year.toString()));
+            }
+    
+        if (noticia.fields.year === null ||  noticia.fields.year === '' ) 
+           setYear(null);
+        else 
+           setYear(new Date(noticia.fields.year.toString()));
+           
+    
+        if (noticia.fields.fh_public === null ||  noticia.fields.fh_public === '') 
+              setFhPublic(null); 
+        else 
+            setFhPublic(new Date(noticia.fields.fh_public.toString()));
+    
+        
+        if (noticia.fields.fh_desactivacion != null ||  noticia.fields.fh_desactivacion === '') 
+        setFhDesact(null); 
+        else 
+        setFhDesact(new Date(noticia.fields.fh_desactivacion.toString()));
+  
+            
+        if (noticia.fields.fh_portada != null) 
+        setFhportada(null);  
+        else 
+        setFhportada(new Date(noticia.fields.fh_portada.toString()));
+        
+        if (noticia.fields.tipo_referencia == 'ENT') 
+            setTref({value: 'ENT', label: 'Entidad'});
+        else if (noticia.fields.tipo_referencia == 'LAB') 
+            setTref({value: 'LAB', label: 'Laboratorio'});
+        else 
+            setTref(noticia.fields.tipo_referencia);
 
-    }, [noticia])
-
-
+        } 
+    , [categorias, noticia])
 
     const setFormValue = (field, value) => {
 
@@ -110,7 +134,7 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
     const {
         atcs,
         obtieneAtcs,
-       
+
         medicamentos,
         obtieneMedicamentos,
         enfermedades,
@@ -133,7 +157,7 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
                         <div className="label">Año:</div>
                         <DatePicker
                             selected={year}
-                            //value={new Date()}
+                            value={year}
                             className="text-center"
                             onChange={date => {
                             setYear(date);
@@ -150,10 +174,10 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
                         <div className="label">Publicacion:</div>
                         <DatePicker
-                          
+                            selected={fhpublic}
+                            value={fhpublic}
                             className="text-center"
                             onChange={date => {
-                           
                             setFormValue('fh_public', date)
                         }}
                             locale="es"
@@ -165,10 +189,10 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
                         <div className="label">Desactivación:</div>
                         <DatePicker
-                          
+                            selected={fhdesact}
+                            value={fhdesact}
                             className="text-center"
                             onChange={date => {
-                          
                             setFormValue('fh_desactivacion', date)
                         }}
                             locale="es"
@@ -181,10 +205,10 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
 
                         <div className="label">En Portada hasta:</div>
                         <DatePicker
-                          
+                            selected={fhportada}
+                            value={fhportada}
                             className="text-center"
                             onChange={date => {
-                           
                             setFormValue('fh_portada', date)
                         }}
                             locale="es"
@@ -203,8 +227,11 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
                             <Label for="exampleEmail">Tipo:</Label>
 
                             <Select
-                                onChange={e => setFormValue('tipo_referencia', e)}
-                                defaultValue={noticia.fields.tipo_referencia}
+                                onChange={e => {
+                                setTref(e);
+                                setFormValue('tipo_referencia', e)
+                            }}
+                                value={tref}
                                 options={[
                                 {
                                     value: 'ENT',
@@ -248,7 +275,7 @@ const EditorFieldsFormPage = ({type, noticia, setNoticia}) => {
                                 });
                                 setFormValue('id_categoria', e);
                             }}
-                                defaultValue={noticia.fields.id_categoria}
+                                value={selecCat}
                                 options={defaultCat}
                                 placeholder={""}/>
                         </div>

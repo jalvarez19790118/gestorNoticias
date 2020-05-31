@@ -19,8 +19,8 @@ const FieldNot = ({name_field, value_field}) => {
 const NotContentFull = ({item}) => {
 
     let format_data = '';
-    if (item.fh_public != null) {
-        const d = new Date(item.fh_public);
+    if (item.fields.fh_public != null) {
+        const d = new Date(item.fields.fh_public);
 
         const dtf = new Intl.DateTimeFormat('en', {
             year: 'numeric',
@@ -42,7 +42,7 @@ const NotContentFull = ({item}) => {
     }
 
     
-    const comp_descr = item.contenido_html != null ?  <span dangerouslySetInnerHTML={{__html: item.contenido_html}}/> : <FieldNot name_field="Descripcion" value_field={''} />
+    const comp_descr = item.fields.contenido_html != null ?  <span dangerouslySetInnerHTML={{__html: item.fields.contenido_html}}/> : <FieldNot name_field="Descripcion" value_field={''} />
 
 
     const htmlEntities = new Html5Entities();
@@ -52,7 +52,7 @@ const NotContentFull = ({item}) => {
 
             <CardBody>
                 <CardTitle className="m-0 p-0">
-                    <FieldNot name_field="Titular" value_field={htmlEntities.decode(item.titular)} />
+                    <FieldNot name_field="Titular" value_field={htmlEntities.decode(item.fields.titular)} />
 
                 </CardTitle>
 
@@ -69,7 +69,7 @@ const NotContentFull = ({item}) => {
 
                     
 
-                        <FieldNot name_field="Entradilla" value_field={htmlEntities.decode(item.entradilla)} />
+                        <FieldNot name_field="Entradilla" value_field={htmlEntities.decode(item.fields.entradilla)} />
                     
                     <br/><br/>
                    

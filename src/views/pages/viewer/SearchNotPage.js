@@ -7,13 +7,13 @@ import NotContentPanel from './NotContentPanel';
 import LoadingCard from '../../commons/LoadingCard';
 
 
+import {useParams} from "react-router-dom";
 
 
 
 
 
-
-const SearchNotPage = (props) => {
+const SearchNotPage = () => {
 
     const [first, setFirst] = useState(true);
     const [onpanel, setOnPanel] = useState(4);
@@ -23,11 +23,12 @@ const SearchNotPage = (props) => {
 
 
 
-     let { id } = props.match.params;
+     let { id } = useParams();
     
     const {news, size,  currentPage, loadingNews, refreshNewsData } = useContext(MyContext);
 
-     
+    
+
      useEffect(() => {
 
         if (first) setFirst(false);
@@ -49,7 +50,7 @@ const SearchNotPage = (props) => {
 
             {first  ? <LoadingCard/> :  
             
-            <NotContentPanel onpanel={onpanel} items={news}></NotContentPanel>
+            <NotContentPanel mode={id}  onpanel={onpanel} items={news}></NotContentPanel>
            
             }
 

@@ -1,5 +1,5 @@
 import React, {useState, useContext, useEffect, Fragment} from 'react';
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation, useParams, useHistory} from "react-router-dom";
 import LoadingCard from '../../commons/LoadingCard';
 import EditorContentPanel from './EditorContentPanel';
 import EditorHeader from './EditorHeader';
@@ -79,10 +79,11 @@ const EditElementPage = (props) => {
 
         const { element, id } = useParams();
 
-        const {editarNoticia, obtieneEditarNoticia} = useContext(MyContext);
+        const {editarNoticia, obtieneEditarNoticia,obtienePrimerId} = useContext(MyContext);
 
         
     const location = useLocation();
+    const history = useHistory();
 
     const getSessionState = () => {
 
@@ -92,12 +93,12 @@ const EditElementPage = (props) => {
 
         if (objNoticia !== null) {
             objNoticia = JSON.parse(objNoticia);
-
+            setExistStorage(true);
             return objNoticia;
 
         }
 
-        setExistStorage(false);
+    
         return new_status;
 
     }
@@ -113,14 +114,10 @@ const EditElementPage = (props) => {
 
         if (editarNoticia !== undefined) {
 
-            Object
-                .entries(editarNoticia)
-                .map((v) => {
 
-                    new_noticia['fields'][v[0]] = v[1];
-                });
+        
 
-            sessionStorage.setItem(`editar_noticia_${id}`, JSON.stringify(new_noticia));
+            sessionStorage.setItem(`editar_${element}_${id}`, JSON.stringify(editarNoticia));
 
             setNoticia(getSessionState());
             
@@ -134,8 +131,24 @@ const EditElementPage = (props) => {
   
     useEffect(() => {
 
+     
+
+        
+        if (id === '0')
+        {
+            obtienePrimerId(`${element}s`).then((data)=>{
+
+              
+                console.log(data);
+              history.push(`/gestor/editor/editar_${element}/${element}/${data.id}`);
+
+          
+            });
+        } 
+
+
         if (!existStorage) {
-            obtieneEditarNoticia('noticias', id);
+            obtieneEditarNoticia(`${element}s`, id);
             setTimeout(()=>setFirst(false),100);
         }
 
@@ -152,7 +165,7 @@ const EditElementPage = (props) => {
 
 
 
-    const component = (!notFound ? <Fragment><EditorHeader/><EditorContentPanel
+    const component = (!notFound ? <Fragment><EditorHeader mode={"update"} storage={`editar_${element}_${id}`} type={element} /><EditorContentPanel
     type={`editar_${element}_${id}`}
     noticia={noticia}
     setNoticia={setNoticia}/></Fragment> : <div>Elemento no encontrado!</div>);

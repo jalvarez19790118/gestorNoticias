@@ -42,11 +42,31 @@ const MyProvider = (props) => {
            
           
                 const respuesta = await clienteAxios.get(`/${tipo}?_sort=fh_public&_order=desc&_page=${currentPage}&_limit=${size}`);
-                const respuesta2 = await clienteAxios.get(`/total_${tipo}`);
+                const respuesta2 = await clienteAxios.get(`/${tipo}`);
 
-                setNews(respuesta.data);
+              
+                let newslist = [];
+                
+                respuesta.data.map((v,k) => {
+
+                    if ('fields' in v)
+                    {
+                        newslist.push(v);
+                    }
+                    else
+                    {
+                        let elem = {};
+                        elem.fields = v;
+                        elem.id = v.id_act_not;
+                        newslist.push(elem);
+                    }
+
+                });
+
+               
+                setNews(newslist);
             
-                 let total  = respuesta2.data[0].total;
+                 let total  = respuesta2.data.length;
                  let total_pages = parseInt(total / size);
                 
                  setAllResults(total);
@@ -55,6 +75,8 @@ const MyProvider = (props) => {
                
                  setPages(total_pages) 
                  setLoadingNews(false);
+
+                 
 
         } catch (error) {
 
@@ -85,6 +107,14 @@ const MyProvider = (props) => {
 
     };
 
+    const obtienePrimerId = async(tipo) => {
+
+           let  url =`/${tipo}?_sort=fh_public&_order=desc&_page=1&_limit=1`;
+             const respuesta = await clienteAxios.get(url);
+
+             return(respuesta.data[0])
+    }
+
 
 
     
@@ -92,12 +122,11 @@ const MyProvider = (props) => {
  
         try {
  
-            let url = ``;
-            if (id == 0)     url =`/${tipo}?_sort=fh_public&_order=desc&_page=1&_limit=1`;
-            else url = `/${tipo}?id_act_not=${id}`;
+            let url =  `/${tipo}?id=${id}`;
 
              const respuesta = await clienteAxios.get(url);
              
+
              setEditarNoticia(respuesta.data[0]);
             
               
@@ -127,7 +156,8 @@ const MyProvider = (props) => {
             wwidth,
             wheight,
             editarNoticia,
-            obtieneEditarNoticia
+            obtieneEditarNoticia,
+            obtienePrimerId
             
         }}>
             {props.children}

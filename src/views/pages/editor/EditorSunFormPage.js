@@ -48,7 +48,7 @@ const EditorSunFormPage = ({type,noticia, setNoticia}) => {
 
 
     const setFormValue = (field, value) => {
-
+/*
         let fields = {
             ...noticia.fields,
             [field]: value
@@ -58,8 +58,12 @@ const EditorSunFormPage = ({type,noticia, setNoticia}) => {
             ...noticia,
             fields
         }
+*/
+  
+          let new_noticia = {...noticia};
 
-    
+          new_noticia.fields[field] = value;
+
         saveState(new_noticia);
     }
 

@@ -5,7 +5,7 @@ import NotContent from './NotContent';
 import $ from 'jquery';
 import NotFullModal from './NotFullModal';
 
-const NotContentPanel = ({onpanel, items}) => {
+const NotContentPanel = ({mode, onpanel, items}) => {
 
     let ref = null;
 
@@ -42,7 +42,7 @@ const NotContentPanel = ({onpanel, items}) => {
                     <Row>
                         {items.map((item, idx) => {
                             return <Col sm={onPageVal} key={idx} className="m-0 p-1">
-                                <NotContent item={item} modal={modal} showModal={showModal}></NotContent>
+                                <NotContent mode={mode} item={item} modal={modal} showModal={showModal}></NotContent>
                             </Col>
                         })}
 

@@ -392,9 +392,8 @@
         }
     }
 
-
-    .formFieldsPageContainer,.formPageContainer
-    {
+    .formFieldsPageContainer,
+    .formPageContainer {
         margin-top: 40px !important;
     }
 
@@ -490,3 +489,35 @@
     }
 }
 
+.EditorHeader {
+    border: 0 solid #fff;
+    border-left: 0 solid;
+    border-right: 0 solid;
+    border-top: 0 solid;
+    background-color: $notPrimaryColor;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1);
+    min-height: 38px;
+    color: #fff !important;
+
+    button {
+        background: #fff;
+        color: $notPrimaryColor;
+        font-weight: bold;
+        font-size: 0.9em;
+        border-radius: 0.25rem;
+        border: 1px solid $notPrimaryColor;
+        margin-top: auto;
+        margin-top: 5px;
+
+        padding: 2px;
+        margin-right: 5px;
+
+        &:active
+        {
+            border: 1px solid $notPrimaryColor;
+        }
+
+    }
+}
