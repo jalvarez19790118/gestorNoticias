@@ -139,8 +139,8 @@ const EditElementPage = (props) => {
             obtienePrimerId(`${element}s`).then((data)=>{
 
               
-                console.log(data);
-              history.push(`/gestor/editor/editar_${element}/${element}/${data.id}`);
+              
+                history.push(`/gestor/editor/editar_${element}/${element}/${data.id}`);
 
           
             });

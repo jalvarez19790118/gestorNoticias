@@ -1,5 +1,5 @@
-import React, {useContext, useState, useEffect, Fragment} from 'react';
-import SunEditor, {buttonList} from "suneditor-react";
+import React, {useContext, useEffect, Fragment} from 'react';
+import SunEditor from "suneditor-react";
 import 'suneditor/dist/css/suneditor.min.css';
 import {btnList} from './config/editor_config';
 import {
@@ -14,20 +14,18 @@ import {
 } from 'reactstrap';
 
 import {MyContext} from '../../../context/MyContext';
-
+import {FormContext} from '../../../context/FormContext';
 
 import $ from 'jquery';
 
-const EditorSunFormPage = ({type,noticia, setNoticia}) => {
-
-
+const EditorSunFormPage = ({type, noticia, setNoticia}) => {
 
     const {wwidth, wheight} = useContext(MyContext);
+    const {emptyFields} = useContext(FormContext);
 
     useEffect(() => {
 
         let entrallidaheight = $('.EditorEntradilla .sun-editor').height();
-        
 
         let new_height = `${wheight - (entrallidaheight + 350)}px`;
 
@@ -35,34 +33,23 @@ const EditorSunFormPage = ({type,noticia, setNoticia}) => {
 
     });
 
-
-
+    useEffect(() => {
+      //  console.log(emptyFields);
+    }, [emptyFields]);
 
     const saveState = (new_noticia) => {
 
         sessionStorage.setItem(type, JSON.stringify(new_noticia));
         setNoticia(new_noticia);
-    }    
-
-
-
+    }
 
     const setFormValue = (field, value) => {
-/*
-        let fields = {
-            ...noticia.fields,
-            [field]: value
-        };
-        
-        let new_noticia ={
-            ...noticia,
-            fields
-        }
-*/
-  
-          let new_noticia = {...noticia};
 
-          new_noticia.fields[field] = value;
+        let new_noticia = {
+            ...noticia
+        };
+
+        new_noticia.fields[field] = value;
 
         saveState(new_noticia);
     }
@@ -78,8 +65,9 @@ const EditorSunFormPage = ({type,noticia, setNoticia}) => {
 
                         <Col sm="12" className="m-0 p-0 py-0">
                             <FormGroup className="p-0">
-                                <Label for="exampleEmail">Titular:</Label>
+                                <Label for="exampleEmail">Titular*:</Label>
                                 <Input
+                                    className={emptyFields !== null && emptyFields.includes('titular') ? 'mandatory_class' : null}
                                     onChange={e => setFormValue(e.target.name, e.target.value)}
                                     type="text"
                                     name="titular"
@@ -88,23 +76,22 @@ const EditorSunFormPage = ({type,noticia, setNoticia}) => {
                                     placeholder=""/>
                             </FormGroup>
                         </Col>
-
+                       
                     </Row>
 
                     <Row className="m-0 px-1 pb-1 pt-0">
                         <Col xs="12" className="m-0  p-0">
                             <FormGroup className="p-0 EditorEntradilla">
-                                <Label for="exampleEmail">Entradilla:</Label>
+                                <Label for="exampleEmail">Entradilla*:</Label>
 
                                 <SunEditor
                                     lang="es"
-
                                     setContents={noticia.fields.entradilla}
-                                   
-                                    onChange = {e => setFormValue('entradilla', e)}
+                                    onChange=
+                                    {e => setFormValue('entradilla', e)}
                                     setOptions={{
-                                  
-                                    buttonList: btnList }}/>
+                                    buttonList: btnList
+                                }}/>
 
                             </FormGroup>
                         </Col>
@@ -114,15 +101,15 @@ const EditorSunFormPage = ({type,noticia, setNoticia}) => {
                     <Row className="m-0 px-1 pb-1 pt-0">
                         <Col xs="12" className="m-0  p-0">
                             <FormGroup className="p-0 EditorContenido">
-                                <Label for="exampleEmail">Contenido:</Label>
+                                <Label for="exampleEmail">Contenido*:</Label>
                                 <SunEditor
-                                setContents={noticia.fields.contenido_html}
-                                onChange = {e => setFormValue('contenido_html', e)}
+                                    setContents={noticia.fields.contenido_html}
+                                    onChange=
+                                    {e => setFormValue('contenido_html', e)}
                                     lang="es"
-                                    
                                     setOptions={{
-                                  
-                                    buttonList: btnList }}/>
+                                    buttonList: btnList
+                                }}/>
                             </FormGroup>
                         </Col>
 

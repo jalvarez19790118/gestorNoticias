@@ -1,7 +1,7 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import LoadingCard from '../../commons/LoadingCard';
-import {useLocation,useParams} from "react-router-dom";
-
+import {useLocation, useParams} from "react-router-dom";
+import FormProvider from '../../../context/FormContext';
 import EditorContentPanel from './EditorContentPanel';
 import EditorHeader from './EditorHeader';
 
@@ -70,25 +70,21 @@ const NewElementPage = () => {
     const location = useLocation();
 
     const {element} = useParams();
-  
 
     const getSessionState = () => {
 
         let new_status = init_noticia
-        
-        
 
         let objNoticia = sessionStorage.getItem('nueva_' + element);
 
         if (objNoticia === null) {
-       
+
             new_status = init_noticia
 
         } else 
             new_status = JSON.parse(objNoticia);
         
-
-            sessionStorage.setItem('nueva_' + element, JSON.stringify(new_status));
+        sessionStorage.setItem('nueva_' + element, JSON.stringify(new_status));
         return new_status;
 
     }
@@ -99,11 +95,10 @@ const NewElementPage = () => {
     useEffect(() => {
 
         if (noticia == null) {
-            console.log(element);
+   
 
             setNoticia(getSessionState);
 
-          
             setFirst(false);
         }
 
@@ -114,14 +109,14 @@ const NewElementPage = () => {
 
     return (
 
-        <Fragment>
+        <FormProvider>
             {first
                 ? <LoadingCard/>
-                : <Fragment><EditorHeader mode={"save"} storage={`nueva_${element}`} type={element} /><EditorContentPanel
+                : <Fragment><EditorHeader mode={"save"} storage={`nueva_${element}`} type={element}/><EditorContentPanel
                     type={`nueva_${element}`}
                     noticia={noticia}
                     setNoticia={setNoticia}/></Fragment>}
-        </Fragment>
+        </FormProvider>
     )
 
 }

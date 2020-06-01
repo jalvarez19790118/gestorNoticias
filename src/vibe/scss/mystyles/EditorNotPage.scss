@@ -381,6 +381,13 @@
 
         }
 
+        .mandatory_class
+        {
+           border: 1px solid #800;
+           background: #f4c6c6;
+
+        }
+
     }
     @media (max-width: 767px) {
         .formFieldsPageContainer {
@@ -519,5 +526,49 @@
             border: 1px solid $notPrimaryColor;
         }
 
+    }
+}
+
+.SavingCard
+{
+    height: calc(100vh - 560px);
+
+
+    .modal-content {
+       border: 1px solid $notPrimaryColor;
+       border-radius: 0.35rem;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        margin-top: calc(100vh - 525px);
+        -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+        -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+
+        
+        .StartComponent 
+        {
+            border-radius: 0.35rem;
+            background: #fff;
+            color:  $notPrimaryColor;
+            font-weight: bold;
+        }
+
+
+        .OkComponent 
+        {
+            border-radius: 0.35rem;
+            background: #abdec5;
+            color:  #3a7570;
+            font-weight: bold;
+        }
+
+        .FailComponent
+        {
+            border-radius: 0.35rem;
+            background: #ffd8d8;
+            color:  #800;
+            font-weight: bold;
+        }
     }
 }

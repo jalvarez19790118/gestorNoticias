@@ -63003,6 +63003,4086 @@
         "list": []
       },
       "id": "fff5487b-75ef-4184-b552-99a95643d2bb"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:09:40.168Z",
+        "fh_public": "2020-06-01T09:09:40.168Z",
+        "fh_desactivacion": "2020-06-01T09:09:40.168Z",
+        "fh_portada": "2020-06-01T09:09:40.168Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "62897435-59b0-4ee0-85bc-dd5944559568"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:09:40.168Z",
+        "fh_public": "2020-06-01T09:09:40.168Z",
+        "fh_desactivacion": "2020-06-01T09:09:40.168Z",
+        "fh_portada": "2020-06-01T09:09:40.168Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "f7b41ff7-01b5-4cea-8c52-8fe65a399191"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:09:40.168Z",
+        "fh_public": "2020-06-01T09:09:40.168Z",
+        "fh_desactivacion": "2020-06-01T09:09:40.168Z",
+        "fh_portada": "2020-06-01T09:09:40.168Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "8f2bf4a3-20f3-4ac3-b8ab-7d5b488075ec"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:32:14.900Z",
+        "fh_public": "2020-06-01T09:32:14.900Z",
+        "fh_desactivacion": "2020-06-01T09:32:14.900Z",
+        "fh_portada": "2020-06-01T09:32:14.900Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "54b48820-1d96-461a-89e8-dbb77abab3bd"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:34:11.972Z",
+        "fh_public": "2020-06-01T09:34:11.972Z",
+        "fh_desactivacion": "2020-06-01T09:34:11.972Z",
+        "fh_portada": "2020-06-01T09:34:11.972Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "aa937401-82da-4700-83e9-8b2c28fc308a"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:38:38.729Z",
+        "fh_public": "2020-06-01T09:38:38.729Z",
+        "fh_desactivacion": "2020-06-01T09:38:38.729Z",
+        "fh_portada": "2020-06-01T09:38:38.729Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "4fd21826-b7ed-46b5-9a35-f44a31c601f5"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:42:19.988Z",
+        "fh_public": "2020-06-01T09:42:19.988Z",
+        "fh_desactivacion": "2020-06-01T09:42:19.988Z",
+        "fh_portada": "2020-06-01T09:42:19.988Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "5d00d1eb-0cf6-4a60-a092-a862f3ec845d"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:42:57.434Z",
+        "fh_public": "2020-06-01T09:42:57.434Z",
+        "fh_desactivacion": "2020-06-01T09:42:57.434Z",
+        "fh_portada": "2020-06-01T09:42:57.434Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "b9fcf4c5-7f5f-4e2c-b822-0f30756acfba"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:50:17.880Z",
+        "fh_public": "2020-06-01T09:50:17.880Z",
+        "fh_desactivacion": "2020-06-01T09:50:17.880Z",
+        "fh_portada": "2020-06-01T09:50:17.880Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "d3b073aa-4b8f-4483-b563-20b1c12ad648"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:50:53.537Z",
+        "fh_public": "2020-06-01T09:50:53.537Z",
+        "fh_desactivacion": "2020-06-01T09:50:53.537Z",
+        "fh_portada": "2020-06-01T09:50:53.537Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "5a1e23b2-2579-47fc-9837-2601b7bc2fc3"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:08:31.000Z",
+        "fh_public": "2020-06-01T10:08:31.000Z",
+        "fh_desactivacion": "2020-06-01T10:08:31.000Z",
+        "fh_portada": "2020-06-01T10:08:31.000Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "702b3945-4848-41bd-8b31-d129d2ea9033"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:12:00.486Z",
+        "fh_public": "2020-06-01T10:12:00.486Z",
+        "fh_desactivacion": "2020-06-01T10:12:00.486Z",
+        "fh_portada": "2020-06-01T10:12:00.486Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "0d564c46-3b95-46ea-87fa-c77ec6726aa1"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:12:18.505Z",
+        "fh_public": "2020-06-01T10:12:18.505Z",
+        "fh_desactivacion": "2020-06-01T10:12:18.505Z",
+        "fh_portada": "2020-06-01T10:12:18.505Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "5183c609-5fb2-4257-ab42-624db0b0eff8"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:12:29.500Z",
+        "fh_public": "2020-06-01T10:12:29.500Z",
+        "fh_desactivacion": "2020-06-01T10:12:29.500Z",
+        "fh_portada": "2020-06-01T10:12:29.500Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "c708c747-ac3e-4168-8d98-67f2a0d18bd8"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:20:33.014Z",
+        "fh_public": "2020-06-01T10:20:33.014Z",
+        "fh_desactivacion": "2020-06-01T10:20:33.014Z",
+        "fh_portada": "2020-06-01T10:20:33.014Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "791e4208-71c2-494b-8415-111def8fd385"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:22:33.864Z",
+        "fh_public": "2020-06-01T10:22:33.864Z",
+        "fh_desactivacion": "2020-06-01T10:22:33.864Z",
+        "fh_portada": "2020-06-01T10:22:33.864Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "71c3ea6e-ce9c-4eec-b449-99057aa6346b"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:26:36.562Z",
+        "fh_public": "2020-06-01T10:26:36.562Z",
+        "fh_desactivacion": "2020-06-01T10:26:36.562Z",
+        "fh_portada": "2020-06-01T10:26:36.562Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "cb1301d2-2dec-4ce1-84c7-b96cb4ff42a0"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:27:35.797Z",
+        "fh_public": "2020-06-01T10:27:35.797Z",
+        "fh_desactivacion": "2020-06-01T10:27:35.797Z",
+        "fh_portada": "2020-06-01T10:27:35.797Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "6c62d1db-f2d1-4edf-9aa0-b15d2714bf4b"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:29:47.062Z",
+        "fh_public": "2020-06-01T10:29:47.062Z",
+        "fh_desactivacion": "2020-06-01T10:29:47.062Z",
+        "fh_portada": "2020-06-01T10:29:47.062Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "cb6d8120-7aee-4939-8f60-aba95c8af3a9"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:30:23.675Z",
+        "fh_public": "2020-06-01T10:30:23.675Z",
+        "fh_desactivacion": "2020-06-01T10:30:23.675Z",
+        "fh_portada": "2020-06-01T10:30:23.675Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "63c41127-2dc3-4d43-852b-496725d68d61"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:30:33.581Z",
+        "fh_public": "2020-06-01T10:30:33.581Z",
+        "fh_desactivacion": "2020-06-01T10:30:33.581Z",
+        "fh_portada": "2020-06-01T10:30:33.581Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "c96b6318-a949-429b-b41e-f2472bfabe68"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:41:48.081Z",
+        "fh_public": "2020-06-01T10:41:48.081Z",
+        "fh_desactivacion": "2020-06-01T10:41:48.081Z",
+        "fh_portada": "2020-06-01T10:41:48.081Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "1a0dc83d-2c13-4f6a-a967-db3d7c559d5d"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:46:03.796Z",
+        "fh_public": "2020-06-01T10:46:03.796Z",
+        "fh_desactivacion": "2020-06-01T10:46:03.796Z",
+        "fh_portada": "2020-06-01T10:46:03.796Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "b10f2dbd-40e0-4400-9749-ea83322bfb49"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:47:42.933Z",
+        "fh_public": "2020-06-01T10:47:42.933Z",
+        "fh_desactivacion": "2020-06-01T10:47:42.933Z",
+        "fh_portada": "2020-06-01T10:47:42.933Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "ac27430b-eaa5-4da1-9d63-2d74fda64546"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:55:46.727Z",
+        "fh_public": "2020-06-01T10:55:46.727Z",
+        "fh_desactivacion": "2020-06-01T10:55:46.727Z",
+        "fh_portada": "2020-06-01T10:55:46.727Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "fd53003d-077d-4a33-a14d-c03acba25dab"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:57:07.956Z",
+        "fh_public": "2020-06-01T10:57:07.956Z",
+        "fh_desactivacion": "2020-06-01T10:57:07.956Z",
+        "fh_portada": "2020-06-01T10:57:07.956Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "f408b05d-3ec9-4f87-854a-f7d75f6396e5"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:58:07.201Z",
+        "fh_public": "2020-06-01T10:58:07.201Z",
+        "fh_desactivacion": "2020-06-01T10:58:07.201Z",
+        "fh_portada": "2020-06-01T10:58:07.201Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "e8cb2265-18db-465b-8fd0-290ce3470c92"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:59:07.353Z",
+        "fh_public": "2020-06-01T10:59:07.353Z",
+        "fh_desactivacion": "2020-06-01T10:59:07.353Z",
+        "fh_portada": "2020-06-01T10:59:07.353Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "4cc1c043-e47d-4795-8168-a51272039dee"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:59:41.377Z",
+        "fh_public": "2020-06-01T10:59:41.377Z",
+        "fh_desactivacion": "2020-06-01T10:59:41.377Z",
+        "fh_portada": "2020-06-01T10:59:41.377Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "54b596ea-2764-4c23-a4f3-21e2499d4642"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:00:37.150Z",
+        "fh_public": "2020-06-01T11:00:37.150Z",
+        "fh_desactivacion": "2020-06-01T11:00:37.150Z",
+        "fh_portada": "2020-06-01T11:00:37.150Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "5dc29a20-774e-4560-8f07-b2c8213c37bd"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:05:50.515Z",
+        "fh_public": "2020-06-01T11:05:50.515Z",
+        "fh_desactivacion": "2020-06-01T11:05:50.515Z",
+        "fh_portada": "2020-06-01T11:05:50.515Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "72da500e-34cd-46f9-a91e-92fbe47abe5b"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:07:38.394Z",
+        "fh_public": "2020-06-01T11:07:38.394Z",
+        "fh_desactivacion": "2020-06-01T11:07:38.394Z",
+        "fh_portada": "2020-06-01T11:07:38.394Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "1861d031-888e-4ce5-b965-a3c9c88d1357"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:09:12.860Z",
+        "fh_public": "2020-06-01T11:09:12.860Z",
+        "fh_desactivacion": "2020-06-01T11:09:12.860Z",
+        "fh_portada": "2020-06-01T11:09:12.860Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "227cb356-1036-4beb-bd5b-dc5ad81b5faf"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T10:49:41.684Z",
+        "fh_public": "2020-06-01T10:49:41.684Z",
+        "fh_desactivacion": "2020-06-01T10:49:41.684Z",
+        "fh_portada": "2020-06-01T10:49:41.684Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "74cb783c-f94a-416b-9fee-b447fdcfae84"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:10:35.535Z",
+        "fh_public": "2020-06-01T11:10:35.535Z",
+        "fh_desactivacion": "2020-06-01T11:10:35.535Z",
+        "fh_portada": "2020-06-01T11:10:35.535Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "471d5549-426a-412a-95b5-397af806aab6"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:11:35.102Z",
+        "fh_public": "2020-06-01T11:11:35.102Z",
+        "fh_desactivacion": "2020-06-01T11:11:35.102Z",
+        "fh_portada": "2020-06-01T11:11:35.102Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "636bc727-b555-45e5-b937-f0f0676c21fb"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:12:39.227Z",
+        "fh_public": "2020-06-01T11:12:39.227Z",
+        "fh_desactivacion": "2020-06-01T11:12:39.227Z",
+        "fh_portada": "2020-06-01T11:12:39.227Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "9e5ec17f-5113-4efd-a637-79117ecc42e1"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:14:43.997Z",
+        "fh_public": "2020-06-01T11:14:43.997Z",
+        "fh_desactivacion": "2020-06-01T11:14:43.997Z",
+        "fh_portada": "2020-06-01T11:14:43.997Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "a197e5e4-25e1-41e9-85e4-ede108df9802"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:16:14.587Z",
+        "fh_public": "2020-06-01T11:16:14.587Z",
+        "fh_desactivacion": "2020-06-01T11:16:14.587Z",
+        "fh_portada": "2020-06-01T11:16:14.587Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "0b08ef45-bb58-4c1a-81e3-61d036e7b9d9"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:19:52.516Z",
+        "fh_public": "2020-06-01T11:19:52.516Z",
+        "fh_desactivacion": "2020-06-01T11:19:52.516Z",
+        "fh_portada": "2020-06-01T11:19:52.516Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "6ca3c926-5227-4d37-b01c-54f19593dd68"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:20:51.838Z",
+        "fh_public": "2020-06-01T11:20:51.838Z",
+        "fh_desactivacion": "2020-06-01T11:20:51.838Z",
+        "fh_portada": "2020-06-01T11:20:51.838Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "b730a756-4f8b-4b72-a300-1d72ece6cba8"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:22:12.091Z",
+        "fh_public": "2020-06-01T11:22:12.091Z",
+        "fh_desactivacion": "2020-06-01T11:22:12.091Z",
+        "fh_portada": "2020-06-01T11:22:12.091Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "b7ec058c-99aa-4e49-8097-7fff491c219a"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:24:09.171Z",
+        "fh_public": "2020-06-01T11:24:09.171Z",
+        "fh_desactivacion": "2020-06-01T11:24:09.171Z",
+        "fh_portada": "2020-06-01T11:24:09.171Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "9068b987-8e13-4a1b-aee3-0078d4ec60d1"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:24:49.978Z",
+        "fh_public": "2020-06-01T11:24:49.978Z",
+        "fh_desactivacion": "2020-06-01T11:24:49.978Z",
+        "fh_portada": "2020-06-01T11:24:49.978Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "558cd5f5-10a3-41a8-9c33-1844e5f7d668"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:25:40.797Z",
+        "fh_public": "2020-06-01T11:25:40.797Z",
+        "fh_desactivacion": "2020-06-01T11:25:40.797Z",
+        "fh_portada": "2020-06-01T11:25:40.797Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "8231c562-bd43-4c4d-a43d-d07f61a4e502"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:30:54.123Z",
+        "fh_public": "2020-06-01T11:30:54.123Z",
+        "fh_desactivacion": "2020-06-01T11:30:54.123Z",
+        "fh_portada": "2020-06-01T11:30:54.123Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "2aa3362e-c0a3-41eb-b390-d2d7987d2056"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:31:37.498Z",
+        "fh_public": "2020-06-01T11:31:37.498Z",
+        "fh_desactivacion": "2020-06-01T11:31:37.498Z",
+        "fh_portada": "2020-06-01T11:31:37.498Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "d6b775e4-d6f8-4977-9267-e5f97a8e4fe2"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:32:23.193Z",
+        "fh_public": "2020-06-01T11:32:23.193Z",
+        "fh_desactivacion": "2020-06-01T11:32:23.193Z",
+        "fh_portada": "2020-06-01T11:32:23.193Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "2e3e27e0-f335-4249-8579-03a6be70f403"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:32:54.023Z",
+        "fh_public": "2020-06-01T11:32:54.023Z",
+        "fh_desactivacion": "2020-06-01T11:32:54.023Z",
+        "fh_portada": "2020-06-01T11:32:54.023Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "b59bfa1b-3308-455f-9e16-15aebec03c6c"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:42:41.034Z",
+        "fh_public": "2020-06-01T11:42:41.034Z",
+        "fh_desactivacion": "2020-06-01T11:42:41.034Z",
+        "fh_portada": "2020-06-01T11:42:41.034Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "abb960a7-5336-4d5a-9252-cdb9a99382a3"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:42:41.034Z",
+        "fh_public": "2020-06-01T11:42:41.034Z",
+        "fh_desactivacion": "2020-06-01T11:42:41.034Z",
+        "fh_portada": "2020-06-01T11:42:41.034Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "9bcecbe9-69e5-47c2-829b-66e216a0228c"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:49:05.289Z",
+        "fh_public": "2020-06-01T11:49:05.289Z",
+        "fh_desactivacion": "2020-06-01T11:49:05.289Z",
+        "fh_portada": "2020-06-01T11:49:05.289Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "ba452729-7076-43f9-9a80-444c89161b00"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:49:05.289Z",
+        "fh_public": "2020-06-01T11:49:05.289Z",
+        "fh_desactivacion": "2020-06-01T11:49:05.289Z",
+        "fh_portada": "2020-06-01T11:49:05.289Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "7a504895-c8c5-411f-bb6a-058321de2895"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:46:44.709Z",
+        "fh_public": "2020-06-01T12:46:44.709Z",
+        "fh_desactivacion": "2020-06-01T12:46:44.709Z",
+        "fh_portada": "2020-06-01T12:46:44.709Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "a3db315d-c930-4ad6-acd2-aac07a30020c"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:47:39.578Z",
+        "fh_public": "2020-06-01T12:47:39.578Z",
+        "fh_desactivacion": "2020-06-01T12:47:39.578Z",
+        "fh_portada": "2020-06-01T12:47:39.578Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "6c5c517a-85a8-4e6f-8125-87640f5f6727"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:49:51.323Z",
+        "fh_public": "2020-06-01T12:49:51.323Z",
+        "fh_desactivacion": "2020-06-01T12:49:51.323Z",
+        "fh_portada": "2020-06-01T12:49:51.323Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "2dd41750-9e57-480a-8fe0-ec918c54f439"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:51:01.303Z",
+        "fh_public": "2020-06-01T12:51:01.303Z",
+        "fh_desactivacion": "2020-06-01T12:51:01.303Z",
+        "fh_portada": "2020-06-01T12:51:01.303Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "9e5b77a8-b70f-4b4c-a974-0c43d4eb1465"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:51:57.778Z",
+        "fh_public": "2020-06-01T12:51:57.778Z",
+        "fh_desactivacion": "2020-06-01T12:51:57.778Z",
+        "fh_portada": "2020-06-01T12:51:57.778Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "7fa30980-8aee-4ec8-bb7c-e7c7a49997b0"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:52:25.703Z",
+        "fh_public": "2020-06-01T12:52:25.703Z",
+        "fh_desactivacion": "2020-06-01T12:52:25.703Z",
+        "fh_portada": "2020-06-01T12:52:25.703Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "38a9dd72-95ef-47d9-b44b-ff94048d3f03"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:52:51.177Z",
+        "fh_public": "2020-06-01T12:52:51.177Z",
+        "fh_desactivacion": "2020-06-01T12:52:51.177Z",
+        "fh_portada": "2020-06-01T12:52:51.177Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "eeea9324-55e4-47e9-8331-97cc779e7f34"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:53:21.860Z",
+        "fh_public": "2020-06-01T12:53:21.860Z",
+        "fh_desactivacion": "2020-06-01T12:53:21.860Z",
+        "fh_portada": "2020-06-01T12:53:21.860Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "9bcdd9a0-1925-472d-bf75-71244a854c8b"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:53:58.419Z",
+        "fh_public": "2020-06-01T12:53:58.419Z",
+        "fh_desactivacion": "2020-06-01T12:53:58.419Z",
+        "fh_portada": "2020-06-01T12:53:58.419Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "73c0ff3a-7527-4ab9-82a4-15b7e9855834"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:55:12.481Z",
+        "fh_public": "2020-06-01T12:55:12.481Z",
+        "fh_desactivacion": "2020-06-01T12:55:12.481Z",
+        "fh_portada": "2020-06-01T12:55:12.481Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "5c9ca975-47c2-4f3e-be74-56c1788a0a94"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:55:52.649Z",
+        "fh_public": "2020-06-01T12:55:52.649Z",
+        "fh_desactivacion": "2020-06-01T12:55:52.649Z",
+        "fh_portada": "2020-06-01T12:55:52.649Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "43d932e7-b7a0-407d-ba47-e4b994ca7955"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:56:50.304Z",
+        "fh_public": "2020-06-01T12:56:50.304Z",
+        "fh_desactivacion": "2020-06-01T12:56:50.304Z",
+        "fh_portada": "2020-06-01T12:56:50.304Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "9d460f66-183b-4140-9c6a-41edc3a82b07"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:57:34.053Z",
+        "fh_public": "2020-06-01T12:57:34.053Z",
+        "fh_desactivacion": "2020-06-01T12:57:34.053Z",
+        "fh_portada": "2020-06-01T12:57:34.053Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "08f3974c-6e46-4527-9a2c-e693ae8c943e"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:57:49.756Z",
+        "fh_public": "2020-06-01T12:57:49.756Z",
+        "fh_desactivacion": "2020-06-01T12:57:49.756Z",
+        "fh_portada": "2020-06-01T12:57:49.756Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "2072b21a-1280-4622-8dac-c6f6fb27eb21"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T12:58:43.812Z",
+        "fh_public": "2020-06-01T12:58:43.812Z",
+        "fh_desactivacion": "2020-06-01T12:58:43.812Z",
+        "fh_portada": "2020-06-01T12:58:43.812Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "398f09b4-024c-49a2-a479-571771075e89"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T13:00:18.225Z",
+        "fh_public": "2020-06-01T13:00:18.225Z",
+        "fh_desactivacion": "2020-06-01T13:00:18.225Z",
+        "fh_portada": "2020-06-01T13:00:18.225Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "c1665499-8dd7-4635-b148-a67ed1129b29"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T13:00:54.797Z",
+        "fh_public": "2020-06-01T13:00:54.797Z",
+        "fh_desactivacion": "2020-06-01T13:00:54.797Z",
+        "fh_portada": "2020-06-01T13:00:54.797Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "2a1e76ce-4912-47f5-a781-99e82e1f77a7"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T13:03:14.246Z",
+        "fh_public": "2020-06-01T13:03:14.246Z",
+        "fh_desactivacion": "2020-06-01T13:03:14.246Z",
+        "fh_portada": "2020-06-01T13:03:14.246Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "9bffe817-4d48-4c84-bcff-99a25d44b8c3"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T13:44:15.144Z",
+        "fh_public": "2020-06-01T13:44:15.144Z",
+        "fh_desactivacion": "2020-06-01T13:44:15.144Z",
+        "fh_portada": "2020-06-01T13:44:15.144Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "459d28c8-0f46-4827-81df-331e7a2702df"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T13:53:02.825Z",
+        "fh_public": "2020-06-01T13:53:02.825Z",
+        "fh_desactivacion": "2020-06-01T13:53:02.825Z",
+        "fh_portada": "2020-06-01T13:53:02.825Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "7eb5f353-2d63-469d-a4a2-e53eb77c3fe8"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T13:56:42.651Z",
+        "fh_public": "2020-06-01T13:56:42.651Z",
+        "fh_desactivacion": "2020-06-01T13:56:42.651Z",
+        "fh_portada": "2020-06-01T13:56:42.651Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "980fbe6b-bc03-4d0c-9fb4-20c30ab5a961"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T13:57:09.925Z",
+        "fh_public": "2020-06-01T13:57:09.925Z",
+        "fh_desactivacion": "2020-06-01T13:57:09.925Z",
+        "fh_portada": "2020-06-01T13:57:09.925Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "5b58af38-c7c2-46b2-a436-e79634b6d921"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T14:05:34.228Z",
+        "fh_public": "2020-06-01T14:05:34.228Z",
+        "fh_desactivacion": "2020-06-01T14:05:34.228Z",
+        "fh_portada": "2020-06-01T14:05:34.228Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "9179e70c-5add-4adb-b5c9-dfda6e2cd1f6"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T14:07:24.606Z",
+        "fh_public": "2020-06-01T14:07:24.606Z",
+        "fh_desactivacion": "2020-06-01T14:07:24.606Z",
+        "fh_portada": "2020-06-01T14:07:24.606Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "efbdb9fc-6a4f-43aa-b704-21b8896d2061"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "Nuevo Titular",
+        "entradilla": "<p>ssss</p>",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T14:07:53.874Z",
+        "fh_public": "2020-06-01T14:07:53.874Z",
+        "fh_desactivacion": "2020-06-01T14:07:53.874Z",
+        "fh_portada": "2020-06-01T14:07:53.874Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "<p>ssss</p>",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "dadbcdf5-d3de-464f-bca3-3840eafaa0ee"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "xxx",
+        "entradilla": "<p>xxxx</p>",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T14:15:37.916Z",
+        "fh_public": "2020-06-01T14:15:37.916Z",
+        "fh_desactivacion": "2020-06-01T14:15:37.916Z",
+        "fh_portada": "2020-06-01T14:15:37.916Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "<p>xxxx</p>",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "e56c88ab-e609-48d0-b8a5-8ee6a0baa4b1"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "xxxx",
+        "entradilla": "<p>xxx</p>",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T15:08:01.788Z",
+        "fh_public": "2020-06-01T15:08:01.788Z",
+        "fh_desactivacion": "2020-06-01T15:08:01.788Z",
+        "fh_portada": "2020-06-01T15:08:01.788Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "<p>xxxx</p>",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "d2bc9ea9-f127-4e53-9e8a-6082eac64217"
     }
   ],
   "alertas": [
@@ -63362,6 +67442,210 @@
         "list": []
       },
       "id": "f4f4b70c-c9a6-40b8-9640-5a2bdc7d074c"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T09:09:40.168Z",
+        "fh_public": "2020-06-01T09:09:40.168Z",
+        "fh_desactivacion": "2020-06-01T09:09:40.168Z",
+        "fh_portada": "2020-06-01T09:09:40.168Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "71f3ba73-5c50-4c25-96ea-319e71ff08ca"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:42:41.034Z",
+        "fh_public": "2020-06-01T11:42:41.034Z",
+        "fh_desactivacion": "2020-06-01T11:42:41.034Z",
+        "fh_portada": "2020-06-01T11:42:41.034Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "47f81a75-2118-42bc-b794-ee9c7640db58"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:42:41.034Z",
+        "fh_public": "2020-06-01T11:42:41.034Z",
+        "fh_desactivacion": "2020-06-01T11:42:41.034Z",
+        "fh_portada": "2020-06-01T11:42:41.034Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "c1baa0ac-5f1d-43c0-a02d-18444b9a7337"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "",
+        "entradilla": "",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-01T11:42:41.034Z",
+        "fh_public": "2020-06-01T11:42:41.034Z",
+        "fh_desactivacion": "2020-06-01T11:42:41.034Z",
+        "fh_portada": "2020-06-01T11:42:41.034Z",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "0eb137f8-1db2-4d65-b0e7-b4eb9eca8d38"
     }
   ]
 }

@@ -30,6 +30,15 @@ const FormProvider = (props) => {
     const [imgs,
         setImgs] = useState([]);
 
+    const [mandatoryFields, setMandatoryFields] = useState(['titular','entradilla','contenido_html']);   
+
+    const [emptyFields, setEmptyFields] = useState(null); 
+
+
+
+    
+
+
     const obtieneEspecialidades = async() => {
 
         try {
@@ -251,7 +260,11 @@ const FormProvider = (props) => {
             entidades,
             obtieneEntidades,
             imgs,
-            obtieneImgs
+            obtieneImgs,
+            emptyFields,
+            mandatoryFields,
+            setEmptyFields
+            
         }}>
             {props.children}
         </FormContext.Provider>
