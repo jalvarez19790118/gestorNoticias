@@ -1,124 +1,49 @@
-import React, {useState, useEffect, Fragment} from 'react';
+import React, { useState, useEffect, Fragment, useContext } from 'react';
 import LoadingCard from '../../commons/LoadingCard';
-import {useLocation, useParams} from "react-router-dom";
-import FormProvider from '../../../context/FormContext';
+import { useLocation, useParams } from 'react-router-dom';
+import { FormContext } from '../../../context/FormContext';
 import EditorContentPanel from './EditorContentPanel';
-import EditorHeader from './EditorHeader';
-
-const init_noticia = {
-    "fields": {
-        "id_categoria": "",
-        "titular": '',
-        "entradilla": "",
-        "tipo_referencia": 'ENT',
-        "nom_labo_entidad": '',
-        "year": new Date(),
-        "fh_public": new Date(),
-        "fh_desactivacion": new Date(),
-        "fh_portada": new Date(),
-        "ib_visible": 1,
-        "ib_boletin": "",
-        "img_noticia": "",
-        "contenido_html": "",
-        "creation": "",
-        "modification": "",
-        "ib_destacado": 0,
-        "profesionales": 0,
-        "palabra_clave": '',
-        "id_imagen": ""
-
-    },
-
-    "especialities": {
-        "active": 0,
-        "list": []
-    },
-
-    "drugs": {
-        "active": 0,
-        "list": []
-    },
-
-    "atcs": {
-        "active": 0,
-        "list": []
-    },
-
-    "diseases": {
-        "active": 0,
-        "list": []
-    },
-
-    "laboratories": {
-        "active": 0,
-        "list": []
-    },
-
-    "entities": {
-        "active": 0,
-        "list": []
-    },
-
-    "files": {
-        "list": []
-    }
-
-}
 
 const NewElementPage = () => {
+  const location = useLocation();
+  const { element } = useParams();
+  const { noticia, setNoticia, init_noticia, setVacios } = useContext(FormContext);
 
-    const location = useLocation();
+  const getSessionState = () => {
+    let new_status = init_noticia;
 
-    const {element} = useParams();
+    let objNoticia = sessionStorage.getItem('nueva_' + element);
 
-    const getSessionState = () => {
-
-        let new_status = init_noticia
-
-        let objNoticia = sessionStorage.getItem('nueva_' + element);
-
-        if (objNoticia === null) {
-
-            new_status = init_noticia
-
-        } else 
-            new_status = JSON.parse(objNoticia);
-        
-        sessionStorage.setItem('nueva_' + element, JSON.stringify(new_status));
-        return new_status;
-
+    if (objNoticia === null) {
+      new_status = init_noticia;
+      sessionStorage.setItem('nueva_' + element, JSON.stringify(new_status));
+    } else {
+      new_status = JSON.parse(objNoticia);
     }
+    return new_status;
+  };
 
-    const [noticia,
-        setNoticia] = useState(null);
+  useEffect(() => {
+    if (noticia == null) {
+      setNoticia(getSessionState);
+      setFirst(false);
+    }
+    setVacios([]);
+  }, [location]);
 
-    useEffect(() => {
+  const [first, setFirst] = useState(true);
 
-        if (noticia == null) {
-   
-
-            setNoticia(getSessionState);
-
-            setFirst(false);
-        }
-
-    }, [location]);
-
-    const [first,
-        setFirst] = useState(true);
-
-    return (
-
-        <FormProvider>
-            {first
-                ? <LoadingCard/>
-                : <Fragment><EditorHeader mode={"save"} storage={`nueva_${element}`} type={element}/><EditorContentPanel
-                    type={`nueva_${element}`}
-                    noticia={noticia}
-                    setNoticia={setNoticia}/></Fragment>}
-        </FormProvider>
-    )
-
-}
+  return (
+    <Fragment>
+      {first ? (
+        <LoadingCard />
+      ) : (
+        <Fragment>
+          <EditorContentPanel type={`nueva_${element}`} noticia={noticia} setNoticia={setNoticia} />
+        </Fragment>
+      )}
+    </Fragment>
+  );
+};
 
 export default NewElementPage;

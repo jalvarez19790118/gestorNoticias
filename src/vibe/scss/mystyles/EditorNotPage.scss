@@ -1,574 +1,613 @@
 .EditNotPage {
+  .Editor_container {
+    height: calc(100vh - 78px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 
-    .Editor_container {
-        height: calc(100vh - 83px);
-        overflow-y: auto;
-        overflow-x: hidden;
+  .EditorFormPage {
+    font-family: $actualfontFamily;
+    border: 1px solid #b4b4b4;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+
+    max-width: unset;
+    border-radius: 0.25rem;
+
+    .emptyField {
+      label {
+        color: #a00 !important;
+      }
+
+      .se-wrapper-wysiwyg {
+        border: px solid #a00 !important;
+        background: #f4c6c6;
+        height: auto !important;
+      }
     }
 
-    .EditorFormPage {
+    .mandatory-field {
+      color: #a00 !important;
+      font-size: 10px;
+      font-weight: bold;
+    }
 
-        font-family: $actualfontFamily;
+    .label {
+      color: $notPrimaryColor;
+      font-size: 0.9em;
+      font-weight: bold;
+      max-width: 200px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    .react-datepicker__input-container {
+      input {
+        width: 100%;
+      }
+    }
+
+    .react-datepicker-popper {
+      z-index: 10000;
+
+      .react-datepicker__header {
+        background-color: #eee;
+      }
+
+      .react-datepicker__month-container {
+        -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0.35rem;
+      }
+    }
+
+    .react-datepicker-wrapper {
+      display: block;
+      padding: 0;
+      border: 0;
+    }
+
+    label {
+      color: $notPrimaryColor;
+      font-size: 0.9em;
+      font-weight: bold;
+      display: inline;
+    }
+
+    input,
+    select {
+      border: 1px solid $borderSectionColor;
+      border-radius: 0.35rem;
+      color: #000 !important;
+      font-size: 0.9em;
+      font-weight: normal;
+      box-shadow: none !important;
+      background-color: #fafafa !important;
+      padding: 4px 6px;
+      font-weight: bold;
+
+      &:focus {
         border: 1px solid $borderSectionColor;
-        background-color: #fff;
-
-        max-width: unset;
-        border-radius: 0.25rem;
-
-        .label {
-            color: $notPrimaryColor;
-            font-size: 0.9em;
-            font-weight: bold;
-            max-width: 200px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-
-        .form-group {
-            margin-bottom: 0;
-        }
-
-        .react-datepicker__input-container {
-
-            input {
-                width: 100%;
-
-            }
-
-        }
-
-        .react-datepicker-popper {
-            z-index: 10000;
-
-            .react-datepicker__header {
-                background-color: #eee;
-            }
-            .react-datepicker__month-container {
-                -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-                -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-                box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-                border-radius: 0.35rem;
-            }
-        }
-
-        .react-datepicker-wrapper {
-            display: block;
-            padding: 0;
-            border: 0;
-        }
-
-        label {
-            color: $notPrimaryColor;
-            font-size: 0.9em;
-            font-weight: bold;
-            display: inline;
-        }
-
-        input,
-        select {
-            border: 1px solid $borderSectionColor;
-            border-radius: 0.35rem;
-            color: #000 !important;
-            font-size: 0.9em;
-            font-weight: normal;
-            box-shadow: none !important;
-            background-color: #eee !important;
-            padding: 4px 6px;
-            font-weight: bold;
-            &:focus {
-                border: 1px solid $borderSectionColor;
-            }
-        }
-
-        .toggle-container {
-            height: 25px;
-            label {
-                margin-left: 5px;
-                position: relative;
-                top: -6px;
-            }
-
-            button {
-                padding: 2px;
-                background: #fff !important;
-                float: right;
-                box-shadow: unset !important;
-                padding-right: 10px;
-                padding-left: 5px;
-                color: $notPrimaryColor;
-                font-weight: bold;
-                font-size: 0.9em;
-                border: 0 solid;
-                &:hover {
-                    background: #fff !important;
-                }
-
-                font-size: 0.9em;
-                svg {
-                    margin-right: 5px;
-                }
-            }
-
-            .react-toggle--checked .react-toggle-track {
-                border: 1px solid $borderSectionColor;
-                background-color: $activeColor;
-
-            };
-            .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-                border: 1px solid $borderSectionColor;
-                background-color: $notPrimaryColor;
-
-            };
-
-            .react-toggle--checked,
-            .react-toggle--focus .react-toggle-thumb {
-                box-shadow: none !important;
-            }
-            .react-toggle-track {
-
-                border: 1px solid $borderSectionColor;
-                background-color: $inactiveColor;
-                border-radius: 0.3rem;
-            }
-
-            .react-toggle-thumb {
-
-                border: 0 solid $borderSectionColor;
-                background-color: #eee;
-                border-radius: 0.2rem;
-            }
-
-            .react-toggle--checked .react-toggle-thumb {
-                left: 27px;
-                border-color: unset;
-            }
-
-            .react-toggle--focus .react-toggle-thumb {
-                -webkit-box-shadow: unset;
-                -moz-box-shadow: unset;
-                box-shadow: unset;
-            }
-            .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
-                -webkit-box-shadow: unset;
-                -moz-box-shadow: unset;
-                box-shadow: unset;
-            }
-
-        }
-
-        .form-control {
-            height: 33px;
-
-        }
-        .select-container {
-
-            div[class$="control"] {
-                border: 1px solid $borderSectionColor;
-                background: #eee;
-                font-size: 0.9em;
-                font-weight: bold;
-                color: $notPrimaryColor;
-                box-shadow: unset;
-                min-height: unset;
-            }
-
-            span[class$='indicatorSeparator'] {
-                width: 0;
-            }
-
-            div[class$='-ValueContainer'] {
-                padding: 0;
-            }
-
-            div[class$='-IndicatorsContainer'] {
-
-                svg[class$='-Svg'] {
-                    color: $notPrimaryColor;
-                    stroke: $notPrimaryColor;
-                    line-height: 2;
-                    background: transparent;
-                    border-radius: 0.3rem;
-                    height: 25PX;
-                    width: 25PX;
-
-                }
-
-            }
-
-            div[class$='-placeholder'] {
-
-                opacity: 0.5;
-                margin-left: 8px;
-
-            }
-
-            div[class$='-Input'] {
-
-                margin-left: 8px;
-                input {
-                    display: block;
-                }
-            }
-
-            div[class$='-multiValue'] {
-                border: 1px solid $notPrimaryColor;
-                background: #fff;
-                padding: 2px;
-                border-radius: 0.3rem;
-                display: none;
-                div {
-                    &:first-child {
-                        font-size: 1em;
-                    }
-                    &:last-child {
-
-                        background: transparent;
-                        border-radius: 0.3rem;
-                        margin-left: 10px;
-                    }
-                }
-
-            }
-
-            div[class$='-singleValue'] {
-                font-size: 1em;
-                padding-left: 4px;
-            }
-
-            svg[class$='-Svg'] {
-                color: $notPrimaryColor;
-                stroke: $notPrimaryColor;
-                line-height: 2;
-
-            }
-
-            div[class$="-menu"] {
-                border: 1px solid $borderSectionColor;
-                background: #fff;
-                font-size: 0.9em;
-                font-weight: bold;
-                padding: 0;
-                box-shadow: unset;
-            }
-
-            .isRelative div[class$="-menu"] {
-
-                position: relative;
-
-            }
-
-            div[class$="-indicatorContainer"] {
-
-                padding: 3px;
-                margin-bottom: auto;
-
-            }
-
-            div[class$='LoadingMessage'] {
-                font-size: 0.9em;
-                font-weight: bold;
-                color: $notPrimaryColor;
-                padding: 4px;
-            }
-
-            div[class$='NoOptionsMessage'] {
-                font-size: 0.9em;
-                font-weight: bold;
-                color: $inactiveColor;
-                padding: 4px;
-                background: #f4c6c6;
-            }
-
-            div[class$='MenuList'] {
-                font-size: 0.9em;
-                font-weight: bold;
-                color: $notPrimaryColor;
-                padding: 0;
-            }
-
-            div[class$='option'] {
-
-                padding: 4px;
-            }
-        }
-
-        hr {
-
-            border-top: wpx solid #eee;
-        }
-
-        .listGroup {
-            border: 1px solid $borderSectionColor;
-            border-radius: 0.25rem;
-            background: #eee;
-            padding: 0;
-            margin-top: 5px !important;
-            padding-top: 0 !important;
-
-            .list-group-item {
-                border: 0 solid $notPrimaryColor;
-                border-bottom: 1px solid $borderSectionColor;
-
-                background: #eee;
-                font-size: 0.9em;
-                font-weight: bold;
-
-                margin: 0 !important;
-                &:last-child {
-                    border-bottom: 0 solid;
-                }
-
-                div {
-                    &:first-child {
-                        float: left;
-                        width: calc(100% - 0px);
-                        margin-right: 5px;
-                    }
-
-                }
-            }
-        }
-
-        .dropzone {
-
-            height: auto;
-            min-height: 33px;
-
-            .label {
-                width: calc(100% - 150px);
-                line-height: 27px;
-                margin-left: 5px;
-
-            }
-
-            .btnaddfiles {
-                padding: 2px;
-                background: #fff !important;
-                float: right;
-                box-shadow: unset !important;
-                padding-right: 10px;
-                padding-left: 5px;
-                color: $notPrimaryColor;
-                font-weight: bold;
-                font-size: 0.9em;
-                cursor: pointer;
-                border-radius: 0.35rem;
-
-            }
-
-            .loadingMsg {
-                border: 1px solid $borderSectionColor;
-                background: #fff;
-                font-size: 0.9em;
-                font-weight: bold;
-                padding: 1px;
-                box-shadow: unset;
-                text-align: center;
-                background: #eee;
-                border-radius: 0.35rem;
-            }
-
-            .list-group {
-                width: 100%;
-                margin: 0;
-                padding: 0;
-
-                .list-group-item {
-                    padding: 4px;
-                }
-            }
-
-        }
-
-        .mandatory_class
-        {
-           border: 1px solid #800;
-           background: #f4c6c6;
-
-        }
-
-    }
-    @media (max-width: 767px) {
-        .formFieldsPageContainer {
-            padding: 0.25rem !important;
-        }
-        .formPageContainer {
-            padding: 0 0.25rem 0.25rem !important;
-
-        }
+      }
     }
 
-    .formFieldsPageContainer,
-    .formPageContainer {
-        margin-top: 40px !important;
-    }
+    .toggle-container {
+      height: 25px;
 
-    .carrousel {
+      label {
+        margin-left: 5px;
+        position: relative;
+        top: -6px;
+      }
 
-        .BrainhubCarouselItem {
-
-            img {
-
-                padding: 0;
-
-                width: calc(100% - 10px) !important;
-                border: 1px solid $notPrimaryColor;
-                border-radius: 0.25rem;
-                max-height: 225px;
-            }
-        }
-
-        .BrainhubCarousel__thumbnail {
-            background: #fff;
-
-            img {
-                border: 1px solid $notPrimaryColor;
-                border-radius: 0.25rem;
-            }
-        }
-
-    }
-
-    .ImgBankSearching {
-        font-size: 0.7em;
-        font-weight: bold;
-        font-size: 0.7em;
-        font-weight: bold;
-
-        margin-top: auto !important;
-        margin-bottom: auto !important;
-        display: grid;
-
-    }
-
-    .sun-editor {
-        border: 0 solid;
-
-        .se-toolbar {
-            outline: 0 solid;
-            background: #fff;
-
-            .se-btn-module-border {
-                border: 1px solid $borderSectionColor;
-
-                .se-btn {
-
-                    color: $notSecondaryColor;
-                    &:hover {
-
-                        background: #eee;
-                    }
-                }
-            }
-        }
-
-        .se-list-layer {
-
-            border: 1px solid $borderSectionColor;
-            margin-top: 2px;
-            border-radius: 0.2rem;
-
-            -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-            -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-
-        }
-
-        .se-wrapper-wysiwyg {
-            background-color: #eee;
-            display: block;
-            border: 1px solid $borderSectionColor;
-            margin-left: 2px;
-            margin-right: 2px;
-            width: calc(100% - 4px);
-            border-radius: 0.25rem;
-            margin-top: 0;
-            margin-bottom: 4px;
-        }
-
-        .se-resizing-bar {
-            display: none;
-        }
-        .EditNotPage .EditorFormPage .select-container div[class$='-Input'] input {
-            /* display: none; */
-        }
-    }
-}
-
-.EditorHeader {
-    border: 0 solid #fff;
-    border-left: 0 solid;
-    border-right: 0 solid;
-    border-top: 0 solid;
-    background-color: $notPrimaryColor;
-    position: absolute;
-    z-index: 10;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1);
-    min-height: 38px;
-    color: #fff !important;
-
-    button {
-        background: #fff;
+      button {
+        padding: 2px;
+        background: #fff !important;
+        float: right;
+        box-shadow: unset !important;
+        padding-right: 10px;
+        padding-left: 5px;
         color: $notPrimaryColor;
         font-weight: bold;
         font-size: 0.9em;
-        border-radius: 0.25rem;
-        border: 1px solid $notPrimaryColor;
-        margin-top: auto;
-        margin-top: 5px;
+        border: 0 solid;
 
-        padding: 2px;
-        margin-right: 5px;
-
-        &:active
-        {
-            border: 1px solid $notPrimaryColor;
+        &:hover {
+          background: #fff !important;
         }
 
+        font-size: 0.9em;
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+
+      .react-toggle--checked .react-toggle-track {
+        border: 1px solid $borderSectionColor;
+        background-color: $activeColor;
+      }
+
+      .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+        border: 1px solid $borderSectionColor;
+        background-color: $notPrimaryColor;
+      }
+
+      .react-toggle--checked,
+      .react-toggle--focus .react-toggle-thumb {
+        box-shadow: none !important;
+      }
+
+      .react-toggle-track {
+        border: 1px solid $borderSectionColor;
+        background-color: $inactiveColor;
+        border-radius: 0.3rem;
+      }
+
+      .react-toggle-thumb {
+        border: 0 solid $borderSectionColor;
+        background-color: #eee;
+        border-radius: 0.2rem;
+      }
+
+      .react-toggle--checked .react-toggle-thumb {
+        left: 27px;
+        border-color: unset;
+      }
+
+      .react-toggle--focus .react-toggle-thumb {
+        -webkit-box-shadow: unset;
+        -moz-box-shadow: unset;
+        box-shadow: unset;
+      }
+
+      .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+        -webkit-box-shadow: unset;
+        -moz-box-shadow: unset;
+        box-shadow: unset;
+      }
     }
+
+    .form-control {
+      height: 33px;
+    }
+
+    .select-container {
+      div[class$='control'] {
+        border: 1px solid $borderSectionColor;
+        background: #fff;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: $notPrimaryColor;
+        box-shadow: unset;
+        min-height: unset;
+      }
+
+      span[class$='indicatorSeparator'] {
+        width: 0;
+      }
+
+      div[class$='-ValueContainer'] {
+        padding: 0;
+      }
+
+      div[class$='-IndicatorsContainer'] {
+        svg[class$='-Svg'] {
+          color: $notPrimaryColor;
+          stroke: $notPrimaryColor;
+          line-height: 2;
+          background: transparent;
+          border-radius: 0.3rem;
+          height: 25px;
+          width: 25px;
+        }
+      }
+
+      div[class$='-placeholder'] {
+        opacity: 0.5;
+        margin-left: 8px;
+      }
+
+      div[class$='-Input'] {
+        margin-left: 8px;
+
+        input {
+          display: block;
+        }
+      }
+
+      div[class$='-multiValue'] {
+        border: 1px solid $notPrimaryColor;
+        background: #fff;
+        padding: 2px;
+        border-radius: 0.3rem;
+        display: none;
+
+        div {
+          &:first-child {
+            font-size: 1em;
+          }
+
+          &:last-child {
+            background: transparent;
+            border-radius: 0.3rem;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      div[class$='-singleValue'] {
+        font-size: 1em;
+        padding-left: 4px;
+      }
+
+      svg[class$='-Svg'] {
+        color: $notPrimaryColor;
+        stroke: $notPrimaryColor;
+        line-height: 2;
+      }
+
+      div[class$='-menu'] {
+        border: 1px solid $borderSectionColor;
+        background: #fff;
+        font-size: 0.9em;
+        font-weight: bold;
+        padding: 0;
+        box-shadow: unset;
+      }
+
+      .isRelative div[class$='-menu'] {
+        position: relative;
+      }
+
+      div[class$='-indicatorContainer'] {
+        padding: 3px;
+        margin-bottom: auto;
+      }
+
+      div[class$='LoadingMessage'] {
+        font-size: 0.9em;
+        font-weight: bold;
+        color: $notPrimaryColor;
+        padding: 4px;
+      }
+
+      div[class$='NoOptionsMessage'] {
+        font-size: 0.9em;
+        font-weight: bold;
+        color: $inactiveColor;
+        padding: 4px;
+        background: #f4c6c6;
+      }
+
+      div[class$='MenuList'] {
+        font-size: 0.9em;
+        font-weight: bold;
+        color: $notPrimaryColor;
+        padding: 0;
+      }
+
+      div[class$='option'] {
+        padding: 4px;
+      }
+    }
+
+    hr {
+      border-top: wpx solid #eee;
+    }
+
+    .listGroup {
+      border: 0px solid $borderSectionColor;
+      border-radius: 0.25rem;
+      background: #fff;
+      padding: 0;
+      margin-top: 5px !important;
+      padding-top: 0 !important;
+
+      .list-group-item {
+        border: 0 solid $notPrimaryColor;
+        border-bottom: 1px solid $borderSectionColor;
+
+        background: #fff;
+        font-size: 0.9em;
+        font-weight: bold;
+
+        margin: 0 !important;
+
+        &:last-child {
+          border-bottom: 0 solid;
+        }
+
+        div {
+          &:first-child {
+            float: left;
+            width: calc(100% - 0px);
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    .dropzone {
+      height: auto;
+      min-height: 33px;
+
+      .label {
+        width: calc(100% - 150px);
+        line-height: 27px;
+        margin-left: 5px;
+      }
+
+      .btnaddfiles {
+        padding: 2px;
+        background: #fff !important;
+        float: right;
+        box-shadow: unset !important;
+        padding-right: 10px;
+        padding-left: 5px;
+        color: $notPrimaryColor;
+        font-weight: bold;
+        font-size: 0.9em;
+        cursor: pointer;
+        border-radius: 0.35rem;
+      }
+
+      .loadingMsg {
+        border: 1px solid $borderSectionColor;
+        background: #fff;
+        font-size: 0.9em;
+        font-weight: bold;
+        padding: 1px;
+        box-shadow: unset;
+        text-align: center;
+        background: #eee;
+        border-radius: 0.35rem;
+      }
+
+      .list-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        .list-group-item {
+          padding: 4px;
+        }
+      }
+    }
+
+    .mandatory_class {
+      border: 1px solid #800;
+      background: #f4c6c6;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .formFieldsPageContainer {
+      padding: 0.25rem !important;
+    }
+
+    .formPageContainer {
+      padding: 0 0.25rem 0.25rem !important;
+    }
+  }
+
+  .formFieldsPageContainer,
+  .formPageContainer {
+    // margin-top: 40px;
+    //margin-bottom: 28px !important;
+  }
+
+  .carrousel {
+    .BrainhubCarouselItem {
+      img {
+        padding: 0;
+
+        width: calc(100% - 10px) !important;
+        border: 1px solid $notPrimaryColor;
+        border-radius: 0.25rem;
+        max-height: 225px;
+      }
+    }
+
+    .BrainhubCarousel__thumbnail {
+      background: #fff;
+
+      img {
+        border: 1px solid $notPrimaryColor;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+
+  .ImgBankSearching {
+    font-size: 0.7em;
+    font-weight: bold;
+    font-size: 0.7em;
+    font-weight: bold;
+
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    display: grid;
+  }
+
+  .sun-editor {
+    border: 0 solid;
+    position: sticky;
+    z-index: 1;
+
+    .se-toolbar {
+      outline: 0 solid;
+      background: #fff;
+
+      .se-btn-module {
+        border: 0px solid $borderSectionColor;
+
+        .se-btn {
+          color: $notPrimaryColor;
+          background: #fff;
+
+          &:hover {
+            background: #eee;
+          }
+        }
+
+        .se-btn-select {
+          color: $notPrimaryColor;
+
+          background: #fafafa !important;
+          border: 1px solid #b4b4b4;
+          font-size: 0.8em;
+          font-weight: bold;
+          width: auto;
+          margin-right: 5px;
+
+          svg {
+            margin-right: 2px;
+            font-weight: bold;
+            margin-left: 5px;
+            font-weight: bold;
+            stroke: aaa;
+            fill: #b4b4b4;
+            fill-rule: evenodd;
+          }
+
+          &:hover {
+            background: #eee;
+          }
+        }
+      }
+    }
+
+    .se-list-layer {
+      border: 1px solid $borderSectionColor;
+      margin-top: 2px;
+      border-radius: 0.2rem;
+
+      -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+      z-index: 100000;
+    }
+
+    .se-wrapper-wysiwyg {
+      background-color: #fafafa;
+      display: block;
+      border: 1px solid #aaa;
+      /* margin-left: 2px; */
+      /* margin-right: 2px; */
+      width: calc(100% - 4px);
+      border-radius: 0.2rem;
+      margin-top: 0;
+      /* margin-bottom: 2px; */
+      /* height: auto !important; */
+    }
+
+    .se-resizing-bar {
+      display: none;
+    }
+
+    .EditNotPage .EditorFormPage .select-container div[class$='-Input'] input {
+      /* display: none; */
+    }
+  }
 }
 
-.SavingCard
-{
-    height: calc(100vh - 560px);
+.EditNotPage .EditorFormPage .select-container div[class$='-control'] {
+  background: #fafafa;
+}
 
+.EditorHeader {
+  border-bottom: 1px solid $notPrimaryColor;
+  border-right: 2px solid #aaa;
+  border-left: 1px solid #aaa;
+  background-color: #eee;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 0 rgba(0, 21, 41, 0.1);
+  min-height: 36px;
+  color: #fff !important;
 
-    .modal-content {
-       border: 1px solid $notPrimaryColor;
-       border-radius: 0.35rem;
-        text-align: center;
-        margin: 0px;
-        padding: 0px;
-        margin-top: calc(100vh - 525px);
-        -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-        -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+  button {
+    background: #fff;
+    color: #091220;
+    font-weight: bold;
+    font-size: 0.9em;
+    border-radius: 0.15rem;
+    border: 1px solid #091220;
+    margin-top: auto;
+    margin-top: 3px;
+    /* padding: 2px; */
+    margin-right: 2px;
+    height: 30px;
 
-        
-        .StartComponent 
-        {
-            border-radius: 0.35rem;
-            background: #fff;
-            color:  $notPrimaryColor;
-            font-weight: bold;
-        }
-
-
-        .OkComponent 
-        {
-            border-radius: 0.35rem;
-            background: #abdec5;
-            color:  #3a7570;
-            font-weight: bold;
-        }
-
-        .FailComponent
-        {
-            border-radius: 0.35rem;
-            background: #ffd8d8;
-            color:  #800;
-            font-weight: bold;
-        }
+    &:active {
+      border: 1px solid $notPrimaryColor;
     }
+  }
+}
+
+.SavingCard {
+  height: calc(100vh - 560px);
+
+  .modal-content {
+    border: 1px solid $notPrimaryColor;
+    border-radius: 0.35rem;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    margin-top: calc(100vh - 525px);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+    .StartComponent {
+      border-radius: 0.35rem;
+      background: #fff;
+      color: $notPrimaryColor;
+      font-weight: bold;
+    }
+
+    .OkComponent {
+      border-radius: 0.35rem;
+      background: #abdec5;
+      color: #3a7570;
+      font-weight: bold;
+    }
+
+    .FailComponent {
+      border-radius: 0.35rem;
+      background: #ffd8d8;
+      color: #800;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .SunEditorFields {
+    margin-top: 0px !important;
+    height: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .SunEditorFields {
+    // margin-top: 40px !important;
+  }
+}
+
+.EditorTitular {
+  position: sticky;
+  z-index: 7;
+}
+
+.EditorEntradilla {
+  position: sticky;
+  z-index: 6;
 }

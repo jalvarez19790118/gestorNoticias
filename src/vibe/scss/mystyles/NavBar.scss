@@ -1,192 +1,287 @@
-.app-header .top-nav {
+.app-header {
+  .navbar {
+    justify-content: start !important;
+  }
+
+  height: 40px !important;
+
+  .top-nav {
     padding: 0;
     width: 100%;
     box-shadow: none;
+  }
 
+  #selectTypeButton {
+    text-transform: none !important;
+    font-size: 1em;
+    font-weight: bold;
+    border: 0px solid !important;
+    background: #eee !important;
+    color: $notPrimaryColor !important;
+    padding: 0px;
+    margin-left: 2px !important;
+    margin-top: 2px;
+
+    span {
+      border: 0px solid !important;
+      line-height: 25px;
+      margin: 0px 10px;
+      color: $notPrimaryColor !important;
+
+      &:active {
+        span: {
+          border: 0px solid !important;
+        }
+      }
+    }
+  }
+}
+
+#selectTypeMenu {
+  .MuiPaper-root {
+    border: 1px solid #aaa;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2) !important;
+    margin-top: 24px;
+    min-width: 110px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background: #eee;
+
+    ul {
+      padding: 0px;
+      margin: 0px;
+
+      li {
+        text-align: center;
+        font-size: 0.9em;
+        font-weight: bold;
+        padding: 0px;
+        margin: 5px;
+        min-height: 35px;
+      }
+    }
+  }
 }
 
 .app-footer {
-    display: none;
+  background: $notTerciaryColor;
+  box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.3), 0 -1px 1px 1px rgba(0, 21, 41, 0.1);
+
+  position: sticky;
+  z-index: 10;
+  margin-left: 0px;
 }
 
 #primary-content {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .app-sidebar {
-
-    font-family: $actualfontFamily;
-    background-color: $notTerciaryColor;
-
+  font-family: $actualfontFamily;
+  background-color: $notTerciaryColor;
 }
 
 .site-logo-bar {
-    border-bottom: 1px solid $notPrimaryColor;
-    background-color: $notTerciaryColor;
-    height: 50px;
+  border-bottom: 1px solid $notPrimaryColor;
+  background-color: $notTerciaryColor;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 2px;
+  position: initial !important;
 
+  display: block !important;
+
+  .navbar-brand {
+    background: $notTerciaryColor;
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+
+    img {
+      max-height: 30px;
+      max-width: 30px;
+      display: inline-block;
+      border: 1px solid #fff;
+      border-radius: 0.15rem;
+      margin-right: 0px 4px;
+    }
+  }
+
+  width: unset !important;
 }
 
 #main-menu .has-submenu {
-
-    border-bottom: 1px solid $notPrimaryColor;
-
+  border-bottom: 1px solid $notPrimaryColor;
 }
 
 #main-menu .nav-submenu {
-
-    border-top: 1px solid $notPrimaryColor;
-
+  border-top: 1px solid $notPrimaryColor;
 }
 
 #main-menu .nav-item > a.active {
-    box-shadow: inset 4px 0 $notFourtyColor;
+  box-shadow: inset 4px 0 $notFourtyColor;
 }
 
 #main-menu .nav-item.has-submenu ul .nav-item {
-    background: $notTerciaryColor;
-    color: #fff;
-    border: 1px solid $notPrimaryColor;
-    border-top: 0 solid;
-
+  background: $notTerciaryColor;
+  color: #fff;
+  border: 1px solid $notPrimaryColor;
+  border-top: 0 solid;
 }
 
 #main-menu .nav-item > a {
-
-    color: #fff;
-    font-size: 1.1em;
+  color: #fff;
+  font-size: 1.1em;
 }
 
 #main-menu .nav-item.has-submenu ul .nav-item a.active {
-    background: $notPrimaryColor;
-    color: #fff;
+  background: $notPrimaryColor;
+  color: #fff;
 }
 
 .myNavbar {
-    font-family: $actualfontFamily;
-    color: #fff;
-    background-color: $notTerciaryColor;
+  font-family: $actualfontFamily;
+  color: #fff;
+  background-color: $notTerciaryColor;
+  /* box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1); */
 
-    padding: 0;
-    height: 50px;
-    border-bottom: 0 solid;
-    border-bottom: 1px solid $notPrimaryColor;
-    button {
+  padding: 0;
+  height: 40px;
 
-        border: 0px solid !important;
-        background: $notTerciaryColor !important;
-        color: #fff !important;
-        border-radius: 0.35rem;
-        width: auto;
-        height: auto;
-        box-shadow: unset !important;
-        margin: 0px;
-        margin-right: 10px;
-        margin-left: 10px;
-        padding: 2px;
-        &:hover {
+  border: 1px solid $notPrimaryColor;
+  border-top: 0 solid;
 
-            background: $notTerciaryColor !important;
-            color: #fff !important;
+  button {
+    border: 0px solid !important;
+    background: $notTerciaryColor !important;
+    color: #fff !important;
+    border-radius: 0.35rem;
+    width: auto;
+    height: auto;
+    box-shadow: unset !important;
+    margin: 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 2px;
 
-        }
-        &:active {
-
-            background: $notTerciaryColor !important;
-            color: #fff !important;
-
-        }
-
-        &:focus
-        {
-            background: $notTerciaryColor !important;
-            color: #fff !important;
-        }
-      
+    &:hover {
+      background: $notTerciaryColor !important;
+      color: #fff !important;
     }
 
-    .page-heading {
-        font-size: 1.2em;
-        font-weight: normal;
+    &:active {
+      background: $notTerciaryColor !important;
+      color: #fff !important;
     }
 
-}
-
-
-.site-logo-bar .navbar-brand {
-    padding: 0 5px;
-    background: $notPrimaryColor;
-    img {
-        max-height: 50px;
-        max-width: 40px;
-        display: inline-block;
-        border: 1px solid #fff;
-        border-radius: 0.15rem;
-        margin-right: 4px;
+    &:focus {
+      background: $notTerciaryColor !important;
+      color: #fff !important;
     }
+  }
 
-
- 
+  .page-heading {
+    font-size: 1.2em;
+    font-weight: normal;
+  }
 }
 
 .app-header .top-nav > nav {
-    padding: 0px 0px;
+  padding: 0px 0px;
 }
 
-@media screen and (min-width: 992px) {
-.side-menu-collapsed .site-logo-bar .navbar-brand {
-    padding: 0 5px;
-}
-}
-
-.app-body
-{
-    overflow: hidden;
+.app-body {
+  overflow: hidden;
 }
 
 .app-sidebar {
-   width: 185px;
-    box-shadow: 0px 0px 1px    2px rgba(0, 0, 0, 0.3), 0px 0px 1px 2px rgba(0, 21, 41, 0.1);
+  width: 185px;
+  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 0px 1px 2px rgba(0, 21, 41, 0.1);
+}
+
+#primary-content {
+  min-height: calc(100vh - 75px) !important;
+  max-height: calc(100vh - 75px) !important;
+  border-right: 1px solid $notPrimaryColor;
+  border-left: 1px solid $notPrimaryColor;
 }
 
 #page-content {
-    margin-left: 185px;
+  margin-left: 0px;
 }
 
-@media screen and (max-width: 992px)
-{
-#page-content {
+@media screen and (max-width: 992px) {
+  #page-content {
     margin-left: 0px;
+    margin-top: 40px;
+  }
 }
 
-}
-
-#main-menu
-{
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1);
+#main-menu {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1);
 }
 
 #main-menu .nav-item > a {
-  
-    padding: 7px 10px;
-    font-size: .9em;
-    font-weight: bold;
-   
+  padding: 7px 10px;
+  font-size: 0.9em;
+  font-weight: bold;
 }
-
 
 #main-menu .nav-item.has-submenu ul .nav-item a {
-    padding-left: 15px;
-    font-weight: normal;
-   
-   
-
+  padding-left: 15px;
+  font-weight: normal;
 }
 
-
 #main-menu .menu-expand-icon {
-  
-    right: 5px;
-    top: 8px;
-   
+  right: 5px;
+  top: 8px;
+}
+
+.MuiButtonBase-root,
+.MuiFab-root {
+  border: 0px solid !important;
+}
+
+.EditorHeader {
+  .MuiFormControl-root {
+    border: 1px solid $notPrimaryColor;
+    margin: 2px !important;
+    margin-left: 1px !important;
+    padding: 1px !important;
+    background: #fff;
+    border-radius: 0.35rem;
+
+    .MuiInputBase-root {
+      &::before {
+        border: 0px solid !important;
+      }
+
+      &::after {
+        border: 0px solid !important;
+      }
+
+      input {
+        margin-left: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        padding: 4px;
+      }
+
+      button {
+        background: $notTerciaryColor;
+        color: #fff;
+        margin-right: -1px;
+        margin-top: 0px;
+        border-radius: 0rem;
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+
+        svg {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
 }

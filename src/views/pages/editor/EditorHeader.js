@@ -1,146 +1,134 @@
-import React, {Fragment, useState, useContext} from 'react';
-import {Container, Col, Row} from 'reactstrap';
-import {IconSave} from './config/select_config';
-import clienteAxios from '../../../config/axios'
-import {v4 as uuidv4} from 'uuid';
-import {useHistory} from "react-router-dom";
+import React, { Fragment, useState, useContext, useEffect } from 'react';
+import { Container, Col, Row } from 'reactstrap';
+import { IconSave } from './config/select_config';
+import { v4 as uuidv4 } from 'uuid';
+import { useHistory, useParams } from 'react-router-dom';
 import SavingCard from '../../commons/SavingCard';
-import {FormContext} from '../../../context/FormContext';
+import { FormContext } from '../../../context/FormContext';
 
-const EditorHeader = ({mode, storage, type}) => {
+const EditorHeader = ({ mode, storage, type }) => {
+  const history = useHistory();
 
-    const history = useHistory();
+  const [show, setShow] = useState(false);
+  const [status, setStatus] = useState({ status: '', msg: '' });
+  const [verify, setVerify] = useState(false);
 
-    const [show,
-        setShow] = useState(false);
-    const [status,
-        setStatus] = useState({'status': '', 'msg': ''});
+  const { vacios, verifyFields, saveNew, updateNew } = useContext(FormContext);
 
-    const {mandatoryFields, setEmptyFields} = useContext(FormContext);
+  const { id } = useParams();
 
-    const stripHtml = (html) => {
-        let tmp = document.createElement("DIV");
-        tmp.innerHTML = html;
-        let text = tmp.textContent || tmp.innerText || "";
+  const saveElement = () => {
+    let objNoticia = getStorageData();
 
-        return text;
-    }
+    try {
+      setStatus({ status: 'start', msg: `guardando ${type}...` });
+      setShow(true);
+      objNoticia.id = uuidv4();
+      objNoticia.fields.id_act_not = objNoticia.fields.id;
 
-    const VerifyFields = (obj) => {
+      const respuesta = saveNew(type + 's', objNoticia);
 
-        let empties = [];
-        Object
-            .entries(obj)
-            .map(v => (mandatoryFields.includes(v[0]) && stripHtml(v[1]).length <= 0)
-                ? empties.push(v[0])
-                : null);
-
-      
-        setEmptyFields(empties);
-
-        return (empties <= 0)
-
-    }
-
-    const saveElement = async() => {
-
-        let objNoticia = sessionStorage.getItem(storage);
-
-        if (objNoticia !== null) {
-            objNoticia = JSON.parse(objNoticia);
-
-            if (!VerifyFields(objNoticia.fields)) {
-                setStatus({'status': 'fail', 'msg': 'Existen campos obligatorios'})
-                setShow(true);
-                setTimeout(() => setShow(false), 1000)
-                return null;
-            }
-
-            try {
-
-                setStatus({'status': 'start', 'msg': 'guardando noticia...'});
-                setShow(true);
-                objNoticia.id = uuidv4();
-                objNoticia.fields.id_act_not = objNoticia.fields.id;
-                const respuesta = await clienteAxios.post(`/${type}s`, objNoticia);
-                setStatus({'status': 'ok', 'msg': 'La noticia se ha guardado correctamente'});
-
-            } catch (error) {
-                setStatus({'status': 'fail', 'msg': `Se ha producido un error al guardar la noticia: ${error} `});
-                console.log(error);
-            } finally
-            {
-                sessionStorage.removeItem(storage);
-
-                setTimeout(() => {
-                    setShow(false)
-                    history.push(`/gestor/${type[0]}/${type}s`);
-                }, 1000)
-            }
-
+      respuesta.then((data) => {
+        if (data.status === 201) {
+          let msg = `La ${type} se ha guardado correctamente`;
+          sessionStorage.removeItem(storage);
+          showErrorModal('ok', msg, 1500, true);
+        } else {
+          showErrorModal('fail', `Se ha producido un error ${data}`, 1500);
         }
+      });
+    } catch (error) {}
+  };
 
-    }
+  const updateElement = () => {
+    let objNoticia = getStorageData();
 
-    const updateElement = async() => {
+    try {
+      setStatus({ status: 'start', msg: `actualizando ${type}...` });
+      setShow(true);
 
-        let objNoticia = sessionStorage.getItem(storage);
+      objNoticia.id = id;
+      objNoticia.fields.id_act_not = objNoticia.fields.id;
 
-        if (objNoticia !== null) {
-            objNoticia = JSON.parse(objNoticia);
+      const respuesta = updateNew(type + 's', objNoticia);
 
-            if (!VerifyFields(objNoticia.fields)) {
-                setStatus({'status': 'fail', 'msg': 'Existen campos obligatorios'})
-                setShow(true);
-                setTimeout(() => setShow(false), 1000)
-                return null;
-            }
-
-            try {
-
-                setStatus({'status': 'start', 'msg': 'actulizando noticia...'});
-                setShow(true);
-                const respuesta = await clienteAxios.put(`/${type}s/${objNoticia.id}`, objNoticia);
-
-            } catch (error) {
-                setStatus({'status': 'fail', 'msg': `Se ha producido un error al actualizar la noticia: ${error} `});
-
-                console.log(error);
-            } finally
-            {
-                sessionStorage.removeItem(storage);
-                setTimeout(() => {
-                    setShow(false)
-                    history.push(`/gestor/${type[0]}/${type}s`);
-                }, 1000)
-            }
-
+      respuesta.then((data) => {
+        if (data.status === 200) {
+          let msg = `La ${type} se ha modificado correctamente`;
+          sessionStorage.removeItem(storage);
+          showErrorModal('ok', msg, 1500, true);
+        } else {
+          showErrorModal('fail', `Se ha producido un error ${data}`, 1500);
         }
+      });
+    } catch (error) {}
+  };
 
+  useEffect(() => {
+    if (verify && vacios.length === 0) {
+      if (mode === 'save') {
+        saveElement();
+      } else {
+        updateElement();
+      }
+    }
+  }, [vacios]);
+
+  const showErrorModal = (status, msg, time, redi = false) => {
+    setStatus({ status, msg });
+    setShow(true);
+    setTimeout(() => {
+      setShow(false);
+      if (redi) history.push(`/gestor/${type[0]}/${type}s`);
+    }, time);
+  };
+
+  const getStorageData = () => {
+    let objNoticia = sessionStorage.getItem(storage);
+
+    if (objNoticia !== null) {
+      objNoticia = JSON.parse(objNoticia);
     }
 
-    const buttonSave = <button onClick={e => saveElement()} className="float-right">{IconSave}Guardar {type}</button>
-    const buttonUpdate = <button onClick={e => updateElement()} className="float-right">{IconSave}Modificar {type}</button>
+    return objNoticia;
+  };
+
+  const fieldsVerify = () => {
+    try {
+      let data = getStorageData();
+
+      verifyFields(data);
+      setVerify(true);
+    } catch (error) {
+      let msg = `Se ha producido un error: ${error} `;
+      showErrorModal('fail', msg, 1500);
+    }
+  };
+
+  const buttonComponent = () => {
+    let texto = `Guardar ${type}`;
+    if (mode !== 'save') texto = `Modificar ${type}`;
 
     return (
-        <Fragment>
-            <Container className="EditorHeader p-0" fluid={true}>
+      <button onClick={(e) => fieldsVerify()} className="float-right">
+        {IconSave}
+        {texto}
+      </button>
+    );
+  };
 
-                <Row className="m-0 p-0">
-
-                    <Col sm='12' className="m-0 p-0">
-                        {mode == 'save'
-                            ? buttonSave
-                            : buttonUpdate}
-
-                    </Col>
-
-                </Row>
-
-            </Container>
-            <SavingCard show={show} status={status}></SavingCard>
-        </Fragment>
-    )
-}
+  return (
+    <Fragment>
+      <Container className="EditorHeader p-0" fluid={true}>
+        <Row className="m-0 p-0">
+          <Col sm="12" className="m-0 p-0">
+            {buttonComponent()}
+          </Col>
+        </Row>
+      </Container>
+      <SavingCard show={show} status={status}></SavingCard>
+    </Fragment>
+  );
+};
 
 export default EditorHeader;

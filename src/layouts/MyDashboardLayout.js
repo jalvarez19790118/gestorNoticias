@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { Header, MySidebarNav, Footer, PageContent, Page } from '../vibe';
+import { Header, Footer, PageContent, Page } from '../vibe';
 import nav from '../navs';
 import routes from '../routes';
 import Logo from '../assets/images/logo.png';
 import ContextProviders from '../vibe/components/utilities/ContextProviders';
 import handleKeyAccessibility, { handleClickAccessibility } from '../vibe/helpers/handleTabAccessibility';
 import MyProvider from '../context/MyContext';
-
+import FormProvider from '../context/FormContext';
+import GAppProvider from '../context/GAppContext';
 
 const MOBILE_SIZE = 992;
 
@@ -31,7 +32,8 @@ export default class MyDashboardLayout extends Component {
 
   componentDidUpdate(prev) {
     if (this.state.isMobile && prev.location.pathname !== this.props.location.pathname) {
-      this.toggleSideCollapse();
+      //console.log('sss');
+      //this.toggleSideCollapse();
     }
   }
 
@@ -46,68 +48,45 @@ export default class MyDashboardLayout extends Component {
   }
 
   toggleSideCollapse = () => {
-    this.setState(prevState => ({ sidebarCollapsed: !prevState.sidebarCollapsed }));
+    this.setState((prevState) => ({ sidebarCollapsed: !prevState.sidebarCollapsed }));
   };
-  
-
-  
- 
 
   render() {
-
- 
-
-  
     const { sidebarCollapsed } = this.state;
     const sidebarCollapsedClass = sidebarCollapsed ? 'side-menu-collapsed' : '';
     return (
+      <GAppProvider>
       <MyProvider>
-      <ContextProviders>
-        <div className={`app ${sidebarCollapsedClass}`}>
-        
-          <div className="app-body">
-            <MySidebarNav
-              nav={nav}
-              logo={Logo}
-              logoText="Vademecum"
-              isSidebarCollapsed={sidebarCollapsed}
-              toggleSidebar={this.toggleSideCollapse}
-              {...this.props}
-            />
-            <Page>
-              <Header 
-                toggleSidebar={this.toggleSideCollapse}
-                isSidebarCollapsed={sidebarCollapsed}
-                routes={routes}
-                {...this.props}
-              >
+        <FormProvider>
+          <ContextProviders>
+            <div className={`app ${sidebarCollapsedClass}`}>
+              <div className="app-body">
                 
-              </Header>
-              <PageContent>
+                <Page>
+                  <Header
+                    logo={Logo}
+                    toggleSidebar={this.toggleSideCollapse}
+                    isSidebarCollapsed={sidebarCollapsed}
+                    routes={routes}
+                    {...this.props}
+                  ></Header>
+                  <PageContent>
+                    <Switch>
+                      {routes.map((page, key) => (
+                        <Route path={page.path} component={page.component} key={key} />
+                      ))}
 
-
-                
-                
-                
-                <Switch>
-                  {routes.map((page, key) => (
-                    <Route path={page.path} component={page.component} key={key} />
-                  ))}
-
-                  <Redirect from="/gestor" to="/gestor/n/noticias" />
-                 </Switch>
-              </PageContent>
-            </Page>
-          </div>
-          <Footer>
-         
-           
-          </Footer>
-        
-        </div>
-      </ContextProviders>
+                      <Redirect from="/gestor" to="/gestor/n/noticias" />
+                    </Switch>
+                  </PageContent>
+                </Page>
+              </div>
+              <Footer></Footer>
+            </div>
+          </ContextProviders>
+        </FormProvider>
       </MyProvider>
+      </GAppProvider>
     );
   }
 }
-

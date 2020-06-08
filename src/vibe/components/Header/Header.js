@@ -1,29 +1,77 @@
-import React, { Component } from 'react';
-import ToggleSidebarButton from './components/ToggleSidebarButton';
-import PageLoader from '../PageLoader/PageLoader';
+import React, {useState,useContext} from 'react';
 
-import { Navbar, NavbarToggler, Collapse, Nav } from 'reactstrap';
-import { matchPath } from 'react-router-dom';
+import { Navbar } from 'reactstrap';
+import { matchPath, Link } from 'react-router-dom';
 
-export default class Header extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      isOpen: false,
-    };
-  }
-  toggle = () => {
-    this.setState(prevState => ({
-      isOpen: !prevState.isOpen,
-    }));
-  };
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import { GAppContext } from '../../../context/GAppContext';
 
-  getPageTitle = () => {
+import MyIcon from '../../components/SidebarNav/components/MyIcon';
+
+
+
+const Header = (props) => {
+  
+
+   const IconSelect = (
+    <MyIcon
+      item={{
+        lib: 'Bs',
+        name: 'BsFillCaretDownFill',
+        style: {
+          fontSize: '16px',
+          color: '#162c50',
+          marginLeft: '8px',
+        },
+      }}
+    />
+  );
+
+  const IconNews = (
+    <MyIcon
+      item={{
+        lib: 'Feather',
+        name: 'FiFileText',
+        style: {
+          fontSize: '16px',
+          color: '#162c50',
+          marginLeft: '0px',
+          marginRight: '8px',
+        },
+      }}
+    />);
+
+
+const IconAlerts = (
+  <MyIcon
+    item={{
+      lib: 'Feather',
+      name: 'FiAlertTriangle',
+      style: {
+        fontSize: '16px',
+        color: '#162c50',
+        marginLeft: '0px',
+        marginRight: '8px',
+      },
+    }}
+  />);
+
+
+
+
+
+  
+  const getPageTitle = () => {
+
+  
+    
     let name;
-    this.props.routes.map(prop => {
+    props.routes.map(prop => {
       if (
-        matchPath(this.props.location.pathname, {
+        matchPath(props.location.pathname, {
           path: prop.path,
           exact: true,
           strict: false
@@ -34,37 +82,86 @@ export default class Header extends Component {
       return null;
     });
     return name;
+    
   };
 
-  render() {
-    return (
+
+  const [open, setOpen] = useState(false);
+  const [anchor, setAnchor] = useState(null);
+  const {selectType,setSelectType} = useContext(GAppContext);
+
+
+  const handleClick = (e) => {
+ 
+ //   console.log(e.currentTarget.detail);
+    setAnchor(e.currentTarget);
+    setOpen(true);
+
+   
+  };
+
+
+  const handleClose = (e) => {
+ 
+    
+
+    
+    if (e.currentTarget.innerText.length > 0)
+    {
+        setSelectType({'type' : e.currentTarget.innerText});
+    }
+    setAnchor(null);
+    setOpen(false);
+
+  };
+
+
+
+  return(
+    
       <header className="app-header">
-        <SkipToContentLink focusId="primary-content" />
+      
         <div className="top-nav">
-          <Navbar className="myNavbar" color="faded" light expand="md">
-            <ToggleSidebarButton
-              toggleSidebar={this.props.toggleSidebar}
-              isSidebarCollapsed={this.props.isSidebarCollapsed}
-            />
-            <div className="page-heading">{this.getPageTitle()}</div>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-                {this.props.children}
-              </Nav>
-            </Collapse>
-            <PageLoader />
+
+     
+
+
+          <Navbar className="myNavbar mr-" color="faded" light expand="md">
+           
+          <div className="site-logo-bar">
+          <div className="navbar-brand m-0 p-0">
+            {props.logo && <img src={props.logo} alt="" />}
+         
+          </div>
+        </div>
+        
+          
+           
+            <Button id="selectTypeButton" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+   {selectType.type} {IconSelect}
+      </Button>
+|  {getPageTitle()}
+      <Menu
+         
+        id="selectTypeMenu"
+        anchorEl={anchor}
+        keepMounted
+        open={open}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose} component={Link} to='/gestor/n/noticias'>{IconNews}Noticias</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to='/gestor/a/alertas'>{IconAlerts}Alertas</MenuItem>
+      
+      </Menu>
+
+
           </Navbar>
         </div>
       </header>
     );
-  }
+  
 }
 
-const SkipToContentLink = ({ focusId }) => {
-  return (
-    <a href={`#${focusId}`} tabIndex="1" className="skip-to-content">
-      Skip to Content
-    </a>
-  );
-};
+
+export default Header;
+

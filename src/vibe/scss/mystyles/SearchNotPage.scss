@@ -1,332 +1,432 @@
 .LoadingCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  position: sticky;
+  height: 10px;
+  .card {
+    font-family: $actualfontFamily;
+    border: 1px solid $notPrimaryColor;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px;
+  }
 
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: calc(50% - 50px);
-    right: 0;
-    width: 250px;
-
-    .card {
-        font-family: $actualfontFamily;
-        border: 1px solid $notPrimaryColor;
-        border-radius: 0.25rem;
-        -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-        -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-        text-align: center;
-        max-width: 300px;
-    }
-
-    .card-text {
-
-        font-size: 1.6em;
-        font-weight: bold;
-    }
-
+  .card-text {
+    font-size: 1.6em;
+    font-weight: bold;
+  }
 }
 
 .NotContentPanel {
-    max-width: calc(100% - 4px);
-    margin-top: 42px;
-
+  max-width: calc(100% - 4px);
+  margin-top: 38px;
+  .row {
+    margin: 0px -18px !important;
+  }
 }
 
 .totaElemContainer {
+  border: 0 solid #fff;
+  border-left: 0 solid;
+  border-right: 0 solid;
+  border-top: 0 solid;
+  background-color: $notPrimaryColor;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1);
+  min-height: 38px;
+  color: #fff !important;
+  display: none;
 
-    border: 0 solid #fff;
-    border-left: 0 solid;
-    border-right: 0 solid;
-    border-top: 0 solid;
-    background-color: $notPrimaryColor;
-    position: absolute;
-    z-index: 10;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 21, 41, 0.1);
-    min-height: 38px;
+  Label {
+    font-family: $actualfontFamily;
+    font-size: 0.9em;
     color: #fff !important;
+    color: $notPrimaryColor;
+  }
 
-    Label {
-        font-family: $actualfontFamily;
-        font-size: 0.9em;
-        color: #fff !important;
-        color: $notPrimaryColor;
+  select {
+    width: 90px;
+    max-width: 90px;
+    border: 1px solid $notPrimaryColor;
+    background: #fff;
+    font-weight: bold;
+    font-size: 0.8em;
+
+    option {
+      padding-left: 5px;
     }
-
-    select {
-        width: 90px;
-        max-width: 90px;
-        border: 1px solid $notPrimaryColor;
-        background: #fff;
-        font-weight: bold;
-        font-size: 0.8em;
-
-        option {
-            padding-left: 5px;
-        }
-    }
+  }
 }
 
 .indiana-scroll-container {
-    min-height: calc(100vh - 88px) !important;
-    max-height: calc(100vh - 88px) !important;
-    border-right: 1px solid $notPrimaryColor;
-    border-left: 1px solid $notPrimaryColor;
+  max-height: calc(100vh - 75px) !important;
 }
 
 .NotContent {
+  font-family: $actualfontFamily;
 
-    font-family: $actualfontFamily;
+  border: 1px solid #b4b4b4;
+  border-radius: 0.25rem;
 
-    border: 1px solid $borderSectionColor;
-    border-radius: 0.25rem;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    /*
-    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-*/
-    button {
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 
-        background: #eee !important;
-        color: $notPrimaryColor !important;
-        border: 1px solid #eee !important;
-        border-radius: 0.35rem;
-        width: auto;
-        height: auto;
-        box-shadow: unset;
-        padding: 0;
-        height: 30px;
-        box-shadow: unset;
-        width: 30px;
-        &:hover {
-            border: 1px solid #eee !important;
+  button {
+    background: $notTerciaryColor !important;
+    color: #fff !important;
+    border: 0px solid #eee !important;
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
 
-            color: $notPrimaryColor !important;
-            background: #eee !important;
+    width: auto;
+    height: auto;
+    box-shadow: none !important;
+    padding: 0;
+    height: 30px;
 
-        }
-        &:active {
+    width: 30px;
 
-            border: 1px solid #eee !important;
-            background-color: #fff !important;
+    &:hover {
+      border: 1px solid #eee !important;
 
-            svg {
-                color: $notTerciaryColor !important;
-                font-size: 10px;
-
-            }
-        }
+      color: $notPrimaryColor !important;
+      background: #eee !important;
     }
 
-    .card-header {
-        text-align: right;
+    &:active {
+      border: 1px solid #eee !important;
+      background-color: #fff !important;
+    }
+  }
 
+  .card-header {
+    text-align: right;
+  }
+
+  .card-body {
+    padding: 12px;
+
+    overflow: hidden;
+    margin-bottom: 15px !important;
+  }
+
+  .mh_not {
+    max-height: 300px;
+  }
+
+  .card-text {
+    table {
+      width: 100% !important;
     }
 
-    .card-body {
-        padding: 12px;
-
-        overflow: hidden;
-        margin-bottom: 15px !important;
+    td {
+      width: 100% !important;
     }
+  }
 
-    .mh_not {
-        max-height: 300px;
-    }
+  .card-title {
+    color: $notPrimaryColor;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 
-    .card-text {
+  .card-subtitle {
+    font-size: 0.9em;
 
-        table {
-            width: 100% !important;
-        }
-
-        td {
-            width: 100% !important;
-        }
-
-    }
-    .card-title {
-
-        color: $notPrimaryColor;
+    label {
+      &:first-child {
         font-weight: bold;
-        font-size: 1.2em;
+        color: $notPrimaryColor;
+      }
+
+      &:last-child {
+        font-style: italic;
+        color: $notSecondaryColor;
+      }
+    }
+  }
+
+  .card-text {
+    div {
+      color: $notSecondaryColor;
+      font-weight: normal;
+      font-style: italic;
+      font-size: 1em;
+      text-overflow: ellipsis;
     }
 
-    .card-subtitle {
+    .contHtml {
+      max-height: 250px;
+      overflow: hidden;
+      margin-bottom: 25px !important;
+    }
+  }
 
+  .card-header {
+    background-color: $notTerciaryColor;
+    border: 0px solid $borderSectionColor;
+    margin: 0px;
+    padding: 3px;
+    border-top-left-radius: 0.15rem;
+    border-top-right-radius: 0.15rem;
+  }
+
+  hr {
+    border-color: $notPrimaryColor;
+  }
+
+  .ToastDelete {
+    opacity: 1;
+    position: absolute;
+    top: calc(50% - 50px);
+    border: 1px solid #800;
+    left: 2%;
+    right: 2%;
+    font-weight: bold;
+    color: $notPrimaryColor;
+    font-size: 0.8em;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    width: calc(100% - 25px);
+
+    .toast-header {
+      background: #800;
+      color: #fff;
+      color: #fff;
+      display: inline-block;
+      width: 100%;
+      line-height: 33px;
+
+      button {
+        display: block;
+        color: #fff !important;
+        opacity: 1;
+        background: transparent !important;
+        border: 0px solid !important;
+        padding: 0px !important;
+        margin: 0px !important;
+        font-size: 1.5em;
+      }
+    }
+
+    .toast-body {
+      background: #f4c6c6;
+      color: #800;
+      padding: 5px 10px;
+      display: inline-table;
+      width: 100%;
+
+      button {
+        background: #800 !important;
+        color: #fff !important;
+        float: right;
+        border: 0px solid !important;
         font-size: 0.9em;
+        font-weight: bold;
+        padding: 2px !important;
+      }
+    }
+  }
 
-        label {
-            &:first-child {
-                font-weight: bold;
-                color: $notPrimaryColor;
-            }
-            &:last-child {
-                font-style: italic;
-                color: $notSecondaryColor;
+  .ToastClone {
+    opacity: 1;
+    position: absolute;
+    top: calc(50% - 50px);
+    border: 1px solid #0f6086;
+    left: 2%;
+    right: 2%;
+    font-weight: bold;
+    color: $notPrimaryColor;
+    font-size: 0.8em;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    width: calc(100% - 25px);
 
-            }
-        }
+    .toast-header {
+      background: #0f6086;
+      color: #fff;
+      color: #fff;
+      display: inline-block;
+      width: 100%;
+      line-height: 33px;
 
+      button {
+        display: block;
+        color: #fff !important;
+        opacity: 1;
+        background: transparent !important;
+        border: 0px solid !important;
+        padding: 0px !important;
+        margin: 0px !important;
+        font-size: 1.5em;
+      }
     }
 
-    .card-text {
+    .toast-body {
+      background: #b0e0f7;
+      color: #0f6086;
+      padding: 5px 10px;
+      display: inline-table;
+      width: 100%;
 
-        div {
-            color: $notSecondaryColor;
-            font-weight: normal;
-            font-style: italic;
-            font-size: 1em;
-            text-overflow: ellipsis;
-
-        }
-
-        .contHtml {
-            max-height: 250px;
-            overflow: hidden;
-            margin-bottom: 25px !important;
-        }
+      button {
+        background: #0f6086 !important;
+        color: #fff !important;
+        float: right;
+        border: 0px solid !important;
+        font-size: 0.9em;
+        font-weight: bold;
+        padding: 2px !important;
+      }
     }
-
-    .card-header {
-
-        background-color: #eee;
-        border: 1px solid $borderSectionColor;
-        margin: 2px;
-        padding: 3px;
-        border-radius: 0.35rem;
-    }
-
-    hr {
-        border-color: $notPrimaryColor;
-    }
+  }
 }
 
 .NotFooter {
-    border-top: 1px solid $notPrimaryColor !important;
-    background-color: $notPrimaryColor;
-    flex-direction: column;
-    display: FLEX;
-    position: absolute;
-    z-index: 10;
-    box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.3), 0 -1px 1px 1px rgba(0, 21, 41, 0.1);
-    min-height: 38px;
-    .pagination {
-        margin-left: auto;
-        margin-right: auto;
-        height: 16px;
-        margin-top: 5px;
+  border-top: 1px solid $notPrimaryColor !important;
+  background-color: $notPrimaryColor;
+  flex-direction: column;
+  display: FLEX;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.3), 0 -1px 1px 1px rgba(0, 21, 41, 0.1);
+  min-height: 38px;
 
-        li > a {
-            background: $notPrimaryColor;
-            color: #fff;
-            border-radius: 0.35rem;
-            width: 28px;
-            display: block;
-            height: 28px;
-            box-shadow: unset !important;
-            text-align: center;
-            font-size: 0.8rem;
-            font-weight: normal;
-            line-height: 28px;
-            border: 1px solid $notPrimaryColor !important;
+  .pagination {
+    margin-left: auto;
+    margin-right: auto;
+    height: 16px;
+    margin-top: 5px;
 
-        }
-
-        .active a {
-
-            background: $notPrimaryColor !important;
-            color: #fff !important;
-            font-size: 1.3rem;
-            font-weight: bold;
-            border: 0 solid $notPrimaryColor !important;
-            text-decoration: none;
-
-        }
-
+    li > a {
+      background: $notPrimaryColor;
+      color: #fff;
+      border-radius: 0.35rem;
+      width: 28px;
+      display: block;
+      height: 28px;
+      box-shadow: unset !important;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: normal;
+      line-height: 28px;
+      border: 1px solid $notPrimaryColor !important;
     }
 
+    .active a {
+      background: $notPrimaryColor !important;
+      color: #fff !important;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border: 0 solid $notPrimaryColor !important;
+      text-decoration: none;
+    }
+  }
 }
 
 .NotContentFull {
+  box-shadow: unset;
+  height: calc(100vh - 62px);
+  border: 0 solid $borderSectionColor;
 
-    box-shadow: unset;
-    height: calc(100vh - 62px);
-    border: 0 solid $borderSectionColor;
-
-    .card-body {
-        table {
-            width: 100% !important;
-            max-height: unset !important;
-        }
+  .card-body {
+    table {
+      width: 100% !important;
+      max-height: unset !important;
     }
+  }
 
-    .card-title {
-
-        font-size: 1.7em;
-        margin-bottom: 25px !important;
-        font-weight: bold;
-    }
+  .card-title {
+    font-size: 1.7em;
+    margin-bottom: 25px !important;
+    font-weight: bold;
+  }
 }
 
 .NotFullModal {
-    max-width: 950px;
-    width: calc(100% - 10px);
-    margin: 5px auto;
+  max-width: 950px;
+  width: calc(100% - 10px);
+  margin: 5px auto;
+  height: calc(100vh - 15px);
+
+  .modal-header {
+    border: 1px solid $borderSectionColor;
+    background: #eee;
+    border-radius: 0.25rem;
+    height: 50px;
+
+    .modal-title {
+      width: 100%;
+    }
+
+    button {
+      background: #eee !important;
+      box-shadow: none;
+      border: 0 solid $borderSectionColor;
+    }
+  }
+
+  .modal-content {
     height: calc(100vh - 15px);
 
-    .modal-header {
-        border: 1px solid $borderSectionColor;
-        background: #eee;
-        border-radius: 0.25rem;
-        height: 50px;
+    -webkit-box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.4);
 
-        .modal-title {
-            width: 100%;
-        }
+    .indiana-scroll-container {
+      max-height: calc(100vh - 80px) !important;
+      min-height: calc(100vh - 80px) !important;
+      border: 0 solid;
 
-        button {
-            background: #eee !important;
-            box-shadow: none;
-            border: 0 solid $borderSectionColor;
-            svg {
-                color: $notPrimaryColor;
-            }
-        }
+      scrollbar-width: thin;
     }
-
-    .modal-content {
-        height: calc(100vh - 15px);
-
-        -webkit-box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.4);
-        box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.4);
-
-        .indiana-scroll-container {
-            max-height: calc(100vh - 80px) !important;
-            min-height: calc(100vh - 80px) !important;
-            border: 0 solid;
-
-            scrollbar-width: thin;
-
-        }
-
-    }
-
+  }
 }
 
 .EditNotPage {
+  .indiana-scroll-container {
+    max-height: calc(100vh - 62px) !important;
+    min-height: calc(100vh - 62px) !important;
+    border: 0 solid;
 
-    .indiana-scroll-container {
-        max-height: calc(100vh - 62px) !important;
-        min-height: calc(100vh - 62px) !important;
-        border: 0 solid;
+    scrollbar-width: thin;
+  }
+}
 
-        scrollbar-width: thin;
+#AddNewButton {
+  position: absolute;
+  z-index: 3;
 
-    }
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2) !important;
+  background: #162c50;
+  border: 1px solid $notPrimaryColor;
+  margin-top: calc(100vh - 130px);
+  margin-left: calc(100vw - 58px);
 
+  span {
+    color: #fff;
+    text-transform: none;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  &:hover,
+  &:focus,
+  &:scope,
+  &:active {
+    border: 0px solid;
+  }
 }
