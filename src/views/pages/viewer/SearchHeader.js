@@ -5,7 +5,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import { Container, Row, Col } from 'reactstrap';
 import { createMuiTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import lightBlue from '@material-ui/core/colors/lightBlue';
+
 
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 
@@ -23,12 +23,7 @@ const materialTheme = createMuiTheme({
         backgroundColor: '#162c50',
       },
     },
-    MuiPickersCalendarHeader: {
-      switchHeader: {
-        // backgroundColor: lightBlue.A200,
-        // color: "white",
-      },
-    },
+   
     MuiPickersDay: {
       day: {
         color: '#162c50',
@@ -69,6 +64,8 @@ const materialTheme = createMuiTheme({
 });
 
 const SearchHeader = ({ currentDate, setCurrentDate, setLoadingNews }) => {
+
+  
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = (aDate) => {

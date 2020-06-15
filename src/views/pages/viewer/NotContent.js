@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from 'react';
-import MyIcon from '../../../vibe/components/SidebarNav/components/MyIcon';
+import MyIcon from '../../../created/components/SidebarNav/components/MyIcon';
 import { useHistory } from 'react-router-dom';
 import $ from 'jquery';
 import { Button, Card, CardHeader, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';

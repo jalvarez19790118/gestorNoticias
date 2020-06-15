@@ -7,5 +7,5 @@ const block_r = ['removeFormat'];
 const block_t = ['codeView', 'showBlocks', 'preview', 'fullScreen'];
 const block_t2 = ['codeView', 'fullScreen'];
 
-export const btnList = [block_f1, block_f2, block_f3, block_a, block_i, block_r, block_t];
+export const btnList = [block_f1, block_f2, block_f3, block_a, block_r, block_t];
 export const btnList2 = [block_f1, block_f2, block_f3, block_r, block_t2];

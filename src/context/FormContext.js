@@ -27,8 +27,8 @@ const FormProvider = (props) => {
       nom_labo_entidad: '',
       year: new Date(),
       fh_public: new Date(),
-      fh_desactivacion: new Date(),
-      fh_portada: new Date(),
+      fh_desactivacion: '',
+      fh_portada: '',
       ib_visible: 1,
       ib_boletin: '',
       img_noticia: '',
@@ -222,9 +222,7 @@ const FormProvider = (props) => {
     return data;
   };
 
-  useEffect(() => {
-    if (categorias.length === 0) obtieneCategorias();
-  }, []);
+ 
 
   const stripHtml = (html) => {
     let tmp = document.createElement('DIV');
@@ -304,6 +302,7 @@ const FormProvider = (props) => {
         init_noticia,
         noticia,
         setNoticia,
+        
       }}
     >
       {props.children}

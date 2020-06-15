@@ -11,9 +11,9 @@ import Forms from './elements/Forms';
 import Loaders from './elements/Loaders';
 import Avatars from './elements/Avatars';
 import Invoice from './pages/Invoice';
-import Analytics from './pages/Analytics';
+
 import CmsPage from './pages/Cms';
-import Widgets from './pages/Widgets';
+
 import BlankPage from './pages/BlankPage';
 import SubNav from './pages/SubNav';
 import Feed from './pages/Feed';
@@ -34,11 +34,7 @@ const pageList = [
     path: '/demo/demo/elements/buttons',
     component: Buttons,
   },
-  {
-    name: 'Alerts',
-    path: '/demo/elements/alerts',
-    component: Alerts,
-  },
+  
   {
     name: 'Grid',
     path: '/demo/elements/grid',
@@ -114,11 +110,7 @@ const pageList = [
     path: '/demo/pages/404',
     component: ErrorPage,
   },
-  {
-    name: 'Analytics',
-    path: '/demo/apps/analytics',
-    component: Analytics,
-  },
+
   {
     name: 'Activity Feed',
     path: '/demo/apps/feed',
@@ -133,11 +125,6 @@ const pageList = [
     name: 'CMS',
     path: '/demo/apps/cms',
     component: CmsPage,
-  },
-  {
-    name: 'Widgets',
-    path: '/demo/widgets',
-    component: Widgets,
   },
 ];
 

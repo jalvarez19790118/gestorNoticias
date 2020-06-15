@@ -85,38 +85,9 @@ export default {
         },
       ],
     },
-    {
-      name: 'Apps',
-      icon: 'Cloud',
-      children: [
-        {
-          name: 'Analytics',
-          url: '/demo/apps/analytics',
-        },
-        {
-          name: 'Invoice',
-          url: '/demo/apps/invoice',
-        },
-        {
-          name: 'Activity Feed',
-          url: '/demo/apps/feed',
-        },
-        {
-          name: 'CMS',
-          url: '/demo/apps/cms',
-        },
-      ],
-    },
+
     {
       divider: true,
-    },
-    {
-      name: 'Widgets',
-      url: '/demo/widgets',
-      icon: 'Package',
-      badge: {
-        text: 'NEW',
-      },
     },
   ],
   bottom: [

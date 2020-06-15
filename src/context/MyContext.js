@@ -11,7 +11,7 @@ const MyProvider = (props) => {
   const [size, setSize] = useState(20000);
   const [pages, setPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-
+  const [currentDate, setCurrentDate] = useState(null);
   const [wwidth, setWwidth] = useState(window.innerWidth);
   const [wheight, setWheight] = useState(window.innerHeight);
 
@@ -99,7 +99,8 @@ const MyProvider = (props) => {
 
       const respuesta = await clienteAxios.get(url);
 
-      setEditarNoticia(respuesta.data[0]);
+      return respuesta;
+     // setEditarNoticia(respuesta.data[0]);
     } catch (error) {
       console.log(error);
     }
@@ -126,6 +127,8 @@ const MyProvider = (props) => {
         obtieneEditarNoticia,
         obtienePrimerId,
         obtieneNoticias,
+        currentDate,
+        setCurrentDate,
       }}
     >
       {props.children}

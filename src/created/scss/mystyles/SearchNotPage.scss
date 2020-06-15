@@ -5,6 +5,7 @@
   top: 50%;
   position: sticky;
   height: 10px;
+
   .card {
     font-family: $actualfontFamily;
     border: 1px solid $notPrimaryColor;
@@ -25,6 +26,7 @@
 .NotContentPanel {
   max-width: calc(100% - 4px);
   margin-top: 38px;
+
   .row {
     margin: 0px -18px !important;
   }
@@ -215,9 +217,11 @@
         opacity: 1;
         background: transparent !important;
         border: 0px solid !important;
-        padding: 0px !important;
+        padding: 4px !important;
         margin: 0px !important;
         font-size: 1.5em;
+        width: 40px;
+        border-radius: 0.2rem;
       }
     }
 
@@ -408,12 +412,37 @@
 
 #AddNewButton {
   position: absolute;
-  z-index: 3;
+  z-index: 3000;
 
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2) !important;
   background: #162c50;
   border: 1px solid $notPrimaryColor;
   margin-top: calc(100vh - 130px);
+  margin-left: calc(100vw - 58px);
+
+  span {
+    color: #fff;
+    text-transform: none;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  &:hover,
+  &:focus,
+  &:scope,
+  &:active {
+    border: 0px solid;
+  }
+}
+
+#ClearButton {
+  position: absolute;
+  z-index: 3000;
+
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2) !important;
+  background: #162c50;
+  border: 1px solid $notPrimaryColor;
+  margin-top: 8px;
   margin-left: calc(100vw - 58px);
 
   span {

@@ -1,5 +1,5 @@
 import React from 'react';
-import MyIcon from '../../../../vibe/components/SidebarNav/components/MyIcon';
+import MyIcon from '../../../../created/components/SidebarNav/components/MyIcon';
 
 const styleObj = {
   fontSize: '16px',

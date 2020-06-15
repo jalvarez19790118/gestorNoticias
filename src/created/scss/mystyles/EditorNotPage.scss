@@ -117,6 +117,9 @@
         font-weight: bold;
         font-size: 0.9em;
         border: 0 solid;
+        z-index: 10000;
+      
+        position: sticky;
 
         &:hover {
           background: #fff !important;
@@ -602,12 +605,140 @@
   }
 }
 
-.EditorTitular {
-  position: sticky;
-  z-index: 7;
+.ToastDelete {
+  opacity: 1;
+  position: absolute;
+  top: calc(50% - 50px);
+  border: 1px solid #800;
+  left: 2%;
+  right: 2%;
+  font-weight: bold;
+  color: $notPrimaryColor;
+  font-size: 0.8em;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  width: calc(100% - 25px);
+  z-index: 100000;
+
+  .toast-header {
+    background: #800;
+    color: #fff;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    line-height: 33px;
+
+    button {
+      display: block;
+      color: #fff !important;
+      opacity: 1;
+      background: transparent !important;
+      border: 0px solid !important;
+      padding: 4px !important;
+      margin: 0px !important;
+      font-size: 1.5em;
+      font-weight: bold !important;
+      width: 40px;
+      border-radius: 0.2rem;
+    }
+  }
+
+  .toast-body {
+    background: #f4c6c6;
+    color: #800;
+    padding: 5px 10px;
+    display: inline-table;
+    width: 100%;
+
+    button {
+      background: #800 !important;
+      color: #fff !important;
+      float: right;
+      border: 0px solid !important;
+      font-size: 1em;
+      font-weight: bold !important;
+      padding: 4px !important;
+      width: 40px;
+      border-radius: 0.2rem;
+    }
+  }
 }
 
-.EditorEntradilla {
-  position: sticky;
-  z-index: 6;
+
+.EditorFormPage { 
+
+  .jodit_container
+  {
+    border-radius: 0.35rem;
+
+    .jodit_workplace
+    {
+      border-bottom-left-radius: 0.35rem;
+      border-bottom-right-radius: 0.35rem;
+      
+    }
+
+    .jodit_toolbar
+    {
+      border-top-left-radius: 0.35rem;
+      border-top-right-radius: 0.35rem;
+      
+    }
+  }
+
+  .isEmpty
+  {
+
+
+    label
+    {
+      color: #800 !important;
+
+      &::after
+      {
+        content: '*';
+        margin-left: 2px;
+        font-size: 0.8em;
+        font-weight: bold;
+        position: relative;
+        top: -4px;
+      }
+    }
+
+    .jodit_container
+    {
+
+
+      .jodit_toolbar
+      {
+        border:  1px solid #800 !important;
+        
+      }
+
+
+      .jodit_workplace
+    {
+
+      border-left: 1px solid #800 !important;
+      border-right:  1px solid #800 !important;
+      border-bottom:  1px solid #800 !important;
+
+      background-color: #f4c6c6;
+     
+    }
+
+
+
+    }
+  }
+}
+
+
+#ref_contenido
+{
+  .jodit_workplace
+  {
+    min-height: calc(100vh - 565px) !important;
+  }
 }

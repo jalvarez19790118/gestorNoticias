@@ -1,15 +1,15 @@
-import React, {useState,useContext} from 'react';
+import React, {useState,useContext, useEffect} from 'react';
 
 import { Navbar } from 'reactstrap';
 import { matchPath, Link } from 'react-router-dom';
-
+import { useLocation } from 'react-router-dom';
 
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { GAppContext } from '../../../context/GAppContext';
 
-import MyIcon from '../../components/SidebarNav/components/MyIcon';
+import MyIcon from '../SidebarNav/components/MyIcon';
 
 
 
@@ -78,6 +78,11 @@ const IconAlerts = (
         })
       ) {
         name = prop.name;
+      
+
+
+        
+
       }
       return null;
     });
@@ -87,9 +92,9 @@ const IconAlerts = (
 
 
   const [open, setOpen] = useState(false);
-  const [anchor, setAnchor] = useState(null);
+  const [anchor, setAnchor] = useState(null);                    
   const {selectType,setSelectType} = useContext(GAppContext);
-
+  const location = useLocation();
 
   const handleClick = (e) => {
  
@@ -108,13 +113,21 @@ const IconAlerts = (
     
     if (e.currentTarget.innerText.length > 0)
     {
-        setSelectType({'type' : e.currentTarget.innerText});
+       setSelectType({'type' : e.currentTarget.innerText});
     }
     setAnchor(null);
     setOpen(false);
 
   };
 
+  useEffect(() => {
+    
+   
+          if (props.location.pathname.toLowerCase().includes('alerta')) { setSelectType({type: 'Alertas'})}
+        if (props.location.pathname.toLowerCase().includes('noticia')) { setSelectType({type: 'Noticias'})}
+        
+ 
+  }, [location]);
 
 
   return(

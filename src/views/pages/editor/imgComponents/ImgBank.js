@@ -3,7 +3,7 @@ import {Container, Col, Row} from 'reactstrap';
 import {FormContext} from '../../../../context/FormContext';
 import Carousel, {Dots} from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import MyIcon from '../../../../vibe/components/SidebarNav/components/MyIcon';
+import MyIcon from '../../../../created/components/SidebarNav/components/MyIcon';
 
 const ImgBank = ({keywords}) => {
 

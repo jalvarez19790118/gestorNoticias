@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import ScrollContainer from "react-indiana-drag-scroll";
 import NotContentFull from './NotContentFull';
-import MyIcon from '../../../vibe/components/SidebarNav/components/MyIcon';
+import MyIcon from '../../../created/components/SidebarNav/components/MyIcon';
 
 const NotFullModal = ({modal, showModal}) => {
 

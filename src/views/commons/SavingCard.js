@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Modal, ModalBody, Spinner } from 'reactstrap';
-import MyIcon from '../../vibe/components/SidebarNav/components/MyIcon';
+import MyIcon from '../../created/components/SidebarNav/components/MyIcon';
 
 const StartComponent = ({ msg }) => {
   const Iconitem = (

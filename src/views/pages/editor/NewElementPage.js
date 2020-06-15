@@ -15,20 +15,28 @@ const NewElementPage = () => {
     let objNoticia = sessionStorage.getItem('nueva_' + element);
 
     if (objNoticia === null) {
+    
       new_status = init_noticia;
-      sessionStorage.setItem('nueva_' + element, JSON.stringify(new_status));
+     
+     
     } else {
+     
       new_status = JSON.parse(objNoticia);
     }
+
+    sessionStorage.setItem('nueva_' + element, JSON.stringify(new_status));
     return new_status;
   };
 
   useEffect(() => {
+    
     if (noticia == null) {
-      setNoticia(getSessionState);
-      setFirst(false);
+    setNoticia(getSessionState());
+    setFirst(false);
     }
     setVacios([]);
+  
+ 
   }, [location]);
 
   const [first, setFirst] = useState(true);
@@ -39,7 +47,7 @@ const NewElementPage = () => {
         <LoadingCard />
       ) : (
         <Fragment>
-          <EditorContentPanel type={`nueva_${element}`} noticia={noticia} setNoticia={setNoticia} />
+        <EditorContentPanel type={`nueva_${element}`} />
         </Fragment>
       )}
     </Fragment>
