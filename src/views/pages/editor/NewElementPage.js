@@ -7,10 +7,22 @@ import EditorContentPanel from './EditorContentPanel';
 const NewElementPage = () => {
   const location = useLocation();
   const { element } = useParams();
-  const { noticia, setNoticia, init_noticia, setVacios } = useContext(FormContext);
+  const {
+   
+    obtieneCategorias,  
+    setNoticia,
+    setVacios,
+    obtienePalabras,
+    obtieneBanco,
+    obtieneRelacionImagen,
+    setChangefields,
+    first,
+    setFirst,
+    init_noticia
+  } = useContext(FormContext);
 
   const getSessionState = () => {
-    let new_status = init_noticia;
+    /*let new_status = init_noticia;
 
     let objNoticia = sessionStorage.getItem('nueva_' + element);
 
@@ -25,21 +37,28 @@ const NewElementPage = () => {
     }
 
     sessionStorage.setItem('nueva_' + element, JSON.stringify(new_status));
-    return new_status;
+    */
+    //return new_status;
   };
 
   useEffect(() => {
     
-    if (noticia == null) {
-    setNoticia(getSessionState());
-    setFirst(false);
-    }
+   
+     setNoticia(init_noticia);
+
+     obtieneCategorias();
+     obtienePalabras();
+     obtieneBanco();
+     obtieneRelacionImagen();
+     setChangefields({})
+     setVacios([]);
+   
+    
     setVacios([]);
   
  
   }, [location]);
 
-  const [first, setFirst] = useState(true);
 
   return (
     <Fragment>

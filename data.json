@@ -62682,32 +62682,28 @@
       "total": 100
     }
   ],
-  "noticias": [],
-  "alertas": [
+  "noticias": [
     {
       "fields": {
-        "id_act_alert": 33,
-        "id_categoria": 2,
-        "titular": "<h2>Adaptación sistema de clasificación anatómica-ATC</h2>",
-        "entradilla": "<em><span style=\"font-size: 14px;\">ORDEN SCO/114/2006, de 20 de enero, por la que se actualiza el anexo I del Real Decreto 1348/2003</span></em>",
-        "tipo_referencia": null,
-        "nom_labo_entidad": null,
-        "year": 2006,
-        "html": "detalle_not_ATC.htm",
-        "pdf": null,
-        "fh_public": "2020-06-15",
-        "fh_desactivacion": null,
-        "fh_portada": null,
-        "ib_visible": "1",
-        "ib_boletin": "1",
-        "img_noticia": null,
-        "resumen": null,
-        "contenido_html": "\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"600\">\n    <tbody>\n        <tr height=\"24\">\n            <td width=\"600\" valign=\"top\">\n                <p align=\"justify\">El Consejo de Ministros reunido el pasado viernes aprobó, a propuesta de la ministra de Sanidad, Política Social e Igualdad, <strong>Leire Pajín</strong>, un Real Decreto por el que se establece el procedimiento para que una sustancia sea considerada estupefaciente en el ámbito nacional. </p>\n                <p align=\"justify\">“Esta nueva norma contribuye a proteger la salud de las personas mediante la intervención del Estado en todas las fases relacionadas con las sustancias declaradas estupefacientes, desde el cultivo y la producción, a la distribución, la prescripción o la dispensación y el consumo”. </p>\n                <p align=\"justify\">Las sustancias consideradas estupefacientes son aquellas que están incluidas en las listas I y II anexas al Convenio Único de 19612 de Naciones Unidas o que han adquirido tal consideración en el ámbito internacional.</p>\n                <p align=\"justify\">Para que una sustancia que no esté incluida en dichas listas internacionales sea considerada estupefaciente en el ámbito nacional es necesario reconocer es carácter mediante el desarrollo reglamentario de la Ley 17/1967, del 8 de abril, que actualizó y adaptó la legislación española de estupefacientes al Convenio de Naciones Unidas. </p>\n                <p align=\"justify\">Desde la entrada en vigor de la Ley 17/1967 no se había planteado la necesidad de calificar una sustancia como estupefaciente en el ámbito nacional pues la incorporación al listado de estupefacientes se ha realizado a través de su inclusión en las listas I y II de Naciones Unidas, o a través de la adquisición de tal consideración en el ámbito internacional. </p>\n                <p align=\"justify\">La norma aprobada por el Consejo de Ministros regula dicho procedimiento que parte de la evaluación de la sustancia mediante una serie de criterios como su semejanza con otras sustancias estupefacientes conocidas, su utilidad terapéutica o el riesgo de su abuso.</p>\n                <p align=\"justify\">La <strong>Agencia Española</strong><strong> de Medicamentos y Productos Sanitarios (AEMPS), </strong>de oficio o a instancia de otro órgano de la Administración General del Estado o de la Fiscalía Especial Antidroga, es el órgano encargado de iniciar el procedimiento para declarar estupefaciente a una determinada sustancia, que será declarada como tal mediante la aprobación de una Orden del <strong>Ministerio de Sanidad, Política Social e Igualdad</strong>. </p>\n                <p align=\"justify\">Tras la aprobación de la Orden Ministerial, la sustancia, así como los medicamentos que la contengan, quedará sometida a las medidas de fiscalización aplicable a los estupefacientes. <br> &nbsp;<br> Este es el caso de la sustancia Tapentadol que se incluye en este Real Decreto como estupefaciente en el ámbito nacional antes de iniciarse su comercialización en España para el tratamiento del dolor agudo y crónico. Su semejanza con los opiáceos clásicos como la morfina, su eficacia terapéutica y el riesgo de que se abuse de su consumo aconsejan su calificación como estupefaciente. </p>\n                <p align=\"justify\">De este modo, las medidas de fiscalización a nivel nacional para la adecuada gestión del riesgo del uso indebido, abuso o desvío al tráfico ilícito del Tapentadol se ampliarán a la declaración de fabricantes o importadores. </p>\n                <p align=\"justify\">Se requerirá una autorización previa de la <strong>Agencia Española</strong><strong> de Medicamentos y Productos Sanitarios </strong>para fabricar o importar, y será obligatoria la utilización de recetas oficiales de estupefacientes para la prescripción o dispensación de aquellos medicamentos que contengan Tapentadol en su composición. </p>\n                <p align=\"justify\">Estados Unidos, Alemania, Francia, Suecia, Suiza, Dinamarca, México y Chile son algunos de los países que han fiscalizado el Tapentadol como estupefaciente mediante procedimientos nacionales en sus respectivas listas de medicamentos controlados. </p>\n                <p align=\"justify\">&nbsp;</p>\n                <p>Fuente: <span class=\"atrespecgris\">Ministerio de Sanidad, Política Social e Igualdad</span></p>\n            </td>\n        </tr>\n        <tr> </tr>\n    </tbody>\n</table>",
-        "creation": null,
-        "ib_destacado": "0",
-        "profesionales": "0",
-        "palabra_clave": null,
-        "id_imagen": null
+        "id_categoria": "",
+        "titular": "dffdffdss",
+        "entradilla": "dfdfss",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-25T15:30:34.231Z",
+        "fh_public": "2020-06-25T15:30:34.231Z",
+        "fh_desactivacion": "",
+        "fh_portada": "",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "dffdffggfgfgsss",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": ""
       },
       "especialities": {
         "active": 0,
@@ -62736,8 +62732,62 @@
       "files": {
         "list": []
       },
-      "id": "33"
+      "id": "29f76606-e0e6-43a3-a7ac-c495b90d30b8"
     },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "(Copia)dffdffd",
+        "entradilla": "dfdf",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-25T15:30:34.231Z",
+        "fh_public": "2020-06-25T15:30:34.231Z",
+        "fh_desactivacion": "",
+        "fh_portada": "",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "dffdffggfgfg",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": "",
+        "id_act_not": "29e4f52d-a67d-4d28-8d0f-30666a43bbd6"
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "29e4f52d-a67d-4d28-8d0f-30666a43bbd6"
+    }
+  ],
+  "alertas": [
     {
       "fields": {
         "id_act_alert": 33,
@@ -62749,7 +62799,7 @@
         "year": 2006,
         "html": "detalle_not_ATC.htm",
         "pdf": null,
-        "fh_public": "2020-06-15",
+        "fh_public": "2020-06-18T00:00:00.000Z",
         "fh_desactivacion": null,
         "fh_portada": null,
         "ib_visible": "1",
@@ -62801,6 +62851,324 @@
         "list": []
       },
       "id": "5e1378d6-77e5-42d1-a486-5b607e6fe643"
+    },
+    {
+      "fields": {
+        "id_act_alert": 33,
+        "id_categoria": 2,
+        "titular": "(Copia)<h2>Adaptación sistema de clasificación anatómica-ATC</h2>",
+        "entradilla": "<em><span style=\"font-size: 14px;\">ORDEN SCO/114/2006, de 20 de enero, por la que se actualiza el anexo I del Real Decreto 1348/2003</span></em>",
+        "tipo_referencia": null,
+        "nom_labo_entidad": null,
+        "year": 2006,
+        "html": "detalle_not_ATC.htm",
+        "pdf": null,
+        "fh_public": "2020-06-15",
+        "fh_desactivacion": null,
+        "fh_portada": null,
+        "ib_visible": "1",
+        "ib_boletin": 0,
+        "img_noticia": null,
+        "resumen": null,
+        "contenido_html": "\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"600\">\n    <tbody>\n        <tr height=\"24\">\n            <td width=\"600\" valign=\"top\">\n                <p align=\"justify\">El Consejo de Ministros reunido el pasado viernes aprobó, a propuesta de la ministra de Sanidad, Política Social e Igualdad, <strong>Leire Pajín</strong>, un Real Decreto por el que se establece el procedimiento para que una sustancia sea considerada estupefaciente en el ámbito nacional. </p>\n                <p align=\"justify\">“Esta nueva norma contribuye a proteger la salud de las personas mediante la intervención del Estado en todas las fases relacionadas con las sustancias declaradas estupefacientes, desde el cultivo y la producción, a la distribución, la prescripción o la dispensación y el consumo”. </p>\n                <p align=\"justify\">Las sustancias consideradas estupefacientes son aquellas que están incluidas en las listas I y II anexas al Convenio Único de 19612 de Naciones Unidas o que han adquirido tal consideración en el ámbito internacional.</p>\n                <p align=\"justify\">Para que una sustancia que no esté incluida en dichas listas internacionales sea considerada estupefaciente en el ámbito nacional es necesario reconocer es carácter mediante el desarrollo reglamentario de la Ley 17/1967, del 8 de abril, que actualizó y adaptó la legislación española de estupefacientes al Convenio de Naciones Unidas. </p>\n                <p align=\"justify\">Desde la entrada en vigor de la Ley 17/1967 no se había planteado la necesidad de calificar una sustancia como estupefaciente en el ámbito nacional pues la incorporación al listado de estupefacientes se ha realizado a través de su inclusión en las listas I y II de Naciones Unidas, o a través de la adquisición de tal consideración en el ámbito internacional. </p>\n                <p align=\"justify\">La norma aprobada por el Consejo de Ministros regula dicho procedimiento que parte de la evaluación de la sustancia mediante una serie de criterios como su semejanza con otras sustancias estupefacientes conocidas, su utilidad terapéutica o el riesgo de su abuso.</p>\n                <p align=\"justify\">La <strong>Agencia Española</strong><strong> de Medicamentos y Productos Sanitarios (AEMPS), </strong>de oficio o a instancia de otro órgano de la Administración General del Estado o de la Fiscalía Especial Antidroga, es el órgano encargado de iniciar el procedimiento para declarar estupefaciente a una determinada sustancia, que será declarada como tal mediante la aprobación de una Orden del <strong>Ministerio de Sanidad, Política Social e Igualdad</strong>. </p>\n                <p align=\"justify\">Tras la aprobación de la Orden Ministerial, la sustancia, así como los medicamentos que la contengan, quedará sometida a las medidas de fiscalización aplicable a los estupefacientes. <br> &nbsp;<br> Este es el caso de la sustancia Tapentadol que se incluye en este Real Decreto como estupefaciente en el ámbito nacional antes de iniciarse su comercialización en España para el tratamiento del dolor agudo y crónico. Su semejanza con los opiáceos clásicos como la morfina, su eficacia terapéutica y el riesgo de que se abuse de su consumo aconsejan su calificación como estupefaciente. </p>\n                <p align=\"justify\">De este modo, las medidas de fiscalización a nivel nacional para la adecuada gestión del riesgo del uso indebido, abuso o desvío al tráfico ilícito del Tapentadol se ampliarán a la declaración de fabricantes o importadores. </p>\n                <p align=\"justify\">Se requerirá una autorización previa de la <strong>Agencia Española</strong><strong> de Medicamentos y Productos Sanitarios </strong>para fabricar o importar, y será obligatoria la utilización de recetas oficiales de estupefacientes para la prescripción o dispensación de aquellos medicamentos que contengan Tapentadol en su composición. </p>\n                <p align=\"justify\">Estados Unidos, Alemania, Francia, Suecia, Suiza, Dinamarca, México y Chile son algunos de los países que han fiscalizado el Tapentadol como estupefaciente mediante procedimientos nacionales en sus respectivas listas de medicamentos controlados. </p>\n                <p align=\"justify\">&nbsp;</p>\n                <p>Fuente: <span class=\"atrespecgris\">Ministerio de Sanidad, Política Social e Igualdad</span></p>\n            </td>\n        </tr>\n        <tr> </tr>\n    </tbody>\n</table>",
+        "creation": null,
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": null,
+        "id_imagen": null,
+        "id_act_not": "4a20370f-6d06-4c2f-93f3-dcc42cb65e44"
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 1,
+        "list": [
+          {
+            "value": 1022148,
+            "label": "INASPIR Susp. Inhal. 25 mcg/dosis"
+          },
+          {
+            "value": 1022336,
+            "label": "KETAZOLAM ADAMED Cáps. 30 mg"
+          }
+        ]
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "4a20370f-6d06-4c2f-93f3-dcc42cb65e44"
+    },
+    {
+      "fields": {
+        "id_act_alert": 33,
+        "id_categoria": 2,
+        "titular": "(Copia)<h2>Adaptación sistema de clasificación anatómica-ATC</h2>",
+        "entradilla": "<em><span style=\"font-size: 14px;\">ORDEN SCO/114/2006, de 20 de enero, por la que se actualiza el anexo I del Real Decreto 1348/2003</span></em>",
+        "tipo_referencia": null,
+        "nom_labo_entidad": null,
+        "year": 2006,
+        "html": "detalle_not_ATC.htm",
+        "pdf": null,
+        "fh_public": "2020-06-15",
+        "fh_desactivacion": null,
+        "fh_portada": null,
+        "ib_visible": "1",
+        "ib_boletin": 0,
+        "img_noticia": null,
+        "resumen": null,
+        "contenido_html": "\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"600\">\n    <tbody>\n        <tr height=\"24\">\n            <td width=\"600\" valign=\"top\">\n                <p align=\"justify\">El Consejo de Ministros reunido el pasado viernes aprobó, a propuesta de la ministra de Sanidad, Política Social e Igualdad, <strong>Leire Pajín</strong>, un Real Decreto por el que se establece el procedimiento para que una sustancia sea considerada estupefaciente en el ámbito nacional. </p>\n                <p align=\"justify\">“Esta nueva norma contribuye a proteger la salud de las personas mediante la intervención del Estado en todas las fases relacionadas con las sustancias declaradas estupefacientes, desde el cultivo y la producción, a la distribución, la prescripción o la dispensación y el consumo”. </p>\n                <p align=\"justify\">Las sustancias consideradas estupefacientes son aquellas que están incluidas en las listas I y II anexas al Convenio Único de 19612 de Naciones Unidas o que han adquirido tal consideración en el ámbito internacional.</p>\n                <p align=\"justify\">Para que una sustancia que no esté incluida en dichas listas internacionales sea considerada estupefaciente en el ámbito nacional es necesario reconocer es carácter mediante el desarrollo reglamentario de la Ley 17/1967, del 8 de abril, que actualizó y adaptó la legislación española de estupefacientes al Convenio de Naciones Unidas. </p>\n                <p align=\"justify\">Desde la entrada en vigor de la Ley 17/1967 no se había planteado la necesidad de calificar una sustancia como estupefaciente en el ámbito nacional pues la incorporación al listado de estupefacientes se ha realizado a través de su inclusión en las listas I y II de Naciones Unidas, o a través de la adquisición de tal consideración en el ámbito internacional. </p>\n                <p align=\"justify\">La norma aprobada por el Consejo de Ministros regula dicho procedimiento que parte de la evaluación de la sustancia mediante una serie de criterios como su semejanza con otras sustancias estupefacientes conocidas, su utilidad terapéutica o el riesgo de su abuso.</p>\n                <p align=\"justify\">La <strong>Agencia Española</strong><strong> de Medicamentos y Productos Sanitarios (AEMPS), </strong>de oficio o a instancia de otro órgano de la Administración General del Estado o de la Fiscalía Especial Antidroga, es el órgano encargado de iniciar el procedimiento para declarar estupefaciente a una determinada sustancia, que será declarada como tal mediante la aprobación de una Orden del <strong>Ministerio de Sanidad, Política Social e Igualdad</strong>. </p>\n                <p align=\"justify\">Tras la aprobación de la Orden Ministerial, la sustancia, así como los medicamentos que la contengan, quedará sometida a las medidas de fiscalización aplicable a los estupefacientes. <br> &nbsp;<br> Este es el caso de la sustancia Tapentadol que se incluye en este Real Decreto como estupefaciente en el ámbito nacional antes de iniciarse su comercialización en España para el tratamiento del dolor agudo y crónico. Su semejanza con los opiáceos clásicos como la morfina, su eficacia terapéutica y el riesgo de que se abuse de su consumo aconsejan su calificación como estupefaciente. </p>\n                <p align=\"justify\">De este modo, las medidas de fiscalización a nivel nacional para la adecuada gestión del riesgo del uso indebido, abuso o desvío al tráfico ilícito del Tapentadol se ampliarán a la declaración de fabricantes o importadores. </p>\n                <p align=\"justify\">Se requerirá una autorización previa de la <strong>Agencia Española</strong><strong> de Medicamentos y Productos Sanitarios </strong>para fabricar o importar, y será obligatoria la utilización de recetas oficiales de estupefacientes para la prescripción o dispensación de aquellos medicamentos que contengan Tapentadol en su composición. </p>\n                <p align=\"justify\">Estados Unidos, Alemania, Francia, Suecia, Suiza, Dinamarca, México y Chile son algunos de los países que han fiscalizado el Tapentadol como estupefaciente mediante procedimientos nacionales en sus respectivas listas de medicamentos controlados. </p>\n                <p align=\"justify\">&nbsp;</p>\n                <p>Fuente: <span class=\"atrespecgris\">Ministerio de Sanidad, Política Social e Igualdad</span></p>\n            </td>\n        </tr>\n        <tr> </tr>\n    </tbody>\n</table>",
+        "creation": null,
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": null,
+        "id_imagen": null,
+        "id_act_not": "9d3ad91c-0ab1-4ec2-baa2-441cac24dacf"
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 1,
+        "list": [
+          {
+            "value": 1022148,
+            "label": "INASPIR Susp. Inhal. 25 mcg/dosis"
+          },
+          {
+            "value": 1022336,
+            "label": "KETAZOLAM ADAMED Cáps. 30 mg"
+          }
+        ]
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "9d3ad91c-0ab1-4ec2-baa2-441cac24dacf"
+    },
+    {
+      "fields": {
+        "id_act_alert": 33,
+        "id_categoria": 2,
+        "titular": "<h2>Adaptación sistema de clasificación anatómica-ATC3</h2>",
+        "entradilla": "<em><span style=\"font-size: 14px;\">ORDEN SCO/114/2006, de 20 de enero, por la que se actualiza el anexo I del Real Decreto 1348/2003</span></em>",
+        "tipo_referencia": null,
+        "nom_labo_entidad": null,
+        "year": 2006,
+        "html": "detalle_not_ATC.htm",
+        "pdf": null,
+        "fh_public": "2020-06-16T00:00:00.000Z",
+        "fh_desactivacion": null,
+        "fh_portada": null,
+        "ib_visible": "1",
+        "ib_boletin": 0,
+        "img_noticia": null,
+        "resumen": null,
+        "contenido_html": "\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"600\">\n    <tbody>\n        <tr height=\"24\">\n            <td width=\"600\" valign=\"top\">\n                <p align=\"justify\">El Consejo de Ministros reunido el pasado viernes aprobó, a propuesta de la ministra de Sanidad, Política Social e Igualdad, <strong>Leire Pajín</strong>, un Real Decreto por el que se establece el procedimiento para que una sustancia sea considerada estupefaciente en el ámbito nacional. </p>\n                <p align=\"justify\">“Esta nueva norma contribuye a proteger la salud de las personas mediante la intervención del Estado en todas las fases relacionadas con las sustancias declaradas estupefacientes, desde el cultivo y la producción, a la distribución, la prescripción o la dispensación y el consumo”. </p>\n                <p align=\"justify\">Las sustancias consideradas estupefacientes son aquellas que están incluidas en las listas I y II anexas al Convenio Único de 19612 de Naciones Unidas o que han adquirido tal consideración en el ámbito internacional.</p>\n                <p align=\"justify\">Para que una sustancia que no esté incluida en dichas listas internacionales sea considerada estupefaciente en el ámbito nacional es necesario reconocer es carácter mediante el desarrollo reglamentario de la Ley 17/1967, del 8 de abril, que actualizó y adaptó la legislación española de estupefacientes al Convenio de Naciones Unidas. </p>\n                <p align=\"justify\">Desde la entrada en vigor de la Ley 17/1967 no se había planteado la necesidad de calificar una sustancia como estupefaciente en el ámbito nacional pues la incorporación al listado de estupefacientes se ha realizado a través de su inclusión en las listas I y II de Naciones Unidas, o a través de la adquisición de tal consideración en el ámbito internacional. </p>\n                <p align=\"justify\">La norma aprobada por el Consejo de Ministros regula dicho procedimiento que parte de la evaluación de la sustancia mediante una serie de criterios como su semejanza con otras sustancias estupefacientes conocidas, su utilidad terapéutica o el riesgo de su abuso.</p>\n                <p align=\"justify\">La <strong>Agencia Española</strong><strong> de Medicamentos y Productos Sanitarios (AEMPS), </strong>de oficio o a instancia de otro órgano de la Administración General del Estado o de la Fiscalía Especial Antidroga, es el órgano encargado de iniciar el procedimiento para declarar estupefaciente a una determinada sustancia, que será declarada como tal mediante la aprobación de una Orden del <strong>Ministerio de Sanidad, Política Social e Igualdad</strong>. </p>\n                <p align=\"justify\">Tras la aprobación de la Orden Ministerial, la sustancia, así como los medicamentos que la contengan, quedará sometida a las medidas de fiscalización aplicable a los estupefacientes. <br> &nbsp;<br> Este es el caso de la sustancia Tapentadol que se incluye en este Real Decreto como estupefaciente en el ámbito nacional antes de iniciarse su comercialización en España para el tratamiento del dolor agudo y crónico. Su semejanza con los opiáceos clásicos como la morfina, su eficacia terapéutica y el riesgo de que se abuse de su consumo aconsejan su calificación como estupefaciente. </p>\n                <p align=\"justify\">De este modo, las medidas de fiscalización a nivel nacional para la adecuada gestión del riesgo del uso indebido, abuso o desvío al tráfico ilícito del Tapentadol se ampliarán a la declaración de fabricantes o importadores. </p>\n                <p align=\"justify\">Se requerirá una autorización previa de la <strong>Agencia Española</strong><strong> de Medicamentos y Productos Sanitarios </strong>para fabricar o importar, y será obligatoria la utilización de recetas oficiales de estupefacientes para la prescripción o dispensación de aquellos medicamentos que contengan Tapentadol en su composición. </p>\n                <p align=\"justify\">Estados Unidos, Alemania, Francia, Suecia, Suiza, Dinamarca, México y Chile son algunos de los países que han fiscalizado el Tapentadol como estupefaciente mediante procedimientos nacionales en sus respectivas listas de medicamentos controlados. </p>\n                <p align=\"justify\">&nbsp;</p>\n                <p>Fuente: <span class=\"atrespecgris\">Ministerio de Sanidad, Política Social e Igualdad</span></p>\n            </td>\n        </tr>\n        <tr> </tr>\n    </tbody>\n</table>",
+        "creation": null,
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": null,
+        "id_imagen": null,
+        "id_act_not": "f9d0acd5-aaeb-418a-b9d1-f10a2de6d827"
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 1,
+        "list": [
+          {
+            "value": 1022148,
+            "label": "INASPIR Susp. Inhal. 25 mcg/dosis"
+          },
+          {
+            "value": 1022336,
+            "label": "KETAZOLAM ADAMED Cáps. 30 mg"
+          }
+        ]
+      },
+      "atcs": {
+        "active": 1,
+        "list": [
+          {
+            "value": "D05AC",
+            "label": "D05AC - Derivados de antraceno"
+          },
+          {
+            "value": "B01AE04",
+            "label": "B01AE04 - Melagatrán"
+          },
+          {
+            "value": "G01AF20 P4",
+            "label": "G01AF20 P4 - Metronidazol + miconazol + ketanserina"
+          }
+        ]
+      },
+      "diseases": {
+        "active": 1,
+        "list": [
+          {
+            "value": "3743",
+            "label": "Cirrosis biliar primaria"
+          },
+          {
+            "value": "85774",
+            "label": "Rotura de varices esofágicas en pacientes con cirrosis, tratamiento preventivo (de la)"
+          }
+        ]
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "f9d0acd5-aaeb-418a-b9d1-f10a2de6d827"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "(Copia)dd",
+        "entradilla": "dd",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-25T15:28:57.280Z",
+        "fh_public": "2020-06-25T15:28:57.280Z",
+        "fh_desactivacion": "",
+        "fh_portada": "",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "ddd",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": "",
+        "id_act_not": "02122cf2-ef32-40bd-bdbc-d2c9075f3fde"
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "02122cf2-ef32-40bd-bdbc-d2c9075f3fde"
+    },
+    {
+      "fields": {
+        "id_categoria": "",
+        "titular": "(Copia)(Copia)dd",
+        "entradilla": "dd",
+        "tipo_referencia": "ENT",
+        "nom_labo_entidad": "",
+        "year": "2020-06-25T15:28:57.280Z",
+        "fh_public": "2020-06-25T15:28:57.280Z",
+        "fh_desactivacion": "",
+        "fh_portada": "",
+        "ib_visible": 1,
+        "ib_boletin": "",
+        "img_noticia": "",
+        "contenido_html": "ddd",
+        "creation": "",
+        "modification": "",
+        "ib_destacado": 0,
+        "profesionales": 0,
+        "palabra_clave": "",
+        "id_imagen": "",
+        "id_act_not": "8296103a-9226-4cf4-9273-49e74bafb036"
+      },
+      "especialities": {
+        "active": 0,
+        "list": []
+      },
+      "drugs": {
+        "active": 0,
+        "list": []
+      },
+      "atcs": {
+        "active": 0,
+        "list": []
+      },
+      "diseases": {
+        "active": 0,
+        "list": []
+      },
+      "laboratories": {
+        "active": 0,
+        "list": []
+      },
+      "entities": {
+        "active": 0,
+        "list": []
+      },
+      "files": {
+        "list": []
+      },
+      "id": "8296103a-9226-4cf4-9273-49e74bafb036"
     }
   ]
 }

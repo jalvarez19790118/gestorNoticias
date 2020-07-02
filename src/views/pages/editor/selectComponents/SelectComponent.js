@@ -12,45 +12,65 @@ const SelectComponent = ({ type, label, tipo, opciones, obtieneOpciones }) => {
 
   const [opcionesDefecto, estableceOpcionesDefecto] = useState([]);
 
-  const { noticia, setNoticia } = useContext(FormContext);
+  const { noticia, setNoticia,  changeFields, setChangefields } = useContext(FormContext);
 
+
+ 
   const [notOptionsMsg, setNotOptionsMsg] = useState('Sin Opciones');
-  const [isActive, setIsActive] = useState(!!noticia[tipo]['active']);
-  const [selectList, setSelectList] = useState(noticia[tipo]['list']);
-  
+  const [isActive, setIsActive] = useState(noticia[tipo].length > 0);
+  const [selectList, setSelectList] = useState(noticia[tipo]);
 
+  
   const saveState = (new_noticia) => {
    // setNoticia(new_noticia);
     sessionStorage.setItem(type, JSON.stringify(new_noticia));
   };
 
   const setLinkActive = (tipo, value) => {
-    let new_noticia = {
-      ...noticia,
-    };
-    new_noticia[tipo]['active'] = value;
-    saveState(new_noticia);
+
 
     if (value === 0) deleteAll(tipo);
+   
   };
 
   const setOpcion = (tipo, values) => {
+
+  
     let new_noticia = {
-      ...noticia,
+      ...noticia
     };
+    
     let a_value = values[values.length - 1];
 
-    new_noticia[tipo]['list'].push(a_value);
+     
+     a_value['id'] = a_value.value;
+     a_value['nombre'] = a_value.label;
+     
+     delete a_value['label']
+     delete a_value['value']
 
-    setSelectList(noticia[tipo]['list']);
-    saveState(new_noticia);
+    new_noticia[tipo].push(a_value);
+
+   
+  let cf = {...changeFields};
+
+  cf[tipo] = new_noticia[tipo];
+
+
+  setChangefields(cf)
+
+
+    setSelectList(new_noticia[tipo]);
+ 
+   setNoticia(new_noticia);
+    
   };
 
 
   useEffect(() => {
 
-    setIsActive(!!noticia[tipo]['active']);
-    setSelectList(noticia[tipo]['list']);
+    setIsActive(noticia[tipo].length > 0);
+    setSelectList(noticia[tipo]);
 
   },[noticia]);
 
@@ -60,10 +80,11 @@ const SelectComponent = ({ type, label, tipo, opciones, obtieneOpciones }) => {
     if (inputValue.length >= 3) {
       obtieneOpciones(inputValue);
 
+
       opciones.map((value) => {
         if (value.label.toLowerCase().includes(inputValue.toLowerCase())) {
           let new_label = value.label;
-          if (tipo == 'atcs') new_label = value.id + ' - ' + new_label;
+          if (tipo == 'atc') new_label = value.id + ' - ' + new_label;
           options.push({ value: value.id, label: new_label });
         }
       });
@@ -84,28 +105,49 @@ const SelectComponent = ({ type, label, tipo, opciones, obtieneOpciones }) => {
   };
 
   const deleteOption = (tipo, id) => {
+
+ 
     let new_noticia = {
-      ...noticia,
+      ...noticia
     };
    
   
-    new_noticia[tipo]['list'] = selectList.filter((drug) => drug.value !== id);
+    new_noticia[tipo] = selectList.filter((drug) => drug.id !== id);
+    setNoticia(new_noticia);
+
+    let cf = {...changeFields};
+
+    cf[tipo] = new_noticia[tipo];
+  
+    setChangefields(cf)
+
+    
 
 
-    setSelectList(new_noticia[tipo]['list']);
-    saveState(new_noticia);
+    setSelectList(new_noticia[tipo]);
+    setNoticia(new_noticia);
+   
   };
 
   const deleteAll = (tipo) => {
 
   let new_noticia = {
-      ...noticia,
+      ...noticia
     };
-    new_noticia[tipo]['list'] = [];
+    new_noticia[tipo] = [];
  
+
+    setNoticia(new_noticia);
+
+    let cf = {...changeFields};
+
+    cf[tipo] = new_noticia[tipo];
+  
+    setChangefields(cf)
     
     setSelectList([]);
-    saveState(new_noticia);
+    setNoticia(new_noticia);
+  
   };
 
   const Svg = (p) => (
@@ -147,7 +189,7 @@ const SelectComponent = ({ type, label, tipo, opciones, obtieneOpciones }) => {
   };
 
   return (
-    <Container fuid="true" className="EditorFormPage m-0 mt-1 p-0">
+    <Container fuid="true" className="EditorFormPage m-0 mt-1 p-0 ml-1">
       <Row className="m-0 p-1">
         <Col xs="12" className="m-0 p-0 ">
           <div className="toggle-container">
@@ -204,15 +246,18 @@ const SelectComponent = ({ type, label, tipo, opciones, obtieneOpciones }) => {
             />
           </div>
         </Col>
+
         {isActive && selectList !== null && selectList.length >= 1 ? (
           <Col xs="12" className="m-0 p-0">
             <ListGroup className="listGroup m-0 p-0 pt-1">
               {selectList.map((val, key) => {
                 return (
-                  <ListGroupItem className="m-0 mb-1 p-1" key={val.value}>
+                  <ListGroupItem className="m-0 mb-1 p-1" key={val.id}>
                     <div className="d-flex">
-                      <div>{val.label}</div>
-                      <div onClick={(e) => deleteOption(tipo, val.value)} className="float-right">
+                      <div>{ val.nombre }</div>
+                      <div onClick={(e) => deleteOption(tipo, val.id)} className="float-right">
+                        
+      
                         {IconDelete}
                       </div>
                     </div>

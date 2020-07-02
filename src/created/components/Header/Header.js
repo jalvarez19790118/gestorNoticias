@@ -61,6 +61,22 @@ const IconAlerts = (
 
 
 
+const IconPa = (
+  <MyIcon
+    item={{
+      lib: 'Fa',
+      name: 'FaPills',
+      style: {
+        fontSize: '16px',
+        color: '#162c50',
+        marginLeft: '0px',
+        marginRight: '8px',
+      },
+    }}
+  />);
+
+
+
 
 
   
@@ -125,7 +141,7 @@ const IconAlerts = (
    
           if (props.location.pathname.toLowerCase().includes('alerta')) { setSelectType({type: 'Alertas'})}
         if (props.location.pathname.toLowerCase().includes('noticia')) { setSelectType({type: 'Noticias'})}
-        
+        if (props.location.pathname.toLowerCase().includes('pactivo')) { setSelectType({type: 'P. Activos'})}
  
   }, [location]);
 
@@ -164,6 +180,7 @@ const IconAlerts = (
       >
         <MenuItem onClick={handleClose} component={Link} to='/gestor/n/noticias'>{IconNews}Noticias</MenuItem>
         <MenuItem onClick={handleClose} component={Link} to='/gestor/a/alertas'>{IconAlerts}Alertas</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to='/gestor/p/pactivos'>{IconPa}P. Activos</MenuItem>
       
       </Menu>
 

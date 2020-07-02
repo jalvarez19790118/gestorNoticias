@@ -6,14 +6,15 @@
   }
 
   .EditorFormPage {
-    font-family: $actualfontFamily;
+  
+  /*  font-family: $actualfontFamily;
     border: 1px solid #b4b4b4;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
     background-color: #fff;
 
     max-width: unset;
     border-radius: 0.25rem;
-
+*/
     .emptyField {
       label {
         color: #a00 !important;
@@ -84,17 +85,24 @@
     select {
       border: 1px solid $borderSectionColor;
       border-radius: 0.35rem;
-      color: #000 !important;
-      font-size: 0.9em;
+     
+      font-size: 14px;
       font-weight: normal;
       box-shadow: none !important;
-      background-color: #fafafa !important;
+      background-color: #fff !important;
       padding: 4px 6px;
-      font-weight: bold;
+     
 
       &:focus {
         border: 1px solid $borderSectionColor;
       }
+
+     
+    }
+
+    .form-control {
+
+      background-image: unset;
     }
 
     .toggle-container {
@@ -108,7 +116,7 @@
 
       button {
         padding: 2px;
-        background: #fff !important;
+      
         float: right;
         box-shadow: unset !important;
         padding-right: 10px;
@@ -117,8 +125,8 @@
         font-weight: bold;
         font-size: 0.9em;
         border: 0 solid;
-        z-index: 10000;
       
+        text-transform: initial;
         position: sticky;
 
         &:hover {
@@ -128,7 +136,9 @@
         font-size: 0.9em;
 
         svg {
-          margin-right: 5px;
+          margin-right: 2px;
+          position: relative;
+          top: 3px;
         }
       }
 
@@ -194,16 +204,23 @@
 
       span[class$='indicatorSeparator'] {
         width: 0;
+        
       }
 
       div[class$='-ValueContainer'] {
         padding: 0;
+        background: #fff;
+        font-weight: 400;
+           
       }
 
       div[class$='-IndicatorsContainer'] {
+
+        border-left: 1px solid #dddddd;
+
         svg[class$='-Svg'] {
-          color: $notPrimaryColor;
-          stroke: $notPrimaryColor;
+          color: #ddd;
+          stroke: #ddd;
           line-height: 2;
           background: transparent;
           border-radius: 0.3rem;
@@ -259,8 +276,8 @@
       div[class$='-menu'] {
         border: 1px solid $borderSectionColor;
         background: #fff;
-        font-size: 0.9em;
-        font-weight: bold;
+        font-size: 14px;
+     
         padding: 0;
         box-shadow: unset;
       }
@@ -275,23 +292,23 @@
       }
 
       div[class$='LoadingMessage'] {
-        font-size: 0.9em;
-        font-weight: bold;
+        font-size: 12px;
+      
         color: $notPrimaryColor;
         padding: 4px;
       }
 
       div[class$='NoOptionsMessage'] {
-        font-size: 0.9em;
-        font-weight: bold;
+        font-size: 12px;
+     font-weight: bold;
         color: $inactiveColor;
         padding: 4px;
         background: #f4c6c6;
       }
 
       div[class$='MenuList'] {
-        font-size: 0.9em;
-        font-weight: bold;
+        font-size: 14px;
+    
         color: $notPrimaryColor;
         padding: 0;
       }
@@ -299,6 +316,8 @@
       div[class$='option'] {
         padding: 4px;
       }
+
+    
     }
 
     hr {
@@ -306,11 +325,11 @@
     }
 
     .listGroup {
-      border: 0px solid $borderSectionColor;
+      border: 1px solid #ddd;
       border-radius: 0.25rem;
       background: #fff;
-      padding: 0;
-      margin-top: 5px !important;
+      padding: 1px;
+     
       padding-top: 0 !important;
 
       .list-group-item {
@@ -318,24 +337,40 @@
         border-bottom: 1px solid $borderSectionColor;
 
         background: #fff;
-        font-size: 0.9em;
-        font-weight: bold;
+        font-size: 14px;
+       
 
         margin: 0 !important;
 
         &:last-child {
           border-bottom: 0 solid;
+
+        }
+
+        &:first-child {
+         margin-right: 0px !important;
+        
+         
         }
 
         div {
           &:first-child {
             float: left;
             width: calc(100% - 0px);
-            margin-right: 5px;
+         padding: 2px;
+         
+
           }
+         
         }
+
+     
       }
     }
+
+    .list-group-item :first-child {
+       margin-right: 0rem; 
+  }
 
     .dropzone {
       height: auto;
@@ -523,6 +558,7 @@
 
 .EditNotPage .EditorFormPage .select-container div[class$='-control'] {
   background: #fafafa;
+  width: 100%;
 }
 
 .EditorHeader {

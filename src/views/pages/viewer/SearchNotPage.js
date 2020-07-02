@@ -1,38 +1,60 @@
 import React, { useContext, useEffect, useState, Fragment } from 'react';
 import { MyContext } from '../../../context/MyContext';
+import { FormContext } from '../../../context/FormContext';
 import SearchHeader from './SearchHeader';
 import NotContentPanel from './NotContentPanel';
 import LoadingCard from '../../commons/LoadingCard';
 import { useParams } from 'react-router-dom';
+import { GAppContext } from '../../../context/GAppContext';
+
 
 const SearchNotPage = () => {
-  const [onpanel, setOnPanel] = useState(4);
+
   const [loadingNews, setLoadingNews] = useState(true);
-
+  const [onpanel, setOnPanel] = useState(4);
   let { id } = useParams();
+  const {selectGDate} = useContext(GAppContext);
+  const {setFirst } = useContext(FormContext);
 
-  const init_date = new Date();
-  const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: '2-digit', day: '2-digit' });
-  const [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(init_date);
+  const {setCurrentDate, obtieneNoticias } = useContext(MyContext);
 
-  const { currentDate, setCurrentDate, obtieneNoticias } = useContext(MyContext);
-
-  const today = year + '-' + month + '-' + day;
-
+  
+  let date_selected = sessionStorage.getItem('selec_date');
 
   useEffect(() => {
+
+  
+  
     if (loadingNews) {
- 
-      let day_to_seach = currentDate;
+     
+     
+
+   
+     
+     if (date_selected == null) 
+     {
+
+      let dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: '2-digit', day: '2-digit' });
+      let [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(new Date());
+      sessionStorage.setItem('selec_date', `${year}-${month}-${day}`);
+      date_selected =  sessionStorage.getItem('selec_date');
     
-      if  (day_to_seach == null) day_to_seach = today;
-      setCurrentDate(day_to_seach);  
-      
-      obtieneNoticias(id, day_to_seach).then(() => {
+
+     }
+
+    
+
+      obtieneNoticias(id, date_selected).then(() => {
         setLoadingNews(false);
+        setFirst(true);
+
+       
       });
+  
     }
+  
   }, [loadingNews]);
+
 
   return (
     <Fragment>
@@ -40,17 +62,12 @@ const SearchNotPage = () => {
         <LoadingCard />
       ) : (
         <div>
-         
-          <SearchHeader currentDate={currentDate} setCurrentDate={setCurrentDate} setLoadingNews={setLoadingNews} />
+          <SearchHeader date_selected={date_selected} setLoadingNews={setLoadingNews} /> 
           <NotContentPanel mode={id} onpanel={onpanel}></NotContentPanel>
-
-       
         </div>
       )}
     </Fragment>
   );
 };
-
-
 
 export default SearchNotPage;

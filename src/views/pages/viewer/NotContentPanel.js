@@ -28,10 +28,7 @@ const NotContentPanel = ({ mode, onpanel }) => {
   };
 
 
-  const [modal, showModal] = useState({
-    ...modal,
-    show: false,
-  });
+  const [open, setOpen] = useState(false);
 
   const onPageVal = parseInt(12 / onpanel);
 
@@ -42,15 +39,11 @@ const NotContentPanel = ({ mode, onpanel }) => {
       respuesta.then((data) => {
         if (data.status === 200) {
           $('#' + mode + '_' + id).fadeOut(() => {
-         //   $('#' + mode + '_' + id).remove();
-
-
-          
+       
 
             setNews(news.filter((v, k) => v.id !== id));
-         //   setNews(current_items);
-          
-
+     
+        
           });
         } else {
           setErrorRemoving(true);
@@ -84,6 +77,8 @@ const NotContentPanel = ({ mode, onpanel }) => {
           setErrorCloning(true);
         }
       });
+
+      
     } catch (error) {
       setErrorCloning(true);
       console.log(error);
@@ -97,7 +92,7 @@ const NotContentPanel = ({ mode, onpanel }) => {
         display: 'none',
       }}
     >
-      <NotFullModal modal={modal} showModal={showModal}></NotFullModal>
+      
 
       <Fab size="medium" onClick={createNewNot} id="AddNewButton" aria-label="add">
         <AddIcon />
@@ -119,12 +114,10 @@ const NotContentPanel = ({ mode, onpanel }) => {
             <Row>
               {news.map((item, idx) => {
                 return (
-                  <Col id={mode + '_' + item.id} sm={onPageVal} key={idx} className="m-0 p-1">
+                  <Col id={mode + '_' + item.id} sm={3} key={idx} className="m-0 p-1">
                     <NotContent
                       mode={mode}
                       item={item}
-                      modal={modal}
-                      showModal={showModal}
                       deleteElement={deleteElement}
                       cloneElement={cloneElement}
                     ></NotContent>

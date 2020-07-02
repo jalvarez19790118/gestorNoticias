@@ -14,9 +14,8 @@ const MyProvider = (props) => {
   const [currentDate, setCurrentDate] = useState(null);
   const [wwidth, setWwidth] = useState(window.innerWidth);
   const [wheight, setWheight] = useState(window.innerHeight);
-
   const [editarNoticia, setEditarNoticia] = useState(null);
-
+  
   const updateOnpanelSize = () => {
     setWwidth(window.innerWidth);
     setWheight(window.innerHeight);
@@ -28,46 +27,50 @@ const MyProvider = (props) => {
   });
 
   const obtieneNoticias = async (tipo, currentDate) => {
-    let search_date = currentDate;
 
-    try {
-      const respuesta = await clienteAxios.get(
-        `/${tipo}?_sort=fh_public&_order=desc&_page=${currentPage}&q=${search_date}`
-      );
-      const respuesta2 = await clienteAxios.get(`/${tipo}`);
 
-      let newslist = [];
+    const d = new Date(currentDate);
 
-      respuesta.data.map((v, k) => {
-        if ('fields' in v) {
-          newslist.push(v);
-        } else {
-          let elem = {};
-          elem.fields = v;
-          elem.id = v.id_act_not;
-          newslist.push(elem);
-        }
-      });
+    const dtf = new Intl.DateTimeFormat('en', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    });
+    const [{ value: mo }, , { value: da }, , { value: ye }] = dtf.formatToParts(d);
 
-      setNews(newslist.reverse());
+   const format_data = `${da}-${mo}-${ye}`;
 
-      let total = respuesta2.data.length;
-      let total_pages = parseInt(total / size);
 
-      setAllResults(total);
+    const data = new Object();
+    data.fini = format_data;
+    data.ffin =  format_data;
 
-      if (total - total_pages * size > 0) total_pages += 1;
+    if (tipo ==='noticias') data.tipos = 1;
+    if (tipo ==='alertas')  data.tipos = 2;
+    if (tipo ==='pactivos')  data.tipos = 3;
 
-      setPages(total_pages);
-      //  setLoadingNews(false);
-    } catch (error) {
-      setNews([]);
-      setAllResults(1);
-      //  setLoadingNews(false);
-      console.error(error);
-      alert(error);
-    }
-  };
+
+      
+      const respuesta = await clienteAxios.post(`/noticias/byDate`, data );
+   
+    
+
+      if ( respuesta.data.success)
+      {
+        let newslist = respuesta.data.resultados;
+        setNews(newslist);
+        setAllResults( respuesta.data.total_resultados);
+      }
+      else
+      {
+        console.log(respuesta.data);      
+
+        setNews([]);
+        setAllResults(0);
+      
+      }
+   
+    };
 
   const setNewSize = (newSize) => {
     if (newSize.length === 0) return null;
@@ -81,9 +84,9 @@ const MyProvider = (props) => {
   };
 
   const refreshNewsData = (tipo) => {
-    // if (!loadingNews) setLoadingNews(true);
+   
     setType(tipo);
-    obtieneNoticias(tipo);
+  
   };
 
   const obtienePrimerId = async (tipo) => {
@@ -95,12 +98,12 @@ const MyProvider = (props) => {
 
   const obtieneEditarNoticia = async (tipo, id) => {
     try {
-      let url = `/${tipo}?id=${id}`;
+      let url = `/noticias/${id}`;
 
       const respuesta = await clienteAxios.get(url);
 
       return respuesta;
-     // setEditarNoticia(respuesta.data[0]);
+      // setEditarNoticia(respuesta.data[0]);
     } catch (error) {
       console.log(error);
     }

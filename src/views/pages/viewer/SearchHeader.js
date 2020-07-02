@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import 'date-fns';
 import EsLocale from 'date-fns/locale/es';
 import DateFnsUtils from '@date-io/date-fns';
 import { Container, Row, Col } from 'reactstrap';
 import { createMuiTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
+import { GAppContext } from '../../../context/GAppContext';
 
 
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
@@ -63,25 +64,28 @@ const materialTheme = createMuiTheme({
   },
 });
 
-const SearchHeader = ({ currentDate, setCurrentDate, setLoadingNews }) => {
+const SearchHeader = ({date_selected, setLoadingNews }) => {
 
   
-  const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const {selectGDate, setSelectGDate} = useContext(GAppContext);
+
 
   const handleDateChange = (aDate) => {
-    //   setSelectedDate(aDate);
+
     let dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: '2-digit', day: '2-digit' });
-
     let [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(aDate);
-
-    setCurrentDate(`${year}-${month}-${day}`);
+    setSelectGDate(`${year}-${month}-${day}`);
+  
     setLoadingNews(true);
-    setSelectedDate(aDate);
+
+    sessionStorage.setItem('selec_date', `${year}-${month}-${day}`);
+   
   };
 
   return (
     <Container className="EditorHeader p-0" fluid={true}>
-      <Row className="m-0 p-0">
+     <Row className="m-0 p-0">
         <Col sm="6" className="m-0 p-0">
           <MuiPickersUtilsProvider utils={DateFnsUtils} locale={EsLocale} className="m-0 p-0">
             <ThemeProvider theme={materialTheme}>
@@ -90,7 +94,7 @@ const SearchHeader = ({ currentDate, setCurrentDate, setLoadingNews }) => {
                 margin="normal"
                 id="date-picker-dialog"
                 format={'dd-MMMM-yyyy'}
-                value={currentDate}
+                value={date_selected}
                 onChange={handleDateChange}
                 cancelLabel="Cancelar"
                 okLabel="Aceptar"

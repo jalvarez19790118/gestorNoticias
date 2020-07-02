@@ -1,162 +1,145 @@
 import React, {useEffect, useState, useContext, Fragment} from 'react';
-import {Container, Col, Row} from 'reactstrap';
-import {FormContext} from '../../../../context/FormContext';
-import Carousel, {Dots} from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
-import MyIcon from '../../../../created/components/SidebarNav/components/MyIcon';
-
-const ImgBank = ({keywords}) => {
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import Toggle from 'react-toggle';
+import 'react-toggle/style.css';
+import { FormContext } from '../../../../context/FormContext';
 
 
-    const entries = Object.entries(keywords).length > 0  ? Object.entries(keywords) : [];
+const ImgBank = ({idImagen,relaImg,banco,categoria, keyword, indicaciones}) => {
 
-    const terms = entries.filter((v,k)=> v[1].length > 1);
+    const {changeFields,setChangefields} = useContext(FormContext);
 
-  
+
+    const [imgCat, setImgCat] =  useState({'id':0, 'img':''});
+    const [imgKey, setImgKey] = useState({'id':0, 'img':''});
+    const [imgActive, setImgActive] = useState(idImagen);
+
+
+    const useStyles = makeStyles((theme) => ({
+        
+
+      
+        
+
+        imgNot: {
+        
+            border: '1px solid #b4b4b4',
+            borderRadius: '0.25rem',
+           
+         }
+        }));
+
+        const classes = useStyles();
+
+
+    useEffect(() => { 
+
+        
+        if (categoria === undefined || categoria === null) categoria = {value: '0', label: '-'};
+        if (keyword === undefined || keyword === null ) keyword =  {value: '0', label: '-'};
+
+
+        const keys_categoria =  Array.from(relaImg['img_categoria'].keys());
+        const keys_palabra =  Array.from(relaImg['img_palabra'].keys());
+        const keys_indicacion =  Array.from(relaImg['img_indicacion'].keys());
+
+
+
+
+        if ( parseInt(categoria.value) > 0 && keys_categoria.includes(parseInt(categoria.value)))
+        {
+           let id_img = relaImg['img_categoria'][categoria.value];
+         
+           if (id_img !== undefined) setImgCat({'id': id_img, 'img' : banco[id_img]});
+           else setImgCat({'id':0, 'img':''});
+        }
+        else setImgCat({'id':0, 'img':''});
+        
+      
+        if ( parseInt(keyword.value) > 0 && keys_palabra.includes(parseInt(keyword.value)))
+        {
+           let id_img = relaImg['img_palabra'][keyword.value];
+
+           if (id_img !== undefined)  setImgKey({'id': id_img, 'img' : banco[id_img]});
+           else setImgKey({'id':0, 'img':''});    
+       
+          
+
+           
+        
+       }
+       else setImgKey({'id':0, 'img':''});
+
+
+    }
+    
+    
+    , [categoria,keyword]);
+
+
 
     return (
-        <Container className="EditorFormPage m-0 mt-1 p-0">
-            <div className="label m-0 p-1 px-2">Banco de imagenes</div>
-            <Row className="m-0 p-0">
 
-                {terms.map((v, k) => <Col xs='12' md='6' className="m-0 p-2"><ImgBankCarrosuel key={k} obj={v}/></Col>)}
+       
+        <div className="EditorFormPage m-0 p-1 ml-2" >
+          { (imgCat.img !== undefined &&   imgCat.img.length > 0) || (imgKey.img !== undefined && imgKey.img.length > 0) ?  <Fragment>
+      <label>Banco de imagenes:</label>
+        <Grid  container className="mt-2">
 
-            </Row>
+        {imgCat.img.length > 0 ?  
+        <Grid container item xs={12} md={6}  className="p-1" >
+          <img  className={classes.imgNot} src={`https://static.vademecum.es/documentos/banco_imagenes_noticias/${imgCat.img}`}/>
+          <div className="toggle-container mt-1">
+            <Toggle
+            
+            checked={imgCat.id === imgActive}
 
-        </Container>
+            onChange={(e)=>{
+
+
+                let cf = {...changeFields};
+                cf['id_imagen'] = imgCat.id;
+
+                
+
+
+
+                setChangefields(cf);
+                setImgActive(imgCat.id);
+            }}
+            />
+            <label>Categoria</label>
+          </div>
+        </Grid>: null }
+
+        {imgKey.img.length > 0 ?  
+        <Grid container item xs={12} md={6}  className="p-1" >
+          <img  className={classes.imgNot} src={`https://static.vademecum.es/documentos/banco_imagenes_noticias/${imgKey.img}`}/>
+          <div className="toggle-container mt-1">
+            <Toggle
+            checked={imgKey.id === imgActive}
+            onChange={(e)=>{
+
+                let cf = {...changeFields};
+                cf['id_imagen'] = imgKey.id;
+                setChangefields(cf);
+                setImgActive(imgKey.id);
+            }}
+
+            />
+            <label>Palabra</label>
+          </div>
+        </Grid>: null }
+       </Grid></Fragment> : null }
+     
+     
+     
+      </div>
     );
 }
 
-const ImgBankCarrosuel = ({obj}) => {
 
 
-   
-
-    const {obtieneImgs} = useContext(FormContext);
-
-    const dataNew = () => {
-
-        obtieneImgs(obj[1]).then((data) => {
-
-            setLoading(true);
-            fSetSlide(data);
-        });
-
-    }
-
-    useEffect(() => {
-
-        dataNew();
-
-    }, [obj[1]])
-
-  
-    const [loading,
-        setLoading] = useState(true);
-
-    const [select,
-        setSelect] = useState(0);
-    const [slides,
-        setSlides] = useState([]);
-    const [thumbs,
-        setThumbs] = useState([]);
-
-    const fSetSlide = (list) => {
-
-        let newSlide = [];
-        let newThumb = [];
-
-        try
-        {
-            list.map((v, k) => {
-
-                newSlide.push(<img src={v.url}/>);
-                newThumb.push(<img src={v.thumb}/>);
-
-            })
-            setSlides(newSlide);
-            setThumbs(newThumb);
-          
-            setTimeout(() => setLoading(false), 2000);
-        } catch (e) {
-
-
-console.log(e)
-
-setLoading(false)
-        }
-
-  
-
-    }
-
-    const ObjCarrusel = (obj[1].length > 0 &&  slides.length > 0
-        ? <Fragment>
-
-                <div className="label m-0 p-0 pl-1">{`${obj[0]}:`}</div>
-                <div className="label mb-1 p-0 pl-1">
-                    <i>{obj[1]}</i>
-                </div>
-                <div className="carrousel">
-
-                    <Carousel
-                        slides={slides}
-                        value={select}
-                        centered
-                        draggable={false}
-                        onChange={e => setSelect(e)}
-                        slidesPerScroll={1}
-                        slidesPerPage={1}/> {slides.length > 1
-                        ? <Dots
-                                className="d-inline-grid"
-                                number={thumbs.length}
-                                thumbnails={thumbs}
-                                value={select}
-                                onChange={e => setSelect(e)}
-                                number={slides.length}/>
-                        : null}
-
-                </div>
-            </Fragment>
-        : null);
-
-    return (
-        <div>
-
-            {!loading
-                ? ObjCarrusel
-                : <ImgBankSearching term={obj[1]}/>}
-
-        </div>
-    )
-
-}
-
-const ImgBankSearching = ({term}) => {
-
-    const IconLoad = <MyIcon
-        item={{
-        class: "fa-pulse",
-        lib: 'Fa',
-        name: 'FaSpinner',
-        style: {
-            'fontSize' : '35px',
-            'color' : '#162c50'
-        }
-    }}/>;
-
-    return (
-        <div className="ImgBankSearching ml-auto mr-auto mt-auto mb-auto p-2 w-100">
-            <div className="margin-auto">
-            {IconLoad}
-            </div>
-         
-            <div className="text-center mt-1">Buscando imagenes para el termino:
-                <i>{term}</i>
-            </div>
-        </div>
-    )
-
-}
 
 export default ImgBank;

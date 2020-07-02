@@ -9,24 +9,29 @@ import SaveIcon from '@material-ui/icons/Save';
 import MyIcon from '../../../created/components/SidebarNav/components/MyIcon';
 
 import { v4 as uuidv4 } from 'uuid';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import SavingCard from '../../commons/SavingCard';
 import { FormContext } from '../../../context/FormContext';
 import { Toast } from 'react-bootstrap';
 
-const EditorContentPanel = ({ type }) => {
+const EditorContentPanel = ({  type }) => {
   const storage = `${type}`;
   const mode = type.split('_')[1];
   const [show, setShow] = useState(false);
   const [status, setStatus] = useState({ status: '', msg: '' });
-  const { saveNew, updateNew,  setNoticia, init_noticia, verifyFields,vacios,setVacios } = useContext(FormContext);
+  const { saveNew, updateNew,  setNoticia, init_noticia, verifyFields,vacios,setVacios,changeFields,setChangeFields } = useContext(FormContext);
   const history = useHistory();
   const [showDelete, setShowDelete] = useState(false);
   const [saving,setSaving] = useState(false);
 
   const operation = type.split("_")[0];
 
+ 
+
+
   const getStorageData = () => {
+   
+   /*
     let objNoticia = sessionStorage.getItem(storage);
 
     if (objNoticia !== null) {
@@ -34,31 +39,52 @@ const EditorContentPanel = ({ type }) => {
     }
 
     return objNoticia;
+    */
   };
 
   const clearElement = () => {
 
    
     setNoticia(init_noticia);
-    sessionStorage.setItem(storage, JSON.stringify(init_noticia));
+   // sessionStorage.setItem(storage, JSON.stringify(init_noticia));
   };
 
   const saveElement = () => {
 
-    setSaving(true);
-    let objNoticia = getStorageData();
-    verifyFields(objNoticia);
+
+    if ( operation === 'nueva') doSave();
+    if ( operation === 'editar') doUpdate();
+
+//    setSaving(true);
+   // let objNoticia = getStorageData();
+   // verifyFields(objNoticia);
 
 
   };
 
   const doSave = () => {
 
-    let objNoticia = getStorageData();
+  //  let objNoticia = getStorageData();
 
+  //console.log(changeFields);
+  //console.log(id);
+
+
+  if (Object.keys(changeFields).length === 0)  { showErrorModal('fail', `Noticia sin datos`, 1500, true); return }
+  
     try {
       setStatus({ status: 'start', msg: `guardando ${type}...` });
       setShow(true);
+      let cf = {...changeFields};
+      if (type ===  'noticia') cf['type_not'] = 1;
+      if (type ===  'alerta') cf['type_not'] = 2;
+      if (type ===  'pactivo') cf['type_not'] = 3;
+     
+
+    
+      setChangefields(cf);
+      
+     /*
       objNoticia.id = uuidv4();
       objNoticia.fields.id_act_not = objNoticia.fields.id;
 
@@ -74,6 +100,9 @@ const EditorContentPanel = ({ type }) => {
           showErrorModal('fail', `Se ha producido un error ${data}`, 1500);
         }
       });
+      */
+
+
     } catch (error) {
 
       showErrorModal('fail', `Se ha producido un error ${error}`, 1500);
@@ -86,26 +115,40 @@ const EditorContentPanel = ({ type }) => {
 
   const doUpdate = () => {
 
-    let objNoticia = getStorageData();
+    //let objNoticia = getStorageData();
+
+    const id = parseInt(type.split("_")[2]);
+
+     
 
     try {
       setStatus({ status: 'start', msg: `Actualizando ${type}...` });
       setShow(true);
-      const respuesta = updateNew(mode + 's', objNoticia);
 
-      respuesta.then((data) => {
-       
-        setVacios([]);
-        if (data.status === 200) {
-          let msg = `La ${type} se ha actualizado correctamente`;
-          sessionStorage.removeItem(storage);
-          showErrorModal('ok', msg, 1500, true);
-        } else {
-          showErrorModal('fail', `Se ha producido un error ${data}`, 1500);
-        }
+
+       if (Object.keys(changeFields).length === 0)  { showErrorModal('ok', `La ${type} se ha actualizado correctamente`, 1500, true); return }
+
+      const respuesta = updateNew(mode + 's', changeFields, id);
+
+     
+      respuesta.then((res) => {
+
+        
+   
+         if (!res.data.success)
+         {
+          
+          showErrorModal('fail', `Se ha producido un error: ${res.data.msg}`, 3500);
+         }
+         else
+         {
+         showErrorModal('ok', `La ${type} se ha actualizado correctamente`, 1500, true);
+         }
+         
+    
       });
 
-    
+
     
     } catch (error) {
 
@@ -136,21 +179,21 @@ const EditorContentPanel = ({ type }) => {
   
   },[]);
 
-
+/*
   useEffect(() => {
   
    if (saving) {
    
     
-     if (vacios.length === 0 && operation === 'nueva') doSave();
-     if (vacios.length === 0 && operation === 'editar') doUpdate();
+     if ( operation === 'nueva') doSave();
+     if ( operation === 'editar') doUpdate();
  
       setSaving(false);
      
     }
 
   }, [vacios]);
-
+*/
 
 
   const IconEraser = (
@@ -189,7 +232,7 @@ const EditorContentPanel = ({ type }) => {
             </Col>
 
             <Col sm="12" md="8" className="m-0 p-0 pr-1 pt-1 formPageContainer SunEditorFields ">
-              <EditorWysiwyqPage type={type} />
+             <EditorWysiwyqPage type={type} /> 
             </Col>
           </Row>
         </Container>

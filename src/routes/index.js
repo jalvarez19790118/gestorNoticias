@@ -18,6 +18,13 @@ export default  [
   },
   
   {
+    name: 'Visor de Principios Activos',
+    path: '/gestor/p/:id',
+    component: SearchNotPage
+  },
+
+
+  {
     name: 'Editor - Nueva noticia',
     path: '/gestor/editor/nueva_noticia/:element',
     component: NewElementPage
@@ -29,6 +36,12 @@ export default  [
     component: NewElementPage
   },
   
+  {
+    name: 'Editor - Nueva P. Activo',
+    path: '/gestor/editor/nueva_pactivo/:element',
+    component: NewElementPage
+  },
+
     {
     name: 'Editor - Editar noticia',
     path: '/gestor/editor/editar_noticia/:element/:id',
