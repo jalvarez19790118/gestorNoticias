@@ -73,7 +73,7 @@
 .NotContent {
   font-family: $actualfontFamily;
 
-  border: 1px solid  $notPrimaryColor;
+  border: 1px solid $notPrimaryColor;
   border-radius: 0.25rem;
 
   display: flex;
@@ -111,8 +111,7 @@
     }
   }
 
-  .NotContentHeader
-  {
+  .NotContentHeader {
     background: $notTerciaryColor;
   }
 
@@ -198,6 +197,7 @@
     position: absolute;
     top: calc(50% - 50px);
     border: 1px solid #800;
+    border-radius: 0.25rem;
     left: 2%;
     right: 2%;
     font-weight: bold;
@@ -215,6 +215,8 @@
       display: inline-block;
       width: 100%;
       line-height: 33px;
+      border-top-left-radius: 0.35rem;
+      border-top-right-radius: 0.35rem;
 
       button {
         display: block;
@@ -320,7 +322,7 @@
     height: 16px;
     margin-top: 5px;
 
-    li > a {
+    li>a {
       background: $notPrimaryColor;
       color: #fff;
       border-radius: 0.35rem;
@@ -427,7 +429,7 @@
   z-index: 20;
 
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2) !important;
-  background: #162c50;
+  background: $notPrimaryColor;
   border: 1px solid $notPrimaryColor;
   margin-top: calc(100vh - 130px);
   margin-left: calc(100vw - 58px);
@@ -436,6 +438,36 @@
     color: #fff;
     text-transform: none;
     font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  &:hover,
+  &:focus,
+  &:scope,
+  &:active {
+    border: 0px solid;
+  }
+}
+
+
+#SearchOptionButton {
+  position: absolute;
+  z-index: 20;
+
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2) !important;
+  background: $notPrimaryColor;
+  border: 1px solid $notPrimaryColor;
+  margin-top: calc(100vh - 130px);
+  margin-left: 10px;
+
+  svg {
+    margin-top: 10px;
+  }
+
+  span {
+    color: #fff;
+    text-transform: none;
+    font-size: 1.5em;
     font-weight: bold;
   }
 
@@ -470,4 +502,47 @@
   &:active {
     border: 0px solid;
   }
+}
+
+.react-numeric-input {
+  margin-right: 2px;
+  padding: 2px;
+
+  input {
+    margin-left: 2px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0px;
+    border: 1px solid $notSecondaryColor !important;
+    padding: 2px;
+    background: #fff;
+    min-height: 30px;
+    border-radius: 0.25rem !important;
+  }
+
+  b {
+    background: $notSecondaryColor !important;
+    box-shadow: none !important;
+    margin-right: 1px;
+
+    i {
+      border-color: #fff transparent #fff !important;
+    }
+  }
+
+  &::selection {
+    border: 0px solid !important;
+  }
+}
+
+#searchContainer {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 400px) {
+  #appTitular {
+    display: none;
+  }
+
+
 }

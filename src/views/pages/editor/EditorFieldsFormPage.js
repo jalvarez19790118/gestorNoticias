@@ -9,24 +9,21 @@ import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
 import Select from 'react-select';
 
-import AttachFiles from './attachComponents/AttachFiles';
+//import AttachFile from './attachComponents/AttachFile';
 import ImgBank from './imgComponents/ImgBank';
 import SelectComponents from './selectComponents/SelectComponent';
+
 import Divider from '@material-ui/core/Divider';
 
 registerLocale('es', es);
 
 const EditorFieldsFormPage = ({ type }) => {
-
-
-  
- 
   const {
     atcs,
     obtieneAtcs,
     categorias,
-    obtieneCategorias,  
-    noticia, 
+    obtieneCategorias,
+    noticia,
     setNoticia,
     palabras,
     obtienePalabras,
@@ -43,11 +40,9 @@ const EditorFieldsFormPage = ({ type }) => {
     relacionImagen,
     obtieneRelacionImagen,
     changeFields,
-    setChangefields
-   
+    setChangefields,
   } = useContext(FormContext);
 
-  
   const [defaultCat, setdefaultCat] = useState([]);
   const [selecCat, setSelectCat] = useState(null);
   const [year, setYear] = useState(null);
@@ -60,26 +55,20 @@ const EditorFieldsFormPage = ({ type }) => {
   const [defaultKey, setdefaultKey] = useState([]);
   const [ibVisible, setIbVisible] = useState(!!parseInt(noticia.ib_visible));
   const [ibDestacado, setIbDestacado] = useState(!!parseInt(noticia.ib_destacado));
-  const [ibProfesionale, setIbProfesionales] =useState(!!parseInt(noticia.profesionales));
+  const [ibProfesionale, setIbProfesionales] = useState(!!parseInt(noticia.profesionales));
   const [ibBoletin, setIbBoletin] = useState(!!parseInt(noticia.ib_boletin));
 
-
   useEffect(() => {
-
-
-    
     if (noticia.year === null || noticia.year === '') setYear(null);
     else setYear(new Date(noticia.year.toString()));
 
-   
     if (noticia.fh_public === null || noticia.fh_public === '') setFhPublic(null);
     else setFhPublic(new Date(noticia.fh_public.toString()));
 
-  
     if (noticia.fh_desactivacion === null || noticia.fh_desactivacion === '') setFhDesact(null);
     else setFhDesact(new Date(noticia.fh_desactivacion.toString()));
 
-    if (noticia.fh_portada === null || noticia.fh_portada === '' ) setFhportada(null);
+    if (noticia.fh_portada === null || noticia.fh_portada === '') setFhportada(null);
     else setFhportada(new Date(noticia.fh_portada.toString()));
 
     if (noticia.tipo_referencia == 'ENT') setTref({ value: 'ENT', label: 'Entidad' });
@@ -92,23 +81,15 @@ const EditorFieldsFormPage = ({ type }) => {
     setIbVisible(!!parseInt(noticia.ib_visible));
     setIbDestacado(!!parseInt(noticia.ib_destacado));
     setIbProfesionales(!!parseInt(noticia.profesionales));
-    setIbBoletin(!!parseInt(noticia.ib_boletin));
-   
-
-  
+    setIbBoletin(noticia.ib_boletin.length > 0 ? !!parseInt(noticia.ib_boletin) : 1);
   }, [noticia]);
 
-
-    useEffect(() => {
-
-
-     
+  useEffect(() => {
     if (categorias.length > 0) {
       let options_cat = [];
 
-      options_cat.push({value: 0, label : '-'});
-      
-      
+      options_cat.push({ value: 0, label: '-' });
+
       categorias.map((value, key) => {
         options_cat.push({
           value: value.id,
@@ -127,9 +108,7 @@ const EditorFieldsFormPage = ({ type }) => {
     if (palabras.length > 0) {
       let options_key = [];
 
-  
-
-      options_key.push({value: 0, label : '-'});
+      options_key.push({ value: 0, label: '-' });
 
       palabras.map((value, key) => {
         options_key.push({
@@ -140,46 +119,28 @@ const EditorFieldsFormPage = ({ type }) => {
 
       setdefaultKey(options_key);
 
-     
-
       if (noticia.palabra_clave.length > 0) {
-
-     
         let option = options_key.filter((v, k) => v.label === noticia.palabra_clave);
         setKeyword(option[0]);
       } else setKeyword(0);
     }
-
-  },[noticia]);
-
-
+  }, [noticia]);
 
   const setFormValue = (field, value) => {
-  
-
     let new_noticia = {
       ...noticia,
     };
 
-    
-
     new_noticia[field] = value;
 
-   let cf = {...changeFields};
+    let cf = { ...changeFields };
 
-   cf[field] = value;
+    cf[field] = value;
 
-   setChangefields(cf);
+    setChangefields(cf);
 
-   setNoticia(new_noticia);
-
-  
-
-    
+    setNoticia(new_noticia);
   };
-
-
-
 
   return (
     <Fragment>
@@ -209,11 +170,14 @@ const EditorFieldsFormPage = ({ type }) => {
               value={fhpublic}
               className="text-center"
               onChange={(date) => {
-
                 setFhPublic(date);
                 setFormValue('fh_public', date);
 
-                let dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: '2-digit', day: '2-digit' });
+                let dateTimeFormat = new Intl.DateTimeFormat('en', {
+                  year: 'numeric',
+                  month: '2-digit',
+                  day: '2-digit',
+                });
                 let [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(date);
                 sessionStorage.setItem('selec_date', `${year}-${month}-${day}`);
               }}
@@ -222,41 +186,7 @@ const EditorFieldsFormPage = ({ type }) => {
               placeholderText=""
             />
           </Col>
-          <Col xs="6" md="3" className="m-0 p-0 py-0 pr-1">
-            <div className="label">Desactivación:</div>
-            <DatePicker
-              selected={fhdesact}
-              value={fhdesact}
-              className="text-center"
-              onChange={(date) => {
-                setFhDesact(date);
-                setFormValue('fh_desactivacion', date);
-              }}
-              locale="es"
-              dateFormat="dd-MM-yyyy"
-              placeholderText=""
-            />
-          </Col>
-
-          <Col xs="6" md="3" className="m-0 p-0 py-0 pr-0">
-            <div className="label">En Portada hasta:</div>
-            <DatePicker
-              selected={fhportada}
-              value={fhportada}
-              className="text-center"
-              onChange={(date) => {
-                setFhportada(date);
-                setFormValue('fh_portada', date);
-              }}
-              locale="es"
-              dateFormat="dd-MM-yyyy"
-              placeholderText=""
-            />
-          </Col>
-        </Row>
-
-        <Row className="m-0 p-0 px-1 pb-1 ">
-          <Col xs="3" className="m-0 p-0 pr-1 py-0">
+          <Col xs="12" sm="6" className="m-0 p-0">
             <div className="select-container">
               <Label for="exampleEmail">Tipo:</Label>
 
@@ -280,15 +210,16 @@ const EditorFieldsFormPage = ({ type }) => {
               />
             </div>
           </Col>
+        </Row>
 
-          <Col xs="9" className="m-0 p-0 py-0">
+        <Row className="m-0 p-0 px-1 pb-1 ">
+          <Col xs="12" className="m-0 p-0 py-0">
             <Label for="exampleEmail">Entidad/Laboratorio:</Label>
             <Input
               onChange={(e) => {
                 setLabo(e.target.value);
-                setFormValue('nom_labo_entidad', e.target.value)
-                }}
-
+                setFormValue('nom_labo_entidad', e.target.value);
+              }}
               type="text"
               name="nom_labo_entidad"
               id="nom_labo_entidad"
@@ -304,12 +235,10 @@ const EditorFieldsFormPage = ({ type }) => {
               <Label>Categoria:</Label>
               <Select
                 onChange={(e) => {
-             
+                  setSelectCat(e);
 
-             setSelectCat(e);
-                  
                   setFormValue('id_categoria', e.value);
-                 // setFormValue('desc_categoria', e.label);
+                  // setFormValue('desc_categoria', e.label);
                 }}
                 value={selecCat}
                 options={defaultCat}
@@ -319,48 +248,40 @@ const EditorFieldsFormPage = ({ type }) => {
           </Col>
 
           <Col xs="7" md="6" className="m-0 p-0">
-          <div className="select-container">
-            <Label for="exampleEmail">Palabra clave:</Label>
-          
-            <Select
+            <div className="select-container">
+              <Label for="exampleEmail">Palabra clave:</Label>
+
+              <Select
                 onChange={(e) => {
+                  //  setKeyword(e);
 
-              //  setKeyword(e);
+                  let new_noticia = {
+                    ...noticia,
+                  };
 
+                  new_noticia['palabra_clave'] = e.label;
+                  new_noticia['id_imagen'] = e.value;
+                  let cf = { ...changeFields };
 
-                let new_noticia = {
-                ...noticia,
-                };
+                  cf['palabra_clave'] = e.label;
+                  cf['id_imagen'] = e.value;
+                  setChangefields(cf);
 
-                new_noticia['palabra_clave'] = e.label;
-                new_noticia['id_imagen'] = e.value;
-                let cf = {...changeFields};
-
-                cf['palabra_clave'] = e.label;
-                cf['id_imagen'] =e.value;
-                setChangefields(cf);
-
-
-                setNoticia(new_noticia);
-
+                  setNoticia(new_noticia);
                 }}
                 value={keyword}
                 options={defaultKey}
                 placeholder={''}
               />
-
-</div>
+            </div>
           </Col>
         </Row>
       </Container>
 
-      <Divider  className="ml-2"/>
+      <Divider className="ml-2" />
 
       <Container fuid="true" className="EditorFormPage m-0 p-0 ml-1">
         <Row className="m-0 p-1 ">
-
-
-          
           <Col xs="6" className="m-0 p-0 ">
             <div className="toggle-container  d-flex">
               <Toggle
@@ -368,11 +289,9 @@ const EditorFieldsFormPage = ({ type }) => {
                 name="ib_visible"
                 checked={ibVisible}
                 onChange={(e) => {
-                
-                setIbVisible(e.target.checked);
-                setFormValue('ib_visible', e.target.checked ? 1 : 0)
-                } 
-                }
+                  setIbVisible(e.target.checked);
+                  setFormValue('ib_visible', e.target.checked ? 1 : 0);
+                }}
               />
               <div className="label mx-1">Mostrar</div>
             </div>
@@ -385,8 +304,8 @@ const EditorFieldsFormPage = ({ type }) => {
                 checked={ibBoletin}
                 onChange={(e) => {
                   setIbBoletin(e.target.checked);
-                  setFormValue('ib_boletin', e.target.checked ? 1 : 0)
-                  }}
+                  setFormValue('ib_boletin', e.target.checked ? 1 : 0);
+                }}
               />
               <div className="label mx-1">Incluir en el boletín</div>
             </div>
@@ -400,10 +319,10 @@ const EditorFieldsFormPage = ({ type }) => {
                 id="profesionales"
                 name="profesionales"
                 checked={ibProfesionale}
-                onChange={(e) => { 
+                onChange={(e) => {
                   setIbProfesionales(e.target.checked);
-                  setFormValue('profesionales', e.target.checked ? 1 : 0)
-                  }}
+                  setFormValue('profesionales', e.target.checked ? 1 : 0);
+                }}
               />
               <div className="label mx-1">Profesionales</div>
             </div>
@@ -416,8 +335,8 @@ const EditorFieldsFormPage = ({ type }) => {
                 checked={ibDestacado}
                 onChange={(e) => {
                   setIbDestacado(e.target.checked);
-                  setFormValue('ib_destacado', e.target.checked ? 1 : 0)
-                  }}
+                  setFormValue('ib_destacado', e.target.checked ? 1 : 0);
+                }}
               />
               <div className="label mx-1">Destacado</div>
             </div>
@@ -429,9 +348,12 @@ const EditorFieldsFormPage = ({ type }) => {
       <AttachFiles type={type} noticia={noticia} setNoticia={setNoticia} />
 
       */}
-      <Divider  className="ml-2"/>
+
+      <Divider className="ml-2" />
+
+      {/* <AttachFile /> */}
+
       <SelectComponents
-         
         type={type}
         label={'medicamentos'}
         tipo={'medicamentos'}
@@ -439,17 +361,11 @@ const EditorFieldsFormPage = ({ type }) => {
         obtieneOpciones={obtieneMedicamentos}
       />
 
-      <Divider  className="ml-2"/>
+      <Divider className="ml-2" />
 
-      <SelectComponents 
-        type={type} 
-        label={'atcs'} 
-        tipo={'atc'} 
-        opciones={atcs} 
-        obtieneOpciones={obtieneAtcs} 
-      />
-    
-      <Divider  className="ml-2"/>
+      <SelectComponents type={type} label={'atcs'} tipo={'atc'} opciones={atcs} obtieneOpciones={obtieneAtcs} />
+
+      <Divider className="ml-2" />
       <SelectComponents
         type={type}
         label={'enfermedades'}
@@ -458,7 +374,7 @@ const EditorFieldsFormPage = ({ type }) => {
         obtieneOpciones={obtieneEnfermedades}
       />
 
-      <Divider  className="ml-2"/>
+      <Divider className="ml-2" />
       <SelectComponents
         type={type}
         label={'laboratorios'}
@@ -466,7 +382,7 @@ const EditorFieldsFormPage = ({ type }) => {
         opciones={laboratorios}
         obtieneOpciones={obtieneLaboratorios}
       />
-      <Divider  className="ml-2"/>
+      <Divider className="ml-2" />
       <SelectComponents
         type={type}
         label={'entidades'}
@@ -475,13 +391,18 @@ const EditorFieldsFormPage = ({ type }) => {
         obtieneOpciones={obtieneEntidades}
       />
 
-      <Divider  className="ml-2"/>
+      <Divider className="ml-2" />
 
-
-
-      {Array.isArray(relacionImagen) ? <ImgBank idImagen={noticia.id_imagen} relaImg={relacionImagen} banco={banco} keyword={keyword} categoria={selecCat}  indicaciones={noticia['enfermedad']} /> : null }
-
-
+      {Array.isArray(relacionImagen) ? (
+        <ImgBank
+          idImagen={noticia.id_imagen}
+          relaImg={relacionImagen}
+          banco={banco}
+          keyword={keyword}
+          categoria={selecCat}
+          indicaciones={noticia['enfermedad']}
+        />
+      ) : null}
     </Fragment>
   );
 };

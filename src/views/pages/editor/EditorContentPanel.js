@@ -14,154 +14,78 @@ import SavingCard from '../../commons/SavingCard';
 import { FormContext } from '../../../context/FormContext';
 import { Toast } from 'react-bootstrap';
 
-const EditorContentPanel = ({  type }) => {
-  const storage = `${type}`;
+const EditorContentPanel = ({ type }) => {
   const mode = type.split('_')[1];
   const [show, setShow] = useState(false);
   const [status, setStatus] = useState({ status: '', msg: '' });
-  const { saveNew, updateNew,  setNoticia, init_noticia, verifyFields,vacios,setVacios,changeFields,setChangeFields } = useContext(FormContext);
+  const { saveNew, updateNew, setNoticia, init_noticia, changeFields } = useContext(FormContext);
   const history = useHistory();
   const [showDelete, setShowDelete] = useState(false);
-  const [saving,setSaving] = useState(false);
 
-  const operation = type.split("_")[0];
-
- 
-
-
-  const getStorageData = () => {
-   
-   /*
-    let objNoticia = sessionStorage.getItem(storage);
-
-    if (objNoticia !== null) {
-      objNoticia = JSON.parse(objNoticia);
-    }
-
-    return objNoticia;
-    */
-  };
+  const operation = type.split('_')[0];
 
   const clearElement = () => {
-
-   
     setNoticia(init_noticia);
-   // sessionStorage.setItem(storage, JSON.stringify(init_noticia));
   };
 
   const saveElement = () => {
-
-
-    if ( operation === 'nueva') doSave();
-    if ( operation === 'editar') doUpdate();
-
-//    setSaving(true);
-   // let objNoticia = getStorageData();
-   // verifyFields(objNoticia);
-
-
+    if (operation === 'nueva') doSave();
+    if (operation === 'editar') doUpdate();
   };
 
   const doSave = () => {
+    if (Object.keys(changeFields).length === 0) {
+      showErrorModal('fail', `Noticia sin datos`, 1500, true);
+      return;
+    }
 
-  //  let objNoticia = getStorageData();
-
-  //console.log(changeFields);
-  //console.log(id);
-
-
-  if (Object.keys(changeFields).length === 0)  { showErrorModal('fail', `Noticia sin datos`, 1500, true); return }
-  
     try {
       setStatus({ status: 'start', msg: `guardando ${type}...` });
       setShow(true);
-      let cf = {...changeFields};
-      if (type ===  'noticia') cf['type_not'] = 1;
-      if (type ===  'alerta') cf['type_not'] = 2;
-      if (type ===  'pactivo') cf['type_not'] = 3;
-     
+      let cf = { ...changeFields };
+      if (type === 'nueva_noticia') cf['type_not'] = 1;
+      if (type === 'nueva_alerta') cf['type_not'] = 2;
+      if (type === 'nueva_pactivo') cf['type_not'] = 3;
 
-    
-      setChangefields(cf);
-      
-     /*
-      objNoticia.id = uuidv4();
-      objNoticia.fields.id_act_not = objNoticia.fields.id;
+      const respuesta = saveNew(mode + 's', cf);
 
-      const respuesta = saveNew(mode + 's', objNoticia);
-
-      respuesta.then((data) => {
-        setVacios([]);
-        if (data.status === 201) {
-          let msg = `La ${type} se ha guardado correctamente`;
-          sessionStorage.removeItem(storage);
-          showErrorModal('ok', msg, 1500, true);
+      respuesta.then((res) => {
+        if (!res.data.success) {
+          showErrorModal('fail', `Se ha producido un error: ${res.data.msg}`, 3500);
         } else {
-          showErrorModal('fail', `Se ha producido un error ${data}`, 1500);
+          showErrorModal('ok', `La ${type} se ha guardado correctamente`, 1500, true);
         }
       });
-      */
-
-
     } catch (error) {
-
       showErrorModal('fail', `Se ha producido un error ${error}`, 1500);
     }
-
-  }
-
-
-
+  };
 
   const doUpdate = () => {
-
-    //let objNoticia = getStorageData();
-
-    const id = parseInt(type.split("_")[2]);
-
-     
+    const id = parseInt(type.split('_')[2]);
 
     try {
       setStatus({ status: 'start', msg: `Actualizando ${type}...` });
       setShow(true);
 
-
-       if (Object.keys(changeFields).length === 0)  { showErrorModal('ok', `La ${type} se ha actualizado correctamente`, 1500, true); return }
+      if (Object.keys(changeFields).length === 0) {
+        showErrorModal('ok', `La ${type} se ha actualizado correctamente`, 1500, true);
+        return;
+      }
 
       const respuesta = updateNew(mode + 's', changeFields, id);
 
-     
       respuesta.then((res) => {
-
-        
-   
-         if (!res.data.success)
-         {
-          
+        if (!res.data.success) {
           showErrorModal('fail', `Se ha producido un error: ${res.data.msg}`, 3500);
-         }
-         else
-         {
-         showErrorModal('ok', `La ${type} se ha actualizado correctamente`, 1500, true);
-         }
-         
-    
+        } else {
+          showErrorModal('ok', `La ${type} se ha actualizado correctamente`, 1500, true);
+        }
       });
-
-
-    
     } catch (error) {
-
       showErrorModal('fail', `Se ha producido un error ${error}`, 1500);
     }
-
-  }
-
-
-
-
-
-
+  };
 
   const showErrorModal = (status, msg, time, redi = false) => {
     setStatus({ status, msg });
@@ -175,26 +99,8 @@ const EditorContentPanel = ({  type }) => {
   let ref = null;
 
   useEffect(() => {
-   setTimeout($(ref).fadeIn(300));
-  
-  },[]);
-
-/*
-  useEffect(() => {
-  
-   if (saving) {
-   
-    
-     if ( operation === 'nueva') doSave();
-     if ( operation === 'editar') doUpdate();
- 
-      setSaving(false);
-     
-    }
-
-  }, [vacios]);
-*/
-
+    setTimeout($(ref).fadeIn(300));
+  }, []);
 
   const IconEraser = (
     <MyIcon
@@ -211,16 +117,13 @@ const EditorContentPanel = ({  type }) => {
   return (
     <Fragment>
       <div ref={(div) => (ref = div)} style={{ display: 'none' }}>
-
-        
         <Fab onClick={saveElement} size="medium" id="AddNewButton" aria-label="add">
           <SaveIcon />
         </Fab>
 
-        <Fab size="medium" id="ClearButton" onClick={(e) => setShowDelete(true)} aria-label="add">
+        {/*<Fab size="medium" id="ClearButton" onClick={(e) => setShowDelete(true)} aria-label="add">
           {IconEraser}
-        </Fab>
-
+        </Fab> */}
         <ToastDelete mode={mode} showDelete={showDelete} setShowDelete={setShowDelete} clearElement={clearElement} />
 
         <SavingCard show={show} status={status}></SavingCard>
@@ -232,7 +135,7 @@ const EditorContentPanel = ({  type }) => {
             </Col>
 
             <Col sm="12" md="8" className="m-0 p-0 pr-1 pt-1 formPageContainer SunEditorFields ">
-             <EditorWysiwyqPage type={type} /> 
+              <EditorWysiwyqPage type={type} />
             </Col>
           </Row>
         </Container>

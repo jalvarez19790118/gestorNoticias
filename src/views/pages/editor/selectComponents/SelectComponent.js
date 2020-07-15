@@ -200,7 +200,7 @@ const SelectComponent = ({ type, label, tipo, opciones, obtieneOpciones }) => {
                 setLinkActive(tipo, e.target.checked ? 1 : 0);
               }}
             />
-            <label>Vincular {label}</label>
+            <label>Vincular con {label}</label>
 
             {isActive ? (
               <Fragment>

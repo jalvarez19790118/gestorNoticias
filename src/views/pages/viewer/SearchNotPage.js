@@ -2,59 +2,34 @@ import React, { useContext, useEffect, useState, Fragment } from 'react';
 import { MyContext } from '../../../context/MyContext';
 import { FormContext } from '../../../context/FormContext';
 import SearchHeader from './SearchHeader';
+import SearchFooter from './SearchFooter';
 import NotContentPanel from './NotContentPanel';
+
 import LoadingCard from '../../commons/LoadingCard';
 import { useParams } from 'react-router-dom';
 import { GAppContext } from '../../../context/GAppContext';
-
+import Fade from '@material-ui/core/Fade';
 
 const SearchNotPage = () => {
-
   const [loadingNews, setLoadingNews] = useState(true);
-  const [onpanel, setOnPanel] = useState(4);
+  const [fadePage, setFadePage] = useState(true);
+
   let { id } = useParams();
-  const {selectGDate} = useContext(GAppContext);
-  const {setFirst } = useContext(FormContext);
+  const { dateIni, dateFin, page, perPage } = useContext(GAppContext);
+  const { setFirst } = useContext(FormContext);
 
-  const {setCurrentDate, obtieneNoticias } = useContext(MyContext);
+  let totalNews = 0;
 
-  
-  let date_selected = sessionStorage.getItem('selec_date');
+  const { obtieneNoticias, totalPaginas, allResults } = useContext(MyContext);
 
   useEffect(() => {
-
-  
-  
     if (loadingNews) {
-     
-     
-
-   
-     
-     if (date_selected == null) 
-     {
-
-      let dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: '2-digit', day: '2-digit' });
-      let [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(new Date());
-      sessionStorage.setItem('selec_date', `${year}-${month}-${day}`);
-      date_selected =  sessionStorage.getItem('selec_date');
-    
-
-     }
-
-    
-
-      obtieneNoticias(id, date_selected).then(() => {
+      obtieneNoticias(id, dateIni, dateFin, page, perPage).then(() => {
         setLoadingNews(false);
         setFirst(true);
-
-       
       });
-  
     }
-  
   }, [loadingNews]);
-
 
   return (
     <Fragment>
@@ -62,8 +37,11 @@ const SearchNotPage = () => {
         <LoadingCard />
       ) : (
         <div>
-          <SearchHeader date_selected={date_selected} setLoadingNews={setLoadingNews} /> 
-          <NotContentPanel mode={id} onpanel={onpanel}></NotContentPanel>
+          <SearchHeader setLoadingNews={setLoadingNews} />
+          <Fade in={fadePage}>
+            <NotContentPanel mode={id} onpanel={4} setLoadingNews={setLoadingNews}></NotContentPanel>
+          </Fade>
+          {parseInt(totalPaginas) > 1 ? <SearchFooter setFadePage={setFadePage} /> : null}
         </div>
       )}
     </Fragment>

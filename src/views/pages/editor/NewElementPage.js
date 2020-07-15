@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment, useContext } from 'react';
+import React, { useEffect, Fragment, useContext } from 'react';
 import LoadingCard from '../../commons/LoadingCard';
 import { useLocation, useParams } from 'react-router-dom';
 import { FormContext } from '../../../context/FormContext';
@@ -8,8 +8,7 @@ const NewElementPage = () => {
   const location = useLocation();
   const { element } = useParams();
   const {
-   
-    obtieneCategorias,  
+    obtieneCategorias,
     setNoticia,
     setVacios,
     obtienePalabras,
@@ -17,48 +16,22 @@ const NewElementPage = () => {
     obtieneRelacionImagen,
     setChangefields,
     first,
-    setFirst,
-    init_noticia
+    init_noticia,
+    setAttached,
   } = useContext(FormContext);
 
-  const getSessionState = () => {
-    /*let new_status = init_noticia;
-
-    let objNoticia = sessionStorage.getItem('nueva_' + element);
-
-    if (objNoticia === null) {
-    
-      new_status = init_noticia;
-     
-     
-    } else {
-     
-      new_status = JSON.parse(objNoticia);
-    }
-
-    sessionStorage.setItem('nueva_' + element, JSON.stringify(new_status));
-    */
-    //return new_status;
-  };
-
   useEffect(() => {
-    
-   
-     setNoticia(init_noticia);
+    setNoticia(init_noticia);
 
-     obtieneCategorias();
-     obtienePalabras();
-     obtieneBanco();
-     obtieneRelacionImagen();
-     setChangefields({})
-     setVacios([]);
-   
-    
+    obtieneCategorias();
+    obtienePalabras();
+    obtieneBanco();
+    obtieneRelacionImagen();
+    setChangefields({});
     setVacios([]);
-  
- 
+    setAttached([]);
+    setVacios([]);
   }, [location]);
-
 
   return (
     <Fragment>
@@ -66,7 +39,7 @@ const NewElementPage = () => {
         <LoadingCard />
       ) : (
         <Fragment>
-        <EditorContentPanel type={`nueva_${element}`} />
+          <EditorContentPanel type={`nueva_${element}`} />
         </Fragment>
       )}
     </Fragment>

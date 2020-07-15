@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import { Header, Footer, PageContent, Page } from '../created';
 import routes from '../routes';
 import Logo from '../assets/images/logo.png';
@@ -8,6 +8,8 @@ import handleKeyAccessibility, { handleClickAccessibility } from '../created/hel
 import MyProvider from '../context/MyContext';
 import FormProvider from '../context/FormContext';
 import GAppProvider from '../context/GAppContext';
+
+import PrivateRoute from './PrivateRoute';
 
 const MOBILE_SIZE = 992;
 
@@ -30,8 +32,6 @@ export default class MyDashboardLayout extends Component {
 
   componentDidUpdate(prev) {
     if (this.state.isMobile && prev.location.pathname !== this.props.location.pathname) {
-      //console.log('sss');
-      //this.toggleSideCollapse();
     }
   }
 
@@ -48,6 +48,10 @@ export default class MyDashboardLayout extends Component {
   toggleSideCollapse = () => {
     this.setState((prevState) => ({ sidebarCollapsed: !prevState.sidebarCollapsed }));
   };
+
+  redirectToInitialRoute() {
+    this.customHistory.push('/gestor/n/noticias');
+  }
 
   render() {
     const { sidebarCollapsed } = this.state;
@@ -66,19 +70,18 @@ export default class MyDashboardLayout extends Component {
                       isSidebarCollapsed={sidebarCollapsed}
                       routes={routes}
                       {...this.props}
-                    ></Header>
-                    <PageContent>
-                      <Switch>
-                        {routes.map((page, key) => (
-                          <Route path={page.path} component={page.component} key={key} />
-                        ))}
+                    />
 
-                        <Redirect from="/gestor" to="/gestor/n/noticias" />
+                    <PageContent>
+                      <Switch history={this.customHistory}>
+                        {routes.map((page, key) => (
+                          <PrivateRoute path={page.path} component={page.component} key={key} />
+                        ))}
                       </Switch>
                     </PageContent>
                   </Page>
                 </div>
-                <Footer></Footer>
+                <Footer />
               </div>
             </ContextProviders>
           </FormProvider>
