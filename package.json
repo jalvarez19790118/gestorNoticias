@@ -30,7 +30,7 @@
     "jodit-react": "^1.0.42",
     "jquery": "^3.5.1",
     "json-serve": "^0.1.0",
-    "json-server": "^0.16.1",
+    "json-server": "^0.16.3",
     "node-sass": "^7.0.0",
     "react": "^16.8.1",
     "react-bootstrap": "^1.0.1",
